@@ -3,371 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/css/global.css" />
+    <link rel="stylesheet" href="./styles/css/home.css" />
     <title>TiCH</title>
   </head>
 
   <body>
-    <!-- Header -->
-    <header id="header">
-      <div class="logo">
-        <img src="images/TiCh.png" />
-      </div>
-      <ul class="navigation">
-        <li>
-          <a class="active Nav_1" href="#home" onclick="toggle()">Home</a>
-        </li>
-        <li><a class="Nav_2" href="#about" onclick="toggle()">About</a></li>
-        <li>
-          <a class="Nav_3" href="#services" onclick="toggle()">Services</a>
-        </li>
-        <li>
-          <a class="Nav_4" href="#portfolio" onclick="toggle()">Portfolio</a>
-        </li>
-        <li><a class="Nav_5" href="#team" onclick="toggle()">Team</a></li>
-        <li><a class="Nav_6" href="#contact" onclick="toggle()">Contact</a></li>
-      </ul>
-      <div class="lang_wrap">
-        <a language="english" class="btn_language active_lang">ENG</a>
-        <a language="finnish" class="btn_language">FIN</a>
-      </div>
-      <div class="toggle" onclick="toggle()"></div>
-    </header>
-
-    <!-- Banner -->
-    <section class="banner" id="home">
-      <h1>
-        <p className="{styles.title}">Get your custom websites for</p>
-        <p className="{styles.detail}"><span>effective communication</span></p>
-        <p className="{styles.title_2}">and <span>collaboration</span></p>
-      </h1>
-    </section>
-
-    <!-- About -->
-    <section id="achievements" class="sec" id="about">
-      <div class="content">
-        <div class="mxw800p">
-          <div class="scroll">
-            <h3>Who We Are</h3>
-            <p>
-              We are a skilled team of website developers who create customized
-              websites that enhance communication with your customers and team.
-              Our sites are tailored to your needs, making it easy to convey
-              your message clearly. Our focus is on ensuring that everyone in
-              your team has the information they need to work together towards
-              shared goals. We design our websites to facilitate seamless
-              information flow within your organization. Whether you need to
-              improve customer engagement, streamline internal communication, or
-              establish a stronger online presence, we can help. Our experienced
-              developers create effective and visually appealing websites to
-              help you achieve your goals and grow your business. 1920
-            </p>
-            <a href="#" class="btn"> Read Our Story</a>
+    <nav class="nav">
+      <div class="nav">
+        <img class="logo" src="./images/logo.png" alt="" />
+        <div class="options">
+          <div class="navigation">
+            <a onclick="closeMenu()" href="#home" class="active">Home</a>
+            <a onclick="closeMenu()" href="#about"><p>About</p></a>
+            <a onclick="closeMenu()" href="#services"><p>Services</p></a>
+            <a onclick="closeMenu()" href="#portfolio"><p>Portfolio</p></a>
+            <a onclick="closeMenu()" href="#team"><p>Team</p></a>
+            <a onclick="closeMenu()" href="#contact"><p>Contact</p></a>
           </div>
+          <div class="languages">
+            <a lang="english" class="btn_language" href="/en"><p>ENG</p></a>
+            <a lang="finnish" class="btn_language" href="/"><p>FIN</p></a>
+          </div>
+          <button class="burger" onclick="toggleMenu()">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#000"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="5" x2="16" y2="5"></line>
+              <line x1="3" y1="19" x2="12" y2="19"></line>
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
-
-    <!-- Services -->
-    <section class="sec" id="services">
-      <div class="content">
-        <div class="services">
-          <div class="box">
-            <div class="iconBx">
-              <img src="images/settings.png" />
-            </div>
-            <div class="content">
-              <h2>homepage service</h2>
-              <p>
-                Lorem ipsum dolor sit ame, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="iconBx">
-              <img src="images/calendar.png" />
-            </div>
-            <div class="content">
-              <h2>ERP service</h2>
-              <p>
-                Lorem ipsum dolor sit ame, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="iconBx">
-              <img src="images/briefcase.png" />
-            </div>
-            <div class="content">
-              <h2>INTRA service</h2>
-              <p>
-                Lorem ipsum dolor sit ame, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats -->
-    <section id="stats" class="sec stats">
-      <div class="content">
-        <div class="mxw800p">
-          <h3>Our Achievements</h3>
-          <p>
-            Lorem ipsum dolor sit ame, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco.
+    </nav>
+    <header class="header">
+      <section class="hero" id="home">
+        <h1>
+          <p class="{styles.title}">Get your custom websites for</p>
+          <p class="{styles.detail}">
+            <span>effective communication</span>
           </p>
-        </div>
-        <div class="statsBox">
-          <div class="box">
-            <h2>1200+</h2>
-            <h4>Projects</h4>
-          </div>
-          <div class="box">
-            <h2>800+</h2>
-            <h4>Happy Clients</h4>
-          </div>
-          <div class="box">
-            <h2>150+</h2>
-            <h4>Countries</h4>
-          </div>
-          <div class="box">
-            <h2>50+</h2>
-            <h4>Awards</h4>
-          </div>
-        </div>
-      </div>
-    </section>
+          <p class="{styles.title_2}">and <span>collaboration</span></p>
+        </h1>
+        <p>
+          Our focus is on ensuring that everyone in your team has the
+          information they need to work together towards shared goals. We design
+          our websites to facilitate seamless information flow within your
+          organization. Whether you need to improve customer engagement,
+          streamline internal communication, or establish a stronger online
+          presence, we can help. Our experienced developers create effective and
+          visually appealing websites to help you achieve your goals and grow
+          your business.
+        </p>
+      </section>
+    </header>
+    <main>
+      <section class="about" id="about">
+        <h2>Our Identity and Our Purpose</h2>
+        <p>
+          We are a skilled team of website developers who create customized
+          websites that enhance communication with your customers and team. Our
+          sites are tailored to your needs, making it easy to convey your
+          message clearly. Our focus is on ensuring that everyone in your team
+          has the information they need to work together towards shared goals.
+          We design our websites to facilitate seamless information flow within
+          your organization. Whether you need to improve customer engagement,
+          streamline internal communication, or establish a stronger online
+          presence, we can help. Our experienced developers create effective and
+          visually appealing websites to help you achieve your goals and grow
+          your business.
+        </p>
+      </section>
 
-    <!-- Team -->
-    <section class="sec" id="team">
-      <div class="content">
-        <div class="mxw800p">
-          <h3>The Team</h3>
-          <p>____________</p>
-        </div>
-        <div class="teamBx">
-          <div class="member">
-            <div class="imgBx">
-              <img src="images/taco.jpg" />
+      <section id="services">
+        <h2>Services</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/settings.png" />
+            <div class="content">
+              <h3>Lorem ipsum, dolor sit amet</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
+                totam, deserunt nesciunt voluptate iste libero laboriosam iure,
+                quisquam optio fuga nisi. At labore aliquid consequatur alias
+                quaerat distinctio adipisci magnam. Nisi eligendi odio veniam
+                sint obcaecati ex explicabo nostrum esse ea delectus dolor, enim
+                mollitia rerum modi natus est. Error cumque adipisci minus at
+                voluptatem magnam quis illo dignissimos quidem?
+              </p>
             </div>
-            <div class="details">
-              <div>
-                <h2>Juan<br /><span>Back End</span></h2>
-              </div>
+          </div>
+
+          <div class="card">
+            <img src="images/settings.png" />
+            <div class="content">
+              <h3>Lorem ipsum, dolor sit amet</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+                cupiditate! Facere ipsa natus temporibus soluta dolorum dolores
+                illum, ea hic, error officia quod, eveniet veniam accusantium.
+                Sequi impedit minus earum!
+              </p>
             </div>
           </div>
-          <div class="member">
-            <div class="imgBx">
-              <img src="images/Mark1.jpg" />
-            </div>
-            <div class="details">
-              <div>
-                <h2>Mark<br /><span>Front End</span></h2>
-              </div>
+          <div class="card">
+            <img src="images/settings.png" />
+            <div class="content">
+              <h3>Lorem ipsum, dolor sit amet</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                quae corrupti doloremque aliquid nobis, eius sequi inventore
+                possimus assumenda dolore, repudiandae earum. Cupiditate modi
+                doloremque reiciendis sequi doloribus. Eum, tenetur. Aspernatur
+                nisi, eaque doloremque ex tempora necessitatibus consectetur
+                accusamus laborum quia totam nam dolorem aut error asperiores
+                iste obcaecati ducimus, adipisci id neque. Repudiandae
+                reiciendis quo dicta perferendis aut voluptatibus. Expedita
+                dicta quis, pariatur optio in fugit quibusdam illo eum, iusto
+                molestiae delectus nulla sapiente omnis placeat modi eaque animi
+                repellendus! Minus animi eaque asperiores quos natus accusamus,
+                earum rerum!
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="sec contact" id="contact">
-      <div class="contentForm">
-        <div class="mxw800p">
-          <h3>Send Us A Message</h3>
-          <p></p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer">
+        <div class="share">
+          <a href="#" class="styles.fa brands fa-facebook-f"></a>
+          <a href="#" class="styles.fa - brands fa-twitter"></a>
+          <a href="#" class="styles.fa - brands fa- instagram"></a>
+          <a href="#" class="styles.fa - brands fa- linkedin"></a>
+          <a href="#" class="styles.fa - brands fa- pinterest"></a>
         </div>
-        <div class="contactForm">
-          <form>
-            <div class="formBox">
-              <div class="row50">
-                <div class="inputBox">
-                  <span>Name :</span>
-                  <input type="text" placeholder="" />
-                </div>
-                <div class="inputBox">
-                  <span>Email :</span>
-                  <input type="text" placeholder="" />
-                </div>
-              </div>
-
-              <div class="row50">
-                <div class="inputBox">
-                  <span>Mobile :</span>
-                  <input type="text" placeholder="" />
-                </div>
-                <div class="inputBox">
-                  <span>Subject :</span>
-                  <input type="text" placeholder="" />
-                </div>
-              </div>
-
-              <div class="row100">
-                <div class="inputBox">
-                  <span>Message :</span>
-                  <textarea placeholder=""></textarea>
-                </div>
-              </div>
-
-              <div style="float: right" class="row100">
-                <div class="inputBox">
-                  <input type="submit" value="Send" />
-                </div>
-              </div>
-            </div>
-          </form>
+        <div class="links">
+          <a href="#"> home</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#services">services</a>
+          <a href="#">review</a>
+          <a href="#">contact</a>
+          <a href="#">blogs</a>
+        </div>
+        <div class="credit">
+          created by <span>mr. web deisgner</span> / all rights reserved
         </div>
       </div>
-    </section>
-
-    <section class="footer">
-      <div class="share">
-        <a href="#" class="fa-brands fa-facebook-f"></a>
-        <a href="#" class="fa-brands fa-twitter"></a>
-        <a href="#" class="fa-brands fa-instagram"></a>
-        <a href="#" class="fa-brands fa-linkedin"></a>
-        <a href="#" class="fa-brands fa-pinterest"></a>
-      </div>
-      <div class="links">
-        <a href="#">home </a>
-        <a href="#">about</a>
-        <a href="#">menu</a>
-        <a href="#">products</a>
-        <a href="#">review</a>
-        <a href="#">contact</a>
-        <a href="#">blogs</a>
-      </div>
-
-      <div class="credit">
-        created by <span>mr. web deisgner</span> / all rights reserved
-      </div>
-    </section>
-
+    </footer>
     <!-- SCRIPTS -->
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-
-      function toggle() {
-        var header = document.querySelector("header");
-        header.classList.toggle("active");
-      }
-    </script>
-
-    <script>
-      let section = document.querySelectorAll("section");
-      let navLinks = document.querySelectorAll("header ul a");
-
-      window.onscroll = () => {
-        section.forEach((sec) => {
-          let top = window.scrollY;
-          let offset = sec.offsetTop - 150;
-          let height = sec.offsetHeight;
-          let id = sec.getAttribute("id");
-
-          if (top >= offset && top < offset + height) {
-            navLinks.forEach((links) => {
-              links.classList.remove("active");
-              document
-                .querySelector("header ul a[href*=" + id + "]")
-                .classList.add("active");
-            });
-          }
-        });
-      };
-    </script>
-
-    <script>
-      const langEl = document.querySelector(".lang_wrap");
-      const link = document.querySelectorAll("a.btn_language");
-      const titleEl = document.querySelector(".title");
-      const descrEl = document.querySelector(".detail");
-      const title2El = document.querySelector(".title_2");
-      const nav_1El = document.querySelector(".Nav_1");
-      const nav_2El = document.querySelector(".Nav_2");
-      const nav_3El = document.querySelector(".Nav_3");
-      const nav_4El = document.querySelector(".Nav_4");
-      const nav_5El = document.querySelector(".Nav_5");
-      const nav_6El = document.querySelector(".Nav_6");
-
-      link.forEach((el) => {
-        el.addEventListener("click", () => {
-          /* if it has active_lang then remove it*/
-          langEl.querySelector(".active_lang").classList.remove("active_lang");
-          /* else put active_lang*/
-          el.classList.add("active_lang");
-
-          /* get language*/
-          const attr = el.getAttribute("language");
-
-          titleEl.textContent = data[attr].title;
-          descrEl.textContent = data[attr].detail;
-          title2El.textContent = data[attr].title_2;
-          nav_1El.textContent = data[attr].Nav_1;
-          nav_2El.textContent = data[attr].Nav_2;
-          nav_3El.textContent = data[attr].Nav_3;
-          nav_4El.textContent = data[attr].Nav_4;
-          nav_5El.textContent = data[attr].Nav_5;
-          nav_6El.textContent = data[attr].Nav_6;
-        });
-      });
-
-      var data = {
-        english: {
-          Nav_1: "Home",
-          Nav_2: "About",
-          Nav_3: "Services",
-          Nav_4: "Portfolio",
-          Nav_5: "Team",
-          Nav_6: "Contact",
-          title: "we just make ",
-          detail: "things",
-          title_2: "matter",
-        },
-        finnish: {
-          Nav_1: "Koti",
-          Nav_2: "Meistä",
-          Nav_3: "Palvelut",
-          Nav_4: "Portfolio",
-          Nav_5: "Tiimi",
-          Nav_6: "Yhteystiedot",
-          title: "me vain teemme ",
-          detail: "asioita",
-          title_2: "asia",
-        },
-      };
-    </script>
-
-    <script src="swiper-bundle.min.js"></script>
-
-    <script>
-      let swiperBrand = new Swiper(".brand", {
-        loop: true,
-        spaceBetween: 24,
-        slidesPerView: "auto",
-        grabCursor: true,
-
-        pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 5,
-          },
-          1024: {
-            spaceBetween: 50,
-          },
-        },
-      });
-    </script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/resize.js" rel=""></script>
   </body>
 </html>
