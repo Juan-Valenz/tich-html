@@ -1,40 +1,21 @@
 //  LAYOUT
-////  COLORS
-nav.nav {
-  background-color: hsl(var(--main-bg));
-}
 
 //// POSITIONING AND STYLES
-nav.nav {
-  //    POSITION
-  position: fixed;
-  top: 0;
-
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  //    FLEX
-  display: flex;
-  align-items: center;
-  //    LENGTH
-  height: fit-content;
-}
 .header {
   //  LENGTH
   height: 100vh;
   height: 100dvh;
   padding-top: 150px;
 }
+
 footer.footer {
   background-color: hsl(var(--secondary-bg));
 }
 
 //  NAVIGATION
 ////  COLORS
-@media (width > 1080px) {
-  div.nav.down {
-    border-bottom-color: hsl(var(--accent-bg) / 0.3);
-  }
+#nav {
+  background-color: hsl(var(--main-bg));
 }
 
 .navigation {
@@ -58,17 +39,38 @@ footer.footer {
   }
 }
 
-//// POSITIONING AND STYLES
-div.nav {
-  //    FLEX
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (width > 1080px) {
+  #nav.down {
+    border-bottom-color: hsl(var(--accent-bg) / 0.3);
+  }
+}
+
+
+/// POSITIONING AND STYLES
+#nav {
+  //POSITION
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   //    LENGTH
   width: 100%;
   height: 80px;
   transition: 0.3s height;
-  padding-inline: 20px;
+
+  >div {
+    //    FLEX
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //    LENGTH
+    width: 100%;
+    height: 100%;
+    padding-inline: 20px;
+  }
+
+
 }
 
 .logo {
@@ -149,14 +151,16 @@ div.nav {
 }
 
 @media (width > 1080px) {
-  div.nav {
+  #nav {
     height: 150px;
+
     &.down {
       height: 80px;
       //    DECORATION
       border-bottom-width: 1px;
       border-bottom-style: solid;
     }
+
     .navigation {
       display: flex;
       gap: 20px;
@@ -176,8 +180,9 @@ div.nav {
     }
   }
 }
-//  HERO
-////  COLORS
+
+//SECTION HERO
+///COLORS
 
 .hero {
   span {
@@ -185,19 +190,20 @@ div.nav {
   }
 }
 
-//// POSITIONING AND STYLES
+///POSITIONING AND STYLES
 .hero {
   background-image: url(../../images/bg_main.png);
   background-size: cover;
-  //
+  //?LENGHT
   width: 80%;
   height: 100%;
   margin-inline: auto;
-  //    GRID
+  ////GRID
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / clamp(272px, 50% + 150px, 850px) 1fr;
   justify-content: start;
   align-items: center;
+
   h1 {
     grid-area: 1 / 1 / 1 span / 1 span;
     align-self: end;
@@ -210,7 +216,8 @@ div.nav {
     //
     transition: 0.2s font-size;
   }
-  > p {
+
+  >p {
     grid-area: 2 / 1 / 2 span / 1 span;
     //  TEXT
     font-size: 0.8rem;
@@ -218,36 +225,44 @@ div.nav {
     //
     transition: 0.3s font-size;
   }
+
   @media (width > 600px) {
     h1 {
       //  TEXT
       font-size: clamp(1.3rem, 1.034rem + 0.71vw, 1.7rem);
     }
-    > p {
+
+    >p {
       //  TEXT
       font-size: clamp(0.9rem, 0.6rem + 0.81vw, 1.1rem);
     }
   }
 }
+
 //  FOOTER
 ////  COLORS
 
 div.footer {
   background-color: hsl(var(--secondary-bg));
   background-color: black;
+
   .credit {
     color: white;
+
     span {
       color: hsl(var(--blue));
     }
   }
+
   .links a {
     color: white;
     border: gray;
+
     &:hover {
       background-color: hsl(var(--blue));
     }
   }
+
   .share a:hover {
     background-color: hsl(var(--blue));
   }
@@ -257,9 +272,11 @@ div.footer {
 div.footer {
   text-align: center;
 }
+
 .footer .share {
   padding: 1rem 0;
 }
+
 div.footer .share a {
   height: 5rem;
   width: 5rem;
@@ -270,6 +287,7 @@ div.footer .share a {
   margin: 0.3rem;
   border-radius: 50%;
 }
+
 div.footer .links {
   display: flex;
   justify-content: center;
@@ -277,17 +295,20 @@ div.footer .links {
   padding: 2rem 0;
   gap: 1rem;
 }
+
 div.footer .links a {
   padding: 0.7rem 2rem;
   font-size: 2rem;
 }
+
 div.footer .credit {
   font-size: 2rem;
   font-weight: lighter;
   padding: 1.5rem;
 }
-//  ABOUT
-//// POSITIONING AND STYLES
+
+//SECTION: ABOUT
+/// POSITIONING AND STYLES
 #about {
   width: 80%;
   margin-inline: min(150px, auto);
@@ -303,25 +324,27 @@ div.footer .credit {
     text-align: justify;
     font-size: 0.8rem;
   }
+
   @media (width > 1095px) {
     h2 {
       font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
     }
+
     p {
       font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
     }
   }
 }
 
-//  SERVICES
-////  COLORS
+// ? SERVICES
+///  COLORS
 #services {
   .card {
     background-color: #fff;
   }
 }
 
-//// POSITIONING AND STYLES
+/// POSITIONING AND STYLES
 #services {
   display: flex;
   flex-direction: column;
@@ -329,12 +352,14 @@ div.footer .credit {
   //  LENGTH
   margin: auto;
   margin-top: 40px;
+
   .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -346,11 +371,13 @@ div.footer .credit {
     padding: 10px 20px;
     //  DECORATION
     border-radius: 30px;
+
     img {
       margin-top: 25px;
       max-width: 70px;
       margin-bottom: 15px;
     }
+
     h3 {
       //  LENGTH
       margin-bottom: 10px;
@@ -359,20 +386,24 @@ div.footer .credit {
       text-transform: uppercase;
       font-weight: 800;
     }
+
     p {
       font-size: 0.8rem;
     }
   }
+
   @media (width > 1090px) {
     p {
       font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
     }
   }
+
   @media (width > 1090px) {
     .cards {
       flex-direction: row;
       justify-content: space-between;
       align-items: stretch;
+
       .card {
         width: 350px;
         padding: 1rem;
