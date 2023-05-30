@@ -1,18 +1,3 @@
-nav.nav {
-  background-color: hsl(var(--main-bg));
-}
-
-nav.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  height: fit-content;
-}
-
 .header {
   height: 100vh;
   height: 100dvh;
@@ -23,11 +8,10 @@ footer.footer {
   background-color: hsl(var(--secondary-bg));
 }
 
-@media (width > 1080px) {
-  div.nav.down {
-    border-bottom-color: hsl(var(--accent-bg)/0.3);
-  }
+#nav {
+  background-color: hsl(var(--main-bg));
 }
+
 .navigation {
   background-color: hsl(var(--main-bg));
 }
@@ -47,13 +31,27 @@ footer.footer {
   color: hsl(var(--main-bg));
 }
 
-div.nav {
+@media (width > 1080px) {
+  #nav.down {
+    border-bottom-color: hsl(var(--accent-bg)/0.3);
+  }
+}
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 80px;
+  transition: 0.3s height;
+}
+#nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
-  transition: 0.3s height;
+  height: 100%;
   padding-inline: 20px;
 }
 
@@ -113,25 +111,25 @@ div.nav {
 }
 
 @media (width > 1080px) {
-  div.nav {
+  #nav {
     height: 150px;
   }
-  div.nav.down {
+  #nav.down {
     height: 80px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
   }
-  div.nav .navigation {
+  #nav .navigation {
     display: flex;
     gap: 20px;
   }
-  div.nav .navigation a {
+  #nav .navigation a {
     width: 80px;
   }
-  div.nav .navigation a:where(:hover, :active, .active) {
+  #nav .navigation a:where(:hover, :active, .active) {
     font-weight: bold;
   }
-  div.nav .burger {
+  #nav .burger {
     display: none;
   }
 }
