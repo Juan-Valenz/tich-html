@@ -83,13 +83,13 @@ window.onscroll = () => {
 };
 //  SECTION
 window.addEventListener("scroll", function () {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
+    let nav = document.getElementById("nav");
+    nav.classList.toggle("down", window.scrollY > 0);
 });
 window.addEventListener("resize", function () {
     let linkList = document.querySelector(".navigation");
     if (window.innerWidth > 1080) {
-        linkList.classList.toggle("active", false);
+        closeMenu();
     }
 });
 
@@ -122,3 +122,6 @@ const closeMenu = () => {
     html.classList.remove("noOverflow");
     linkList.classList.remove("active");
 }
+
+// HeroCode
+// Herocode
