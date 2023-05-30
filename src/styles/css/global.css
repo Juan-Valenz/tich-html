@@ -10,7 +10,7 @@
   --green: 106 100% 63%;
   --test-color: hsl(213 9% 21%);
   --test-color: hsl(218, 100%, 63%);
-  --test-color: hsl(0, 0%, 94%);
+  --test-color: #eeff00;
   --main-bg: var(--whitish);
   --secondary-bg: var(--black);
   --accent-bg: var(--blue);
