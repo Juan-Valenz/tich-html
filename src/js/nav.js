@@ -6,12 +6,6 @@ const link = document.querySelectorAll("a.btn_language");
 const titleEl = document.querySelector(".title");
 const descrEl = document.querySelector(".detail");
 const title2El = document.querySelector(".title_2");
-const nav_1El = document.querySelector(".Nav_1");
-const nav_2El = document.querySelector(".Nav_2");
-const nav_3El = document.querySelector(".Nav_3");
-const nav_4El = document.querySelector(".Nav_4");
-const nav_5El = document.querySelector(".Nav_5");
-const nav_6El = document.querySelector(".Nav_6");
 
 link.forEach((el) => {
     el.addEventListener("click", () => {
@@ -26,12 +20,6 @@ link.forEach((el) => {
         titleEl.textContent = data[attr].title;
         descrEl.textContent = data[attr].detail;
         title2El.textContent = data[attr].title_2;
-        nav_1El.textContent = data[attr].Nav_1;
-        nav_2El.textContent = data[attr].Nav_2;
-        nav_3El.textContent = data[attr].Nav_3;
-        nav_4El.textContent = data[attr].Nav_4;
-        nav_5El.textContent = data[attr].Nav_5;
-        nav_6El.textContent = data[attr].Nav_6;
     });
 });
 
