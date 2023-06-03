@@ -139,7 +139,8 @@ footer.footer {
 
 .hero {
   background-image: url(../../images/bg_main.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 80%;
   height: 100%;
   margin-inline: auto;
@@ -238,6 +239,7 @@ div.footer .credit {
 #about h2 {
   text-align: center;
   font-size: 1rem;
+  padding-bottom: 20px;
 }
 #about p {
   text-align: justify;
@@ -262,6 +264,10 @@ div.footer .credit {
   gap: 30px;
   margin: auto;
   margin-top: 40px;
+  margin-bottom: 40px;
+}
+#services h2 {
+  visibility: hidden;
 }
 #services .cards {
   display: flex;
@@ -278,22 +284,30 @@ div.footer .credit {
   width: 80%;
   padding: 10px 20px;
   border-radius: 30px;
+  box-shadow: 10px 5px 5px #7c7c7c;
 }
-#services .card img {
+#services .card svg {
   margin-top: 25px;
   max-width: 70px;
+  max-height: 70px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 #services .card h3 {
   margin-bottom: 10px;
   font-size: 0.95rem;
   text-transform: uppercase;
   font-weight: 800;
+  text-align: center;
 }
 #services .card p {
   font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-@media (width > 1090px) {
+@media (width > 600px) {
   #services p {
     font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
   }
