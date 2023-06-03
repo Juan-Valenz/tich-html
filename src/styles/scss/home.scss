@@ -193,8 +193,9 @@ footer.footer {
 ///POSITIONING AND STYLES
 .hero {
   background-image: url(../../images/bg_main.png);
-  background-size: cover;
-  //?LENGHT
+  background-size: contain;
+  background-repeat: no-repeat;
+  ////LENGHT
   width: 80%;
   height: 100%;
   margin-inline: auto;
@@ -317,6 +318,7 @@ div.footer .credit {
     // display: block;
     text-align: center;
     font-size: 1rem;
+    padding-bottom: 20px;
   }
 
   p {
@@ -352,6 +354,11 @@ div.footer .credit {
   //  LENGTH
   margin: auto;
   margin-top: 40px;
+  margin-bottom: 40px;
+
+  h2 {
+    visibility: hidden;
+  }
 
   .cards {
     display: flex;
@@ -371,11 +378,14 @@ div.footer .credit {
     padding: 10px 20px;
     //  DECORATION
     border-radius: 30px;
+    box-shadow: 10px 5px 5px #7c7c7c;
 
-    img {
+    svg {
       margin-top: 25px;
       max-width: 70px;
+      max-height: 70px;
       margin-bottom: 15px;
+      cursor: pointer;
     }
 
     h3 {
@@ -385,14 +395,18 @@ div.footer .credit {
       font-size: 0.95rem;
       text-transform: uppercase;
       font-weight: 800;
+      text-align: center;
     }
 
     p {
       font-size: 0.8rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
-
-  @media (width > 1090px) {
+  @media (width > 600px) {
     p {
       font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
     }
@@ -411,3 +425,4 @@ div.footer .credit {
     }
   }
 }
+
