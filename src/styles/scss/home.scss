@@ -406,6 +406,7 @@ div.footer .credit {
       overflow: hidden;
     }
   }
+
   @media (width > 600px) {
     p {
       font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
@@ -501,6 +502,117 @@ div.footer .credit {
         opacity: 1;
 
       }
+    }
+  }
+}
+
+.inputBox input:hover[type="submit"] {
+  background: #64DD17;
+}
+
+.inputBox ::placeholder {
+  color: #999;
+}
+
+
+
+
+#contact {
+  background: linear-gradient(-45deg, #ee7752, #ca870b9c, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  height: 100vh;
+  border-radius: 50px;
+  max-width: none;
+  width: auto;
+  min-height: 80vh;
+  margin-inline: 20px;
+  padding: 100px 50px 50px 50px;
+
+  .contentForm {
+    position: relative;
+    text-align: center;
+    width: 1000px;
+
+    header {
+      h2 {
+        color: #FFF;
+      }
+    }
+  }
+
+  .contactForm {
+    position: relative;
+    display: grid;
+
+    .formBox {
+      position: relative;
+      width: 100%;
+
+      input {
+        padding: 10px;
+        font-size: 1.1em;
+        outline: none;
+        border: 0px solid #FFF;
+        background: #FFFFFF40;
+        border-radius: 10px;
+      }
+
+      .persinfo {
+        display: flex;
+        gap: 20px;
+      }
+
+      .inputBox {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 50%;
+
+        span {
+          color: #FFF;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          font-weight: 500;
+          text-align: left;
+        }
+
+        textarea {
+          padding: 10px;
+          font-size: 1.1em;
+          outline: none;
+          border: 0px solid #FFF;
+          resize: none;
+          min-height: 220px;
+          margin-bottom: 10px;
+          background: #FFFFFF40;
+          border-radius: 10px;
+          resize: vertical;
+        }
+
+        [type="submit"] {
+          background: #00C853;
+          color: #FFF;
+          border: none;
+          font-size: 1.1em;
+          width: 200px;
+          font-weight: 500;
+          cursor: pointer;
+          padding: 14px 15px;
+          border-radius: 10px;
+        }
+      }
+
+      .message {
+        .inputBox {
+          width: 100%;
+        }
+      }
+      @media (width > 600px) {
+         #contact{
+          padding: 100px 50px 50px 50px;
+        }
+    }
     }
   }
 }
