@@ -387,3 +387,96 @@ div.footer .credit {
 #team .member:hover .details {
   opacity: 1;
 }
+
+.inputBox input:hover[type=submit] {
+  background: #64DD17;
+}
+
+.inputBox ::placeholder {
+  color: #999;
+}
+
+#contact {
+  background: linear-gradient(-45deg, #ee7752, rgba(202, 135, 11, 0.6117647059), #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  height: 100vh;
+  border-radius: 50px;
+  max-width: none;
+  width: auto;
+  min-height: 80vh;
+  margin-inline: 20px;
+  padding: 100px 50px 50px 50px;
+}
+#contact .contentForm {
+  position: relative;
+  text-align: center;
+  width: 1000px;
+}
+#contact .contentForm header h2 {
+  color: #FFF;
+}
+#contact .contactForm {
+  position: relative;
+  display: grid;
+}
+#contact .contactForm .formBox {
+  position: relative;
+  width: 100%;
+}
+#contact .contactForm .formBox input {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 0px solid #FFF;
+  background: rgba(255, 255, 255, 0.2509803922);
+  border-radius: 10px;
+}
+#contact .contactForm .formBox .persinfo {
+  display: flex;
+  gap: 20px;
+}
+#contact .contactForm .formBox .inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+#contact .contactForm .formBox .inputBox span {
+  color: #FFF;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: left;
+}
+#contact .contactForm .formBox .inputBox textarea {
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 0px solid #FFF;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.2509803922);
+  border-radius: 10px;
+  resize: vertical;
+}
+#contact .contactForm .formBox .inputBox [type=submit] {
+  background: #00C853;
+  color: #FFF;
+  border: none;
+  font-size: 1.1em;
+  width: 200px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
+  border-radius: 10px;
+}
+#contact .contactForm .formBox .message .inputBox {
+  width: 100%;
+}
+@media (width > 600px) {
+  #contact .contactForm .formBox #contact {
+    padding: 100px 50px 50px 50px;
+  }
+}
