@@ -506,113 +506,87 @@ div.footer .credit {
   }
 }
 
-.inputBox input:hover[type="submit"] {
-  background: #64DD17;
-}
-
-.inputBox ::placeholder {
-  color: #999;
-}
-
-
-
+// contact
 
 #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(-45deg, #ee7752, #ca870b9c, #23a6d5, #23d5ab);
+  background-size: auto;
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
   height: 100vh;
   border-radius: 50px;
-  max-width: none;
-  width: auto;
-  min-height: 80vh;
-  margin-inline: 20px;
-  padding: 100px 50px 50px 50px;
+  min-height: 126vh;
+  padding: 100px;
+  width: 97%;
+  max-width: 1300px;
+  margin-bottom: 20px;
 
-  .contentForm {
-    position: relative;
-    text-align: center;
-    width: 1000px;
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: hsla(198, 100%, 63%, 0.062);
+    border-radius: 8px;
+  }
 
-    header {
-      h2 {
-        color: #FFF;
-      }
+  input[type=submit] {
+    background-color: hsl(var(--bluish));
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+
+
+    &:hover {
+      background-color: #45a049;
     }
   }
 
-  .contactForm {
-    position: relative;
-    display: grid;
 
-    .formBox {
-      position: relative;
-      width: 100%;
+  .container {
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-      input {
-        padding: 10px;
-        font-size: 1.1em;
-        outline: none;
-        border: 0px solid #FFF;
-        background: #FFFFFF40;
-        border-radius: 10px;
-      }
-
-      .persinfo {
-        display: flex;
-        gap: 20px;
-      }
-
-      .inputBox {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        width: 50%;
-
-        span {
-          color: #FFF;
-          margin-top: 10px;
-          margin-bottom: 5px;
-          font-weight: 500;
-          text-align: left;
-        }
-
-        textarea {
-          padding: 10px;
-          font-size: 1.1em;
-          outline: none;
-          border: 0px solid #FFF;
-          resize: none;
-          min-height: 220px;
-          margin-bottom: 10px;
-          background: #FFFFFF40;
-          border-radius: 10px;
-          resize: vertical;
-        }
-
-        [type="submit"] {
-          background: #00C853;
-          color: #FFF;
-          border: none;
-          font-size: 1.1em;
-          width: 200px;
-          font-weight: 500;
-          cursor: pointer;
-          padding: 14px 15px;
-          border-radius: 10px;
-        }
-      }
-
-      .message {
-        .inputBox {
-          width: 100%;
-        }
-      }
-      @media (width > 600px) {
-         #contact{
-          padding: 100px 50px 50px 50px;
-        }
+  header {
+    text-align: center;
+    h2{
+      color: hsl(var(--whitish));
+      font-size: 2rem;
     }
+    p {
+      color: hsl(var(--whitish));
+    }
+  }
+
+  .column {
+    float: left;
+    margin-top: 6px;
+    padding: 20px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .column,
+    input[type=submit] {
+      width: 100%;
+      margin-top: 0;
     }
   }
 }
