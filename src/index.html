@@ -186,63 +186,33 @@
     </section>
 
     <section id="contact">
-      <div class="contentForm">
+      <div class="container">
         <header>
-          <h2>Send Us A Message</h2>
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
         </header>
-        <div class="contactForm">
-          <form>
-            <div class="formBox">
-              <div class="persinfo">
-                <div class="inputBox">
-                  <span>Name :</span>
-                  <input type="text" placeholder="">
-                </div>
-                <div class="inputBox">
-                  <span>Email :</span>
-                  <input type="text" placeholder="">
-                </div>
-              </div>
 
-              <div class="persinfo">
-                <div class="inputBox">
-                  <span>Mobile :</span>
-                  <input type="text" placeholder="">
-                </div>
-                <div class="inputBox">
-                  <span>Subject :</span>
-                  <input type="text" placeholder="">
-                </div>
-              </div>
-
-              <div class="message">
-                <div class="inputBox">
-                  <span>Message :</span>
-                  <textarea placeholder=""></textarea>
-                </div>
-              </div>
-
-              <div style="float: right;" class="message">
-                <div class="inputBox">
-                  <input type="submit" value="Send">
-                </div>
-              </div>
-            </div>
+        <div class="column">
+          <!-- <form action="/action_page.php"> -->
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your full name..">
+            <label for="lname">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email..">
+            <label for="country">Mobile</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Your phone number..">
+            <label for="country">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What would you like to ask us ?">
+            <label for="subject">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+            <input type="submit" value="Submit">
           </form>
         </div>
+
       </div>
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer">
-      <!-- <div class="share">
-        <a href="#" class="styles.fa brands fa-facebook-f"></a>
-        <a href="#" class="styles.fa - brands fa-twitter"></a>
-        <a href="#" class="styles.fa - brands fa- instagram"></a>
-        <a href="#" class="styles.fa - brands fa- linkedin"></a>
-        <a href="#" class="styles.fa - brands fa- pinterest"></a>
-      </div> -->
       <div class="links">
         <a href="#"> home</a>
         <a href="#about">about</a>
