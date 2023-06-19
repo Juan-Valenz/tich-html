@@ -378,7 +378,8 @@ div.footer .credit {
     padding: 10px 20px;
     //  DECORATION
     border-radius: 30px;
-    box-shadow: 10px 5px 5px #7c7c7c;
+    box-shadow: 25px 25px 51px #bebebe,
+      -25px -25px 51px #ffffff;
 
     svg {
       margin-top: 25px;
@@ -560,10 +561,12 @@ div.footer .credit {
 
   header {
     text-align: center;
-    h2{
+
+    h2 {
       color: hsl(var(--whitish));
       font-size: 2rem;
     }
+
     p {
       color: hsl(var(--whitish));
     }
