@@ -284,7 +284,7 @@ div.footer .credit {
   width: 80%;
   padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 10px 5px 5px #7c7c7c;
+  box-shadow: 25px 25px 51px #bebebe, -25px -25px 51px #ffffff;
 }
 #services .card svg {
   margin-top: 25px;
@@ -340,11 +340,6 @@ div.footer .credit {
   max-width: 800px;
   margin: 0 auto;
 }
-#team h3 {
-  font-size: 40px;
-  font-weight: 200;
-  margin-bottom: 10px;
-}
 #team .teamBox {
   position: relative;
   display: grid;
@@ -383,6 +378,15 @@ div.footer .credit {
   background-color: #000;
   opacity: 0;
   transition: 0.5s linear;
+}
+#team .member .details h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: hsl(var(--bluish));
+}
+#team .member .details span {
+  color: hsl(var(--whitish));
 }
 #team .member:hover .details {
   opacity: 1;
