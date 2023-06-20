@@ -405,41 +405,45 @@ footer.footer {
   }
 }
 
-footer {
-  background-color: hsl(var(--black));
+#footer {
+  background-color: hsl(var(--blackish));
 }
-footer .credit {
+#footer .share a .facebook {
+  fill: hsl(var(--facebook));
+}
+#footer .share a .linkedin {
+  fill: hsl(var(--linkedin));
+}
+#footer .share a .dribbble {
+  fill: hsl(var(--dribbble));
+}
+#footer .credit {
   color: white;
 }
-footer .credit span {
+#footer .credit span {
   color: hsl(var(--blue));
 }
-footer .links a {
+#footer .links a {
   color: white;
   border: gray;
 }
-footer .links a:hover {
-  background-color: hsl(var(--blue));
-}
-footer .share a:hover {
-  border-radius: 20px;
+#footer .links a:hover {
   background-color: hsl(var(--blue));
 }
 
-footer {
+#footer {
   text-align: center;
 }
-footer .share {
+#footer .share {
   padding: 2rem 0;
 }
-footer .share svg {
+#footer .share a {
+  display: inline-block;
+}
+#footer .share a svg {
   height: 2rem;
   width: 2rem;
-  line-height: 1rem;
-  font-size: 1rem;
   margin: 0.3rem;
-  text-transform: uppercase;
-  cursor: pointer;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -449,42 +453,24 @@ footer .share svg {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
-footer .share svg:hover {
+#footer .share a:hover svg {
   cursor: pointer;
-  animation-name: bounce;
   -moz-animation-name: bounce;
 }
-@keyframes bounce {
-  0%, 100%, 20%, 50%, 80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-footer .links {
+#footer .links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 0;
   gap: 1rem;
 }
-footer .links a {
+#footer .links a {
   padding: 0.7rem 2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   border-radius: 20px;
 }
-footer .credit {
+#footer .credit {
   font-weight: lighter;
   padding: 1.5rem;
 }
