@@ -34,6 +34,12 @@
   --btn-secondary-bg: 0 0% 0%;
   --btn-accent-bg: 0 0% 0%;
 
+
+  --facebook: 221, 44%, 41%;
+  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  --linkedin: 201, 100%, 35%;
+  --dribbble: 337, 79%, 61%;
+
   --txt-dark: var(--black);
   --txt-light: var(--white);
   --txt-accent: var(--blue);
@@ -88,5 +94,31 @@ section {
   margin-inline: auto;
   &.container {
     margin-inline: 30px;
+  }
+}
+
+//// ANIMATIONS
+@keyframes bounce {
+
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px)
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px)
   }
 }
