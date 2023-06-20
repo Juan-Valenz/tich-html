@@ -536,9 +536,24 @@ footer.footer {
 //  FOOTER
 ////  COLORS
 
-footer {
-  background-color: hsl(var(--black));
-
+#footer {
+  background-color: hsl(var(--blackish));
+  .share {
+    a {
+      .facebook {
+          fill: hsl(var(--facebook));
+      }
+      .instagram {
+       
+      }
+      .linkedin{
+        fill: hsl(var(--linkedin));
+      }
+      .dribbble{
+        fill: hsl(var(--dribbble));
+      }
+    }
+  }
   .credit {
     color: white;
 
@@ -546,7 +561,7 @@ footer {
       color: hsl(var(--blue));
     }
   }
-
+  
   .links a {
     color: white;
     border: gray;
@@ -556,66 +571,38 @@ footer {
     }
   }
 
-  .share a:hover {
-    border-radius: 20px;
-    background-color: hsl(var(--blue));
-  }
+  
 }
 
 //// POSITIONING AND STYLES
-footer {
+#footer {
   text-align: center;
 
   .share {
     padding: 2rem 0;
 
-    svg {
-      height: 2rem;
-      width: 2rem;
-      line-height: 1rem;
-      font-size: 1rem;
-      margin: 0.3rem;
-      text-transform: uppercase;
-      cursor: pointer;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      -webkit-animation-iteration-count: infinite;
+    a {
+       display: inline-block;
+      svg {
+        height: 2rem;
+        width: 2rem;
+        margin: 0.3rem;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
 
-      &:hover {
+      }
+
+      &:hover svg {
         cursor: pointer;
-        animation-name: bounce;
         -moz-animation-name: bounce;
       }
 
-      @keyframes bounce {
-
-        0%,
-        100%,
-        20%,
-        50%,
-        80% {
-          -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-          transform: translateY(0)
-        }
-
-        40% {
-          -webkit-transform: translateY(-30px);
-          -ms-transform: translateY(-30px);
-          transform: translateY(-30px)
-        }
-
-        60% {
-          -webkit-transform: translateY(-15px);
-          -ms-transform: translateY(-15px);
-          transform: translateY(-15px)
-        }
-      }
     }
   }
 
