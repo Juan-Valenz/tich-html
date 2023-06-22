@@ -169,7 +169,6 @@ footer.footer {
         align-items: center;
         //  TEXT
         font-size: 1.5rem;
-
         //  LENGTH
         width: 100%;
         min-height: 85px;
@@ -224,11 +223,13 @@ footer.footer {
 
     .navigation {
       display: flex;
-      gap: 20px;
+      gap: 5px;
 
       a {
         //    LENGTH
-        width: 80px;
+        width: 115px;
+        min-width: 80px;
+        text-align: center;
 
         &:where(:hover, :active, .active) {
           font-weight: bold;
@@ -462,9 +463,9 @@ footer.footer {
   border-radius: 50px;
   min-height: 126vh;
   padding: 100px;
-  width: 97%;
-  max-width: 1300px;
-  margin-bottom: 20px;
+  width: auto;
+  max-width: none;
+  margin: 20px;
 
   input[type=text],
   select,
@@ -517,6 +518,12 @@ footer.footer {
     float: left;
     margin-top: 6px;
     padding: 20px;
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      column-gap: 10px;
+    }
   }
 
   .row:after {
@@ -525,13 +532,21 @@ footer.footer {
     clear: both;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (width < 600px) {
+    padding-inline: 5%;
 
     .column,
     input[type=submit] {
       width: 100%;
       margin-top: 0;
     }
+  }
+
+  @media (width > 1080px) {
+    .column>div {
+      flex-direction: row;
+    }
+
   }
 }
 
