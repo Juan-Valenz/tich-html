@@ -28,23 +28,15 @@ var data = {
         Nav_1: "Home",
         Nav_2: "About",
         Nav_3: "Services",
-        Nav_4: "Portfolio",
         Nav_5: "Team",
         Nav_6: "Contact",
-        title: "we just make ",
-        detail: "things",
-        title_2: "matter",
     },
     finnish: {
         Nav_1: "Koti",
         Nav_2: "Meistä",
         Nav_3: "Palvelut",
-        Nav_4: "Portfolio",
         Nav_5: "Tiimi",
         Nav_6: "Yhteystiedot",
-        title: "me vain teemme ",
-        detail: "asioita",
-        title_2: "asia",
     },
 };
 
@@ -110,6 +102,3 @@ const closeMenu = () => {
     html.classList.remove("noOverflow");
     linkList.classList.remove("active");
 }
-
-// HeroCode
-// Herocode

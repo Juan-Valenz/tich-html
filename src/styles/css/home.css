@@ -8,6 +8,46 @@ footer.footer {
   background-color: hsl(var(--secondary-bg));
 }
 
+.hero span {
+  color: hsl(var(--txt-accent));
+}
+
+.hero {
+  background-image: url(../../images/bg_main.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/clamp(272px, 50% + 150px, 850px) 1fr;
+  justify-content: start;
+  align-items: center;
+}
+.hero h1 {
+  grid-area: 1/1/1 span/1 span;
+  align-self: end;
+  width: max(100%, 375px);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: 0.2s font-size;
+}
+.hero > p {
+  grid-area: 2/1/2 span/1 span;
+  font-size: 0.8rem;
+  text-align: justify;
+  transition: 0.3s font-size;
+}
+@media (width > 600px) {
+  .hero h1 {
+    font-size: clamp(1.3rem, 1.034rem + 0.71vw, 1.7rem);
+  }
+  .hero > p {
+    font-size: clamp(0.9rem, 0.6rem + 0.81vw, 1.1rem);
+  }
+}
+
 #nav {
   background-color: hsl(var(--main-bg));
 }
@@ -133,46 +173,6 @@ footer.footer {
     display: none;
   }
 }
-.hero span {
-  color: hsl(var(--txt-accent));
-}
-
-.hero {
-  background-image: url(../../images/bg_main.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 80%;
-  height: 100%;
-  margin-inline: auto;
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/clamp(272px, 50% + 150px, 850px) 1fr;
-  justify-content: start;
-  align-items: center;
-}
-.hero h1 {
-  grid-area: 1/1/1 span/1 span;
-  align-self: end;
-  width: max(100%, 375px);
-  font-size: 1.1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  transition: 0.2s font-size;
-}
-.hero > p {
-  grid-area: 2/1/2 span/1 span;
-  font-size: 0.8rem;
-  text-align: justify;
-  transition: 0.3s font-size;
-}
-@media (width > 600px) {
-  .hero h1 {
-    font-size: clamp(1.3rem, 1.034rem + 0.71vw, 1.7rem);
-  }
-  .hero > p {
-    font-size: clamp(0.9rem, 0.6rem + 0.81vw, 1.1rem);
-  }
-}
-
 #about {
   width: 80%;
   margin-inline: min(150px, auto);
@@ -362,7 +362,7 @@ footer.footer {
   border-radius: 8px;
 }
 #contact input[type=submit] {
-  background-color: hsl(var(--bluish));
+  background-color: rgba(0, 0, 0, 0.199);
   color: white;
   padding: 15px 25px;
   border: none;
@@ -406,7 +406,7 @@ footer.footer {
 }
 
 #footer {
-  background-color: hsl(var(--blackish));
+  background-color: hsl(var(--black));
 }
 #footer .share a .facebook {
   fill: hsl(var(--facebook));
