@@ -161,10 +161,12 @@ footer.footer {
   }
   #nav .navigation {
     display: flex;
-    gap: 20px;
+    gap: 5px;
   }
   #nav .navigation a {
-    width: 80px;
+    width: 115px;
+    min-width: 80px;
+    text-align: center;
   }
   #nav .navigation a:where(:hover, :active, .active) {
     font-weight: bold;
@@ -345,9 +347,9 @@ footer.footer {
   border-radius: 50px;
   min-height: 126vh;
   padding: 100px;
-  width: 97%;
-  max-width: 1300px;
-  margin-bottom: 20px;
+  width: auto;
+  max-width: none;
+  margin: 20px;
 }
 #contact input[type=text],
 #contact select,
@@ -392,16 +394,29 @@ footer.footer {
   margin-top: 6px;
   padding: 20px;
 }
+#contact .column > div {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+}
 #contact .row:after {
   content: "";
   display: table;
   clear: both;
 }
-@media screen and (max-width: 600px) {
+@media screen and (width < 600px) {
+  #contact {
+    padding-inline: 5%;
+  }
   #contact .column,
   #contact input[type=submit] {
     width: 100%;
     margin-top: 0;
+  }
+}
+@media (width > 1080px) {
+  #contact .column > div {
+    flex-direction: row;
   }
 }
 
