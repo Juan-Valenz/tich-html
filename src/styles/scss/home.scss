@@ -100,11 +100,10 @@ footer.footer {
   }
 }
 
-@media (width > 1080px) {
-  #nav.down {
-    border-bottom-color: hsl(var(--accent-bg) / 0.3);
-  }
+#nav.down {
+  border-bottom-color: hsl(var(--accent-bg) / 0.3);
 }
+
 
 
 /// POSITIONING AND STYLES
@@ -131,6 +130,11 @@ footer.footer {
     padding-inline: 20px;
   }
 
+  &.down {
+    //    DECORATION
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
 
 }
 
@@ -216,9 +220,6 @@ footer.footer {
 
     &.down {
       height: 80px;
-      //    DECORATION
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
     }
 
     .navigation {
@@ -324,22 +325,45 @@ footer.footer {
       cursor: pointer;
     }
 
-    h3 {
-      //  LENGTH
-      margin-bottom: 10px;
-      //  TEXT
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      font-weight: 800;
-      text-align: center;
-    }
+    .content {
+      display: flex;
+      flex-direction: column;
 
-    p {
-      font-size: 0.8rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      h3 {
+        //  LENGTH
+        margin-bottom: 10px;
+        //  TEXT
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+        color: hsl(var(--txt-accent));
+
+      }
+
+      p {
+        font-size: 0.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      button {
+        width: 85px;
+        height: 30px;
+        font-weight: bold;
+        color: hsl(var(--txt-light));
+        background-color: hsl(var(--accent-bg));
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        margin-inline: auto;
+      }
     }
   }
 
@@ -470,18 +494,18 @@ footer.footer {
   input[type=text],
   select,
   textarea {
-  ////LENGHT
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  ////TEXT
-  font-size: .8rem;
-  ////DECORATION
-  border: 1px solid hsl(var(--main-bg));
-  resize: vertical;
-  background-color: hsl(var(--secondary-bg) / 0.062);
-  border-radius: 8px;
+    ////LENGHT
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    ////TEXT
+    font-size: .8rem;
+    ////DECORATION
+    border: 1px solid hsl(var(--main-bg));
+    resize: vertical;
+    background-color: hsl(var(--secondary-bg) / 0.062);
+    border-radius: 8px;
 
     @media (width > 600px) {
       font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
