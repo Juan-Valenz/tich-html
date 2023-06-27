@@ -3,13 +3,14 @@
 @mixin colors-test {
   --test-color: hsl(213 9% 21%);
   --test-color: hsl(218, 100%, 63%);
-  --test-color: #eeff00;
+  --test-color: hsl(0, 0%, 70%);
 }
+
 @mixin colors {
   // base colors
   --black: 0 0% 8%;
   --blackish: 210 3% 15%;
-  --grey: 0 0% 22%;
+  --grey: 0 0% 70%;
   --whitish: 0 0% 94%;
   --white: 0 0% 100%;
   // blues
@@ -20,8 +21,9 @@
   // greens
   --green: 106 100% 63%;
 }
+
 @mixin color-theme {
-  //  HSL
+  //  HSL !!!
   --main-bg: var(--whitish);
   --secondary-bg: var(--black);
   --accent-bg: var(--blue);
@@ -34,16 +36,15 @@
   --btn-secondary-bg: 0 0% 0%;
   --btn-accent-bg: 0 0% 0%;
 
-
-  --facebook: 221, 44%, 41%;
-  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  --linkedin: 201, 100%, 35%;
-  --dribbble: 337, 79%, 61%;
-
   --txt-dark: var(--black);
   --txt-light: var(--white);
   --txt-accent: var(--blue);
+
+  --facebook: 221, 44%, 41%;
+  --linkedin: 201, 100%, 35%;
+  --dribbble: 337, 79%, 61%;
 }
+
 :root {
   @include colors;
   @include colors-test;
@@ -66,9 +67,11 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
 html.noOverflow {
   overflow-y: hidden;
 }
+
 body {
   background-color: hsl(var(--main-bg));
   color: hsl(var(--txt-dark));
@@ -78,23 +81,37 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 a,
 button {
   cursor: pointer;
 }
+
 main {
   display: grid;
   align-items: start;
+  // justify-content: center;
   row-gap: 20px;
 }
+
 section {
   /* LENGTH */
-  width: 100%;
-  max-width: 1180px;
-  margin-inline: auto;
-  &.container {
-    margin-inline: 30px;
+  width: auto;
+
+  @media (width < 1180px) {
+    &.container {
+      margin-inline: 30px;
+    }
   }
+
+  @media (width > 1180px) {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+  }
+
+
+
 }
 
 //// ANIMATIONS
