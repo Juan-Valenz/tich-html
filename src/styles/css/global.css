@@ -2,7 +2,7 @@
 :root {
   --black: 0 0% 8%;
   --blackish: 210 3% 15%;
-  --grey: 0 0% 22%;
+  --grey: 0 0% 70%;
   --whitish: 0 0% 94%;
   --white: 0 0% 100%;
   --blue: 218 100% 63%;
@@ -11,7 +11,7 @@
   --green: 106 100% 63%;
   --test-color: hsl(213 9% 21%);
   --test-color: hsl(218, 100%, 63%);
-  --test-color: #eeff00;
+  --test-color: hsl(0, 0%, 70%);
   --main-bg: var(--whitish);
   --secondary-bg: var(--black);
   --accent-bg: var(--blue);
@@ -21,13 +21,12 @@
   --btn-main-bg: 0 0% 0%;
   --btn-secondary-bg: 0 0% 0%;
   --btn-accent-bg: 0 0% 0%;
-  --facebook: 221, 44%, 41%;
-  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  --linkedin: 201, 100%, 35%;
-  --dribbble: 337, 79%, 61%;
   --txt-dark: var(--black);
   --txt-light: var(--white);
   --txt-accent: var(--blue);
+  --facebook: 221, 44%, 41%;
+  --linkedin: 201, 100%, 35%;
+  --dribbble: 337, 79%, 61%;
   --border-radius-s: 5px;
   --border-radius-m: 10px;
   --border-radius-l: 15px;
@@ -73,12 +72,19 @@ main {
 
 section {
   /* LENGTH */
-  width: 100%;
-  max-width: 1180px;
-  margin-inline: auto;
+  width: auto;
 }
-section.container {
-  margin-inline: 30px;
+@media (width < 1180px) {
+  section.container {
+    margin-inline: 30px;
+  }
+}
+@media (width > 1180px) {
+  section {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+  }
 }
 
 @keyframes bounce {
