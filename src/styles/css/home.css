@@ -56,7 +56,7 @@ footer.footer {
   background-color: hsl(var(--main-bg));
 }
 .navigation a:where(:hover, :active, .active) {
-  color: #304ffe;
+  color: hsl(var(--txt-accent));
 }
 
 .burger {
@@ -64,10 +64,10 @@ footer.footer {
 }
 
 .btn_language {
-  background-color: rgba(204, 204, 204, 0.2509803922);
+  background-color: hsl(var(--grey)/0.251);
 }
 .btn_language.active {
-  background-color: hsl(218, 100%, 63%);
+  background-color: hsl(var(--accent-bg));
   color: hsl(var(--main-bg));
 }
 
@@ -105,7 +105,7 @@ footer.footer {
 
 .options {
   display: flex;
-  gap: 80px;
+  gap: 35px;
 }
 .options .navigation {
   display: none;
@@ -177,7 +177,7 @@ footer.footer {
 }
 #about {
   width: 80%;
-  margin-inline: min(150px, auto);
+  margin-inline: auto;
 }
 #about h2 {
   text-align: center;
@@ -198,7 +198,7 @@ footer.footer {
 }
 
 #services .card {
-  background-color: #fff;
+  background-color: hsl(var(--white));
 }
 
 #services {
@@ -216,7 +216,7 @@ footer.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 }
 #services .card {
   display: flex;
@@ -227,7 +227,7 @@ footer.footer {
   width: 80%;
   padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 25px 25px 51px #bebebe, -25px -25px 51px #ffffff;
+  box-shadow: 5px 5px 0px hsl(var(--grey));
 }
 #services .card svg {
   margin-top: 25px;
@@ -268,7 +268,7 @@ footer.footer {
 }
 
 #team {
-  padding: 100px;
+  justify-self: normal;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -302,7 +302,8 @@ footer.footer {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
+  box-shadow: 5px 5px 0px hsl(var(--grey));
 }
 #team .member img {
   width: 100%;
@@ -318,7 +319,7 @@ footer.footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: hsl(var(--black));
   opacity: 0;
   transition: 0.5s linear;
 }
@@ -339,41 +340,50 @@ footer.footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 20px;
   background: linear-gradient(-45deg, #ee7752, rgba(202, 135, 11, 0.6117647059), #23a6d5, #23d5ab);
   background-size: auto;
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
-  height: 100vh;
   border-radius: 50px;
-  min-height: 126vh;
-  padding: 100px;
-  width: auto;
-  max-width: none;
-  margin: 20px;
 }
 #contact input[type=text],
 #contact select,
 #contact textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
   margin-top: 6px;
   margin-bottom: 16px;
+  font-size: 0.8rem;
+  border: 1px solid hsl(var(--main-bg));
   resize: vertical;
-  background-color: hsla(198, 100%, 63%, 0.062);
+  background-color: hsl(var(--secondary-bg)/0.062);
   border-radius: 8px;
 }
-#contact input[type=submit] {
-  background-color: rgba(0, 0, 0, 0.199);
-  color: white;
+@media (width > 600px) {
+  #contact input[type=text],
+  #contact select,
+  #contact textarea {
+    font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
+  }
+}
+#contact textarea {
+  min-height: 140px;
+}
+#contact button {
+  background-color: hsl(var(--secondary-bg)/0.2);
+  color: hsl(var(--txt-light));
   padding: 15px 25px;
   border: none;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid hsl(var(--main-bg));
   border-radius: 8px;
 }
-#contact input[type=submit]:hover {
-  background-color: #45a049;
+#contact button:hover {
+  background-color: hsl(var(--accent-bg));
 }
 #contact .container {
   border-radius: 5px;
@@ -383,11 +393,11 @@ footer.footer {
   text-align: center;
 }
 #contact header h2 {
-  color: hsl(var(--whitish));
+  color: hsl(var(--txt-light));
   font-size: 2rem;
 }
 #contact header p {
-  color: hsl(var(--whitish));
+  color: hsl(var(--txt-light));
 }
 #contact .column {
   float: left;
@@ -421,7 +431,7 @@ footer.footer {
 }
 
 #footer {
-  background-color: hsl(var(--black));
+  background-color: hsl(var(--secondary-bg));
 }
 #footer .share a .facebook {
   fill: hsl(var(--facebook));
@@ -433,17 +443,17 @@ footer.footer {
   fill: hsl(var(--dribbble));
 }
 #footer .credit {
-  color: white;
+  color: hsl(var(--txt-light));
 }
 #footer .credit span {
-  color: hsl(var(--blue));
+  color: hsl(var(--txt-accent));
 }
 #footer .links a {
-  color: white;
-  border: gray;
+  color: hsl(var(--txt-light));
+  border: hsl(var(--grey));
 }
 #footer .links a:hover {
-  background-color: hsl(var(--blue));
+  color: hsl(var(--txt-accent));
 }
 
 #footer {
@@ -484,8 +494,15 @@ footer.footer {
   font-size: 1.5rem;
   text-transform: uppercase;
   border-radius: 20px;
+  width: 255.5px;
+}
+#footer .links a:hover {
+  font-weight: bold;
 }
 #footer .credit {
   font-weight: lighter;
   padding: 1.5rem;
+}
+#footer .credit span {
+  font-weight: bold;
 }
