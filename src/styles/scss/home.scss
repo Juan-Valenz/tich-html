@@ -1,3 +1,4 @@
+@use "bootstrap";
 //  LAYOUT
 
 //SECTION: HEADER
@@ -7,7 +8,7 @@
   height: 100vh;
   height: 100dvh;
   padding-top: 150px;
-
+  min-height: 700px;
 }
 
 footer.footer {
@@ -44,8 +45,7 @@ footer.footer {
     ////  LENGTH
     width: max(100%, 375px);
     ////  TEXT
-    font-size: 1.1rem;
-    font-weight: 800;
+    @include bootstrap.h3;
     text-transform: uppercase;
     ////DECORATION
     transition: 0.2s font-size;
@@ -53,24 +53,14 @@ footer.footer {
 
   >p {
     grid-area: 2 / 1 / 2 span / 1 span;
-    //  TEXT
-    font-size: 0.8rem;
-    text-align: justify;
+    //  TEXT    
+    @include bootstrap.p_small;
+
+    text-align: left;
     //
     transition: 0.3s font-size;
   }
 
-  @media (width > 600px) {
-    h1 {
-      ////  TEXT
-      font-size: clamp(1.3rem, 1.034rem + 0.71vw, 1.7rem);
-    }
-
-    >p {
-      //// TEXT
-      font-size: clamp(0.9rem, 0.6rem + 0.81vw, 1.1rem);
-    }
-  }
 }
 
 //SECTION: NAVIGATION
@@ -251,17 +241,17 @@ footer.footer {
   width: 80%;
   margin-inline: auto;
 
+
   h2 {
-    // display: block;
     text-align: center;
-    font-size: 1rem;
     padding-bottom: 20px;
+    @include bootstrap.h2;
   }
 
   p {
-    // display: block;
     text-align: justify;
     font-size: 0.8rem;
+    @include bootstrap.p_small;
   }
 
   @media (width > 1095px) {
@@ -485,7 +475,7 @@ footer.footer {
   max-width: none;
   margin: 20px;
   ////DECORATION
-  background: linear-gradient(-45deg, #ee7752, #ca870b9c, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf, );
   background-size: auto;
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
@@ -500,16 +490,13 @@ footer.footer {
     margin-top: 6px;
     margin-bottom: 16px;
     ////TEXT
+    @include bootstrap.p_small;
     font-size: .8rem;
     ////DECORATION
     border: 1px solid hsl(var(--main-bg));
     resize: vertical;
     background-color: hsl(var(--secondary-bg) / 0.062);
     border-radius: 8px;
-
-    @media (width > 600px) {
-      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-    }
   }
 
   textarea {
