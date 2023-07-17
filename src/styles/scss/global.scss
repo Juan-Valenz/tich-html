@@ -1,54 +1,12 @@
+@use "bootstrap";
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
-@mixin colors-test {
-  --test-color: hsl(213 9% 21%);
-  --test-color: hsl(218, 100%, 63%);
-  --test-color: hsl(0, 0%, 70%);
-}
-
-@mixin colors {
-  // base colors
-  --black: 0 0% 8%;
-  --blackish: 210 3% 15%;
-  --grey: 0 0% 70%;
-  --whitish: 0 0% 94%;
-  --white: 0 0% 100%;
-  // blues
-  --blue: 218 100% 63%;
-  --bluish: 180 61% 50%;
-  // reds
-  --red: 0 100% 50%;
-  // greens
-  --green: 106 100% 63%;
-}
-
-@mixin color-theme {
-  //  HSL !!!
-  --main-bg: var(--whitish);
-  --secondary-bg: var(--black);
-  --accent-bg: var(--blue);
-
-  --card-main-bg: 0 0% 0%;
-  --card-secondary-bg: 0 0% 0%;
-  --card-accent-bg: 0 0% 0%;
-
-  --btn-main-bg: 0 0% 0%;
-  --btn-secondary-bg: 0 0% 0%;
-  --btn-accent-bg: 0 0% 0%;
-
-  --txt-dark: var(--black);
-  --txt-light: var(--white);
-  --txt-accent: var(--blue);
-
-  --facebook: 221, 44%, 41%;
-  --linkedin: 201, 100%, 35%;
-  --dribbble: 337, 79%, 61%;
-}
 
 :root {
-  @include colors;
-  @include colors-test;
-  @include color-theme;
+  @include bootstrap.colors;
+  @include bootstrap.colors-test;
+  @include bootstrap.color-theme;
 
   --border-radius-s: 5px;
   --border-radius-m: 10px;
@@ -196,3 +154,225 @@ section {
     background-position: 0% 50%;
   }
 }
+
+
+//SECTION: NAVIGATION
+////  COLORS
+#nav {
+  background-color: hsl(var(--main-bg));
+}
+
+.navigation {
+  background-color: hsl(var(--main-bg));
+
+  a:where(:hover, :active, .active) {
+    color: hsl(var(--txt-accent));
+  }
+}
+
+.burger {
+  background-color: transparent;
+}
+
+.btn_language {
+  background-color: hsl(var(--grey) / 0.251);
+
+  &.active {
+    background-color: hsl(var(--accent-bg));
+    color: hsl(var(--main-bg));
+  }
+}
+
+#nav.down {
+  border-bottom-color: hsl(var(--accent-bg) / 0.3);
+}
+
+
+
+/// POSITIONING AND STYLES
+#nav {
+  //POSITION
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  //    LENGTH
+  width: 100%;
+  height: 80px;
+  transition: 0.3s height;
+
+  >div {
+    //    FLEX
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //    LENGTH
+    width: 100%;
+    height: 100%;
+    padding-inline: 20px;
+  }
+
+  &.down {
+    //    DECORATION
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+}
+
+.logo {
+  position: relative;
+  //    LENGTH
+  height: 64px;
+  width: 80px;
+  min-height: 64px;
+  min-width: 80px;
+}
+
+.options {
+  display: flex;
+  gap: 35px;
+
+  .navigation {
+    display: none;
+
+    &.active {
+      overflow-x: auto;
+      //  POSITION
+      position: absolute;
+      inset: 80px 0 0 0;
+      height: calc(100dvh - 80px);
+      //  FLEX
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      //  DECORATION
+      transition: 1s height;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //  TEXT
+        font-size: 1.5rem;
+        //  LENGTH
+        width: 100%;
+        min-height: 85px;
+      }
+    }
+  }
+
+  .languages {
+    //    FLEX
+    display: flex;
+    gap: 5px;
+    //    TEXT
+    font-size: 0.95rem;
+
+    .btn_language {
+      //  FLEX
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //    LENGTH
+      width: 55px;
+      height: 30px;
+      //    DECORATION
+      border-radius: 8px;
+
+      &.active {
+        //  TEXT
+        font-weight: 800;
+      }
+    }
+  }
+
+  .burger {
+    //  LENGTH
+    height: 30px;
+    width: 30px;
+    //  DECORATION
+    border: none;
+  }
+}
+
+@media (width > 1080px) {
+  #nav {
+    height: 150px;
+
+    &.down {
+      height: 80px;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 5px;
+
+      a {
+        //    LENGTH
+        width: 115px;
+        min-width: 80px;
+        text-align: center;
+
+        &:where(:hover, :active, .active) {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+}
+
+//SECTION HERO
+///COLORS
+
+.hero {
+  span {
+    color: hsl(var(--txt-accent));
+  }
+}
+
+///POSITIONING AND STYLES
+.hero {
+  background-image: url(../../images/bg_main.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  ////LENGHT
+  width: 80%;
+  height: 100%;
+  margin-inline: auto;
+  ////GRID
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / clamp(272px, 50% + 150px, 850px) 1fr;
+  justify-content: start;
+  align-items: center;
+
+  h1 {
+    grid-area: 1 / 1 / 1 span / 1 span;
+    align-self: end;
+    ////  LENGTH
+    width: 100%;
+    ////  TEXT
+    @include bootstrap.h4;
+    text-transform: uppercase;
+    ////DECORATION
+    transition: 0.2s font-size;
+  }
+
+  >p {
+    grid-area: 2 / 1 / 2 span / 1 span;
+    //  TEXT    
+    @include bootstrap.p_small;
+
+    text-align: left;
+    //
+    transition: 0.3s font-size;
+  }
+
+}
+
