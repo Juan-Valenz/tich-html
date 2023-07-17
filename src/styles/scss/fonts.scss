@@ -70,3 +70,11 @@
     font-size: clamp(0.93rem, 0.61rem + 0.85vw, 1.63rem);
   }
 }
+
+@mixin p_tiny {
+  font-size: 0.6rem;
+
+  @media (width > 600px) {
+    font-size: clamp(0.7rem, .4rem + 0.85vw, 1.3rem);
+  }
+}
