@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "sass":"sass --watch --no-source-map src/styles/scss/global.scss:src/styles/css/global.css src/styles/scss/home.scss:src/styles/css/home.css"
+    "sass":"sass --watch --no-source-map src/styles/scss:src/styles/css"
   },
   "dependencies": {
     "sass": "^1.62.1"
