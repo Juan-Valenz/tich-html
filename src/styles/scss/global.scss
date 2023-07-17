@@ -97,6 +97,7 @@ main {
 section {
   /* LENGTH */
   width: auto;
+  min-height: 700px;
 
   @media (width < 1180px) {
     &.container {
@@ -110,9 +111,50 @@ section {
     margin-inline: auto;
   }
 
-
-
 }
+
+
+
+// @mixin h1 {
+//   ////  TEXT
+//   font-size: 1.1rem;
+//   font-weight: bold;
+
+//   @media (width > 600px) {
+//     font-size: clamp(1.3rem, 1.034rem + 0.71vw, 1.7rem);
+//   }
+// }
+
+
+// @mixin h2 {
+//   font-weight: bold;
+//   font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
+// }
+
+// @mixin p_large {
+//   //// TEXT
+//   font-size: clamp(1rem, 0.6rem + 0.81vw, 1.2rem);
+// }
+
+// @mixin p_medium {
+//   //// TEXT
+//   font-size: clamp(0.9rem, 0.6rem + 0.81vw, 1.1rem);
+// }
+
+// @mixin p_small {
+//   font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 //// ANIMATIONS
 @keyframes bounce {
@@ -137,5 +179,20 @@ section {
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     transform: translateY(-15px)
+  }
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
