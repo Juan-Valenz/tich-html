@@ -46,7 +46,7 @@
   }
 }
 
-@mixin p_large {
+@mixin p_colossal {
   font-size: 1.3rem;
 
   @media (width > 600px) {
@@ -55,7 +55,7 @@
   }
 }
 
-@mixin p_medium {
+@mixin p_large {
   font-size: 1rem;
 
   @media (width > 600px) {
@@ -63,18 +63,20 @@
   }
 }
 
-@mixin p_small {
+@mixin p_medium {
   font-size: 0.83rem;
 
   @media (width > 600px) {
-    font-size: clamp(0.93rem, 0.61rem + 0.85vw, 1.63rem);
+    font-size: clamp(.93rem, 0.61rem + 0.85vw, 1.63rem);
   }
 }
 
-@mixin p_tiny {
-  font-size: 0.6rem;
+@mixin p_small {
+  font-size: clamp(.7rem, .4rem + 0.85vw, 1.3rem);
 
-  @media (width > 600px) {
-    font-size: clamp(0.7rem, .4rem + 0.85vw, 1.3rem);
-  }
+}
+
+@mixin p_tiny {
+  font-size: clamp(.5rem, .2rem + 0.85vw, 1.1rem);
+
 }
