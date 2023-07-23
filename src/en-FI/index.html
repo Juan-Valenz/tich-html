@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/css/global.css" />
   <link rel="stylesheet" href="../styles/css/home.css" />
-  <link rel="alternate" hreflang="fi-FI" href="../index.html">
+  <link rel="alternate" hreflang="fi-FI" href="../">
   <title>TiCH</title>
   <meta name="description" content=" We are a skilled team of website developers who create customized
   websites that enhance communication with your customers and team. Our
@@ -27,17 +27,17 @@
       <img class="logo" src="../images/logo.png" alt="tich logo" />
       <div class="options">
         <div class="navigation">
-          <a onclick="closeMenu()" href="#home" class="active">Home</a>
-          <a onclick="closeMenu()" href="#about">
+          <a onclick="closeMenu()" href="./" class="active">Home</a>
+          <a onclick="closeMenu()" href="">
             <p>About</p>
           </a>
-          <a onclick="closeMenu()" href="#services">
+          <a onclick="closeMenu()" href="./services/">
             <p>Services</p>
           </a>
-          <a onclick="closeMenu()" href="#team">
+          <a onclick="closeMenu()" href="">
             <p>Team</p>
           </a>
-          <a onclick="closeMenu()" href="#contact">
+          <a onclick="closeMenu()" href="">
             <p>Contact</p>
           </a>
         </div>
@@ -100,7 +100,8 @@
     </section>
 
     <section id="services">
-      <h2>Services</h2>
+      <h2>What services can we provide for you ?</h2>
+      <p></p>
       <div class="cards">
         <article class="card">
 
@@ -117,11 +118,13 @@
 
             <h3>Homepage Services</h3>
             <p>
-              <span>Homepage</span> service let`s you discover satisfaction throught your unique website journey. 
+              <span>Homepage</span> service let`s you discover satisfaction throught your unique website journey.
             </p>
-            <button>
-              Read more
-            </button>
+            <a href="services/indexEn.html">
+              <button>
+                Read more
+              </button>
+            </a>
             <dialog>
               Elevate your customer experience to new heights through our bespoke websites,
               meticulously crafted to deliver a flawless user journey that aligns perfectly
@@ -143,11 +146,14 @@
           <div class="content">
             <h3>ERP Services</h3>
             <p>
-              <span>Enterprise resource planning (ERP)</span> provides you a way to digitalise internal documents and your company`s intelligence.
+              <span>Enterprise resource planning (ERP)</span> provides you a way to digitalise internal documents and
+              your company`s intelligence.
             </p>
-            <button> 
-              Read more
-            </button>
+            <a href="services/index.html">
+              <button>
+                Read more
+              </button>
+            </a>
             <dialog>
               Enhance the efficiency of your business operations by leveraging the
               power of our tailored Enterprise Resource Planning (ERP) websites.
@@ -186,11 +192,14 @@
           <div class="content">
             <h3>Employees portal</h3>
             <p>
-               <span>INTRANET</span> provides your employees with personalise intel such as personal payroll and schedule.  
+              <span>INTRANET</span> provides your employees with personalise intel such as personal payroll and
+              schedule.
             </p>
-            <button>
-              Read more
-            </button>
+            <a href="services/index.html">
+              <button>
+                Read more
+              </button>
+            </a>
             <dialog>
               To improve transparency and communication within the company, we will
               provide employees with regular updates on their roles and facilitate
@@ -200,6 +209,8 @@
         </article>
       </div>
     </section>
+
+
 
     <section id="team">
       <div class="subject">
@@ -241,23 +252,27 @@
         <div class="column">
           <!-- <form action="/action_page.php"> -->
           <div>
-            <div>
-              <label for="fname">Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your full name..">
-            </div>
-            <div>
-              <label for="lname">Email</label>
-              <input type="text" id="email" name="email" placeholder="Your email..">
-            </div>
-            <div>
-              <label for="country">Mobile</label>
-              <input type="text" id="mobile" name="mobile" placeholder="Your phone number..">
-            </div>
+            <label>
+              <p>Full Name :</p>
+              <input id="fname" placeholder="Your full name...">
+            </label>
+            <label>
+              <p>Email :</p>
+              <input id="email" placeholder="Your email...">
+            </label>
+            <label>
+              <p>Mobile :</p>
+              <input id="mobile" placeholder="Your phone number...">
+            </label>
           </div>
-          <label for="country">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="What would you like to ask us ?">
-          <label for="subject">Message</label>
-          <textarea id="message" name="message" placeholder="Write something.."></textarea>
+          <label>
+            <p>Subject :</p>
+            <input id="subject" placeholder="What would you like to ask us ?">
+          </label>
+          <label>
+            <p>Message :</p>
+            <textarea id="message" placeholder="Let us now about the details of your project ..."></textarea>
+          </label>
           <button>
             Submit
           </button>
@@ -337,11 +352,11 @@
       </a>
     </div>
     <div class="links">
-      <a href="#"> home</a>
-      <a href="#about">about</a>
-      <a href="#services">services</a>
-      <a href="#team">team</a>
-      <a href="#contact">contact</a>
+      <a href="./"> home</a>
+      <a href="">about</a>
+      <a href="./services/">services</a>
+      <a href="">team</a>
+      <a href="">contact</a>
     </div>
     <div class="credit">
       &#169 2023 <span>TiCH</span> / All Rights Reserved
@@ -349,7 +364,7 @@
   </footer>
   <!-- SCRIPTS -->
   <script src="../js/nav.js"></script>
-  <script src="../js/resize.js" rel=""></script>
+ 
 </body>
 
 </html>
