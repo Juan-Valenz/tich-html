@@ -249,10 +249,12 @@ section {
   color: hsl(var(--txt-accent));
 }
 
+header {
+  overflow: hidden;
+}
+
 .hero {
-  background-image: url(../../images/bg_main.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
   width: 80%;
   height: 100%;
   margin-inline: auto;
@@ -260,6 +262,23 @@ section {
   grid-template: 1fr 1fr 1fr 1fr/clamp(272px, 50% + 150px, 850px) 1fr;
   justify-content: start;
   align-items: center;
+}
+.hero > div {
+  position: absolute;
+  background-image: url(../../images/bg_main.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 800px;
+  aspect-ratio: 1/1;
+  z-index: -1;
+  left: 60%;
+  transition: all 1s linear;
+}
+@media (width < 800px) {
+  .hero > div {
+    width: 600px;
+    translate: -300px 400px;
+  }
 }
 .hero h1 {
   grid-area: 1/1/1 span/1 span;
@@ -277,12 +296,7 @@ section {
 }
 .hero > p {
   grid-area: 2/1/2 span/1 span;
-  font-size: 0.83rem;
+  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
   text-align: left;
   transition: 0.3s font-size;
-}
-@media (width > 600px) {
-  .hero > p {
-    font-size: clamp(0.93rem, 0.61rem + 0.85vw, 1.63rem);
-  }
 }
