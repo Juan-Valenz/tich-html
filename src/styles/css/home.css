@@ -12,6 +12,7 @@ footer.footer {
 #about {
   width: 80%;
   margin-inline: auto;
+  margin-top: 30px;
 }
 #about h2 {
   text-align: center;
@@ -25,7 +26,7 @@ footer.footer {
   }
 }
 #about p {
-  text-align: justify;
+  text-align: left;
   font-size: 0.8rem;
   font-size: 0.83rem;
 }
@@ -56,7 +57,14 @@ footer.footer {
   margin-bottom: 40px;
 }
 #services h2 {
-  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#services p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 #services .cards {
   display: flex;
@@ -95,8 +103,10 @@ footer.footer {
   color: hsl(var(--txt-accent));
 }
 #services .card .content p {
+  min-height: 60px;
   font-size: 0.8rem;
   display: -webkit-box;
+  text-align: center;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -104,7 +114,12 @@ footer.footer {
 #services .card .content p span {
   font-weight: bold;
 }
-#services .card .content button {
+#services .card .content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services .card .content a button {
   width: 85px;
   height: 30px;
   font-weight: bold;
@@ -215,26 +230,26 @@ footer.footer {
   animation: gradient 20s ease infinite;
   border-radius: 50px;
 }
-#contact input[type=text],
+#contact label > * {
+  color: hsl(var(--whitish));
+}
+#contact label > p {
+  font-weight: bold;
+  cursor: pointer;
+}
+#contact input,
 #contact select,
 #contact textarea {
   width: 100%;
   padding: 12px;
   margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 0.6rem;
+  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
   font-size: 0.8rem;
   border: 1px solid hsl(var(--main-bg));
   resize: vertical;
   background-color: hsl(var(--secondary-bg)/0.062);
   border-radius: 8px;
-}
-@media (width > 600px) {
-  #contact input[type=text],
-  #contact select,
-  #contact textarea {
-    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  }
 }
 #contact textarea {
   min-height: 140px;
