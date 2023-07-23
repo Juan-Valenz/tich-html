@@ -22,7 +22,7 @@ footer.footer {
 #about {
   width: 80%;
   margin-inline: auto;
-
+  margin-top: 30px;
 
   h2 {
     text-align: center;
@@ -31,9 +31,9 @@ footer.footer {
   }
 
   p {
-    text-align: justify;
+    text-align: left;
     font-size: 0.8rem;
-    @include bootstrap.p_small;
+    @include bootstrap.p_medium;
   }
 
   @media (width > 1095px) {
@@ -66,7 +66,15 @@ footer.footer {
   margin-bottom: 40px;
 
   h2 {
-    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 
   .cards {
@@ -75,6 +83,7 @@ footer.footer {
     align-items: center;
     gap: 25px;
   }
+
 
   .card {
     display: flex;
@@ -88,6 +97,7 @@ footer.footer {
     //  DECORATION
     border-radius: 30px;
     box-shadow: 5px 5px 0px hsl(var(--grey));
+
 
     svg {
       margin-top: 25px;
@@ -114,27 +124,36 @@ footer.footer {
       }
 
       p {
+        min-height: 60px;
         font-size: 0.8rem;
         display: -webkit-box;
+        text-align: center;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+
 
         span {
           font-weight: bold;
         }
       }
 
-      button {
-        width: 85px;
-        height: 30px;
-        font-weight: bold;
-        color: hsl(var(--txt-light));
-        background-color: hsl(var(--accent-bg));
-        border-radius: 5px;
-        border: none;
-        margin-top: 10px;
-        margin-inline: auto;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 85px;
+          height: 30px;
+          font-weight: bold;
+          color: hsl(var(--txt-light));
+          background-color: hsl(var(--accent-bg));
+          border-radius: 5px;
+          border: none;
+          margin-top: 10px;
+          margin-inline: auto;
+        }
       }
     }
   }
@@ -263,7 +282,18 @@ footer.footer {
   animation: gradient 20s ease infinite;
   border-radius: 50px;
 
-  input[type=text],
+  label {
+    >* {
+      color: hsl(var(--whitish));
+    }
+
+    >p {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  input,
   select,
   textarea {
     ////LENGHT
@@ -272,7 +302,7 @@ footer.footer {
     margin-top: 6px;
     margin-bottom: 16px;
     ////TEXT
-    @include bootstrap.p_tiny;
+    @include bootstrap.p_small;
     font-size: .8rem;
     ////DECORATION
     border: 1px solid hsl(var(--main-bg));
