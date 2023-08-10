@@ -22,7 +22,6 @@ footer.footer {
 #about {
   width: 80%;
   margin-inline: auto;
-  margin-top: 30px;
 
   h2 {
     text-align: center;
@@ -62,7 +61,6 @@ footer.footer {
   gap: 30px;
   //  LENGTH
   margin: auto;
-  margin-top: 40px;
   margin-bottom: 40px;
 
   h2 {
@@ -143,17 +141,15 @@ footer.footer {
         justify-content: center;
         align-items: center;
 
-        button {
-          width: 85px;
-          height: 30px;
-          font-weight: bold;
-          color: hsl(var(--txt-light));
-          background-color: hsl(var(--accent-bg));
-          border-radius: 5px;
-          border: none;
-          margin-top: 10px;
-          margin-inline: auto;
-        }
+        width: 85px;
+        height: 30px;
+        font-weight: bold;
+        color: hsl(var(--txt-light));
+        background-color: hsl(var(--accent-bg));
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        margin-inline: auto;
       }
     }
   }
@@ -179,15 +175,60 @@ footer.footer {
 }
 
 #team {
-  justify-self: normal;
-  min-height: 100vh;
+
+  ///COLORS
+  .member.v1 {
+    background-color: hsl(var(--card-main-bg));
+    box-shadow: 5px 5px 0px hsl(var(--grey));
+
+    h3 {
+      color: hsl(var(--txt-light));
+      background-color: hsl(var(--accent-bg));
+    }
+  }
+
+  .member.v1 img {
+    box-shadow: 2px 2px 0px hsl(var(--grey));
+  }
+
+  .contacts svg {
+    fill: hsl(var(--linkedin));
+  }
+
+  /// POSITION & DISPLAY
   display: flex;
   justify-content: center;
   align-items: center;
 
 
+
   .subject {
     position: relative;
+  }
+
+  .teamBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+    grid-gap: 30px;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .member.v1 {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(auto-fit);
+
+    img {
+      display: grid;
+      position: relative;
+    }
+  }
+
+
+  /// LENGTH AND STYLES
+  .subject {
     text-align: center;
     width: 100%;
   }
@@ -199,69 +240,190 @@ footer.footer {
 
 
   .teamBox {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
     max-width: 100%;
     margin-top: 40px;
   }
 
-  .member {
-    overflow: hidden;
-    //// 
-    position: relative;
-    background: #000;
-    min-height: 300px;
-    width: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
-    box-shadow: 5px 5px 0px hsl(var(--grey));
+  .member.v1 {
+    min-height: 350px;
+    max-width: 400px;
+    width: auto;
+    border-radius: 20px;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 150px;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 50%;
     }
 
-    .details {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    p {
+      //// LENGHT
+      padding-inline: 20px;
+      margin-bottom: 20px;
+      ////TEXT
+      font-size: 13px;
+    }
+
+    .contacts {
+      //// LENGTH 
+      margin-bottom: 20px;
+      //// TEXT 
+      font-weight: normal;
+
+      svg {
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+
+    h3 {
+      padding: 20px;
+      border-radius: 0 0 20px 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .member.v2 {
+
+    ///COLORS
+    background-color: hsl(var(--card-main-bg));
+    box-shadow: 5px 5px 0px hsl(var(--grey));
+
+    header {
+      color: hsl(var(--txt-light));
+      background-color: hsl(var(--accent-bg));
+    }
+
+    /// POSITION & DISPLAY  
+    display: grid;
+    grid-template-rows: 1fr 69px;
+
+    header {
+      grid-area: 2/1/1 span/1 span;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: hsl(var(--black));
-      opacity: 0;
-      transition: .5s linear;
+    }
 
-      h3 {
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: hsl(var(--bluish));
+    main {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+
+      img {
+        justify-self: center;
+        align-self: center;
       }
 
-      span {
-        color: hsl(var(--whitish));
+      .content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        .contacts {
+          display: grid;
+          grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
+          align-content: stretch;
+
+          >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
 
-    &:hover {
 
-      .details {
-        opacity: 1;
+    /// LENGTH AND STYLES
+    border-radius: 10px;
+    overflow: hidden;
 
+    main {
+      height: 410px;
+
+      img {
+        width: 150px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+      .content {
+        padding-inline: 20px;
+          font-size: 13px;
+        .bio {
+          font-size: 12px;
+        }
+        .contacts {
+          .linkedin_icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }
+
+  // .member {
+  //   // overflow: hidden;
+  //   //// 
+  //   position: relative;
+  //   background: #000;
+  //   min-height: 300px;
+  //   width: 250px;
+  //   margin: 0 auto;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   border-radius: 10px;
+  //   box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
+  //   box-shadow: 5px 5px 0px hsl(var(--grey));
+  //   h3 {
+  //     width: 100%;
+  //     border-radius: 25px 25px 0 0;
+  //     padding: 30px 0;
+  //     font-weight: 800;
+  //     margin: 0;
+  //     color: hsl(var(--bluish));
+  //   }
+
+  //   img {
+  //     display: block;
+  //     position: relative;
+  //     background-color: #E6EBEE;
+  //     width: 150px;
+  //     height: 150px;
+  //     margin: 0 auto;
+  //     margin-top: 30px;
+  //     overflow: hidden;
+  //     border-radius: 50%;
+  //   }
+
+  //   .details {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     background-color: hsl(var(--black));
+  //     opacity: 0;
+  //     transition: .5s linear;
+
+
+  //     span {
+  //       color: hsl(var(--whitish));
+  //     }
+  //   }
+  // }
 }
+
+
+
 
 // SECTION: CONTACT
 
@@ -339,6 +501,7 @@ footer.footer {
 
   header {
     text-align: center;
+    text-transform: uppercase;
 
     h2 {
       color: hsl(var(--txt-light));

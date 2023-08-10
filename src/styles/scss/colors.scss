@@ -1,45 +1,54 @@
-
 @mixin colors-test {
-    --test-color: hsl(213 9% 21%);
-    --test-color: hsl(218, 100%, 63%);
-    --test-color: hsl(0, 0%, 70%);
-  }
-  
-  @mixin colors {
-    // base colors
-    --black: 0 0% 8%;
-    --blackish: 210 3% 15%;
-    --grey: 0 0% 70%;
-    --whitish: 0 0% 94%;
-    --white: 0 0% 100%;
-    // blues
-    --blue: 218 100% 63%;
-    --bluish: 180 61% 50%;
-    // reds
-    --red: 0 100% 50%;
-    // greens
-    --green: 106 100% 63%;
-  }
-  
-  @mixin color-theme {
-    //  HSL !!!
-    --main-bg: var(--whitish);
-    --secondary-bg: var(--black);
-    --accent-bg: var(--blue);
-  
-    --card-main-bg: 0 0% 0%;
-    --card-secondary-bg: 0 0% 0%;
-    --card-accent-bg: 0 0% 0%;
-  
-    --btn-main-bg: 0 0% 0%;
-    --btn-secondary-bg: 0 0% 0%;
-    --btn-accent-bg: 0 0% 0%;
-  
-    --txt-dark: var(--black);
-    --txt-light: var(--white);
-    --txt-accent: var(--blue);
-  
-    --facebook: 221, 44%, 41%;
-    --linkedin: 201, 100%, 35%;
-    --dribbble: 337, 79%, 61%;
-  }
+  --test-color: hsl(213, 100%, 50%);
+  --test-color: hsl(24, 100%, 63%);
+  --test-color: hsl(0, 0%, 70%);
+}
+
+@mixin colors {
+  // base colors
+  --black: 0 0% 8%;
+  --blackish: 210 3% 15%;
+  --grey: 0 0% 70%;
+  --whitish: 0 0% 94%;
+  --white: 0 0% 100%;
+  // blues
+  --blue-dark: 218 50% 40%;
+  --blue: 218 100% 63%;
+  --bluish: 180 61% 50%;
+  // reds
+  --red: 0 100% 50%;
+  // greens
+  --green: 106 100% 63%;
+  // browns
+  --brown: 30 100% 32%;
+  // orange
+  --orange: 24 100% 63%;
+  // orange
+  --yellow-dark: 55 100% 43%;
+}
+
+@mixin color-theme {
+  //  HSL !!!
+  --main-bg: var(--whitish);
+  --secondary-bg: var(--black);
+  --accent-bg: var(--blue-dark);
+
+  --card-main-bg: var(--white);
+  --card-secondary-bg: var(--whitish);
+  --card-accent-bg: var(--accent-bg);
+  --card-shadow-bg: var(--grey);
+
+  --btn-main-bg: var(--grey);
+  --btn-secondary-bg: var(--blue);
+  --btn-accent-bg: var(--accent-bg);
+  --btn-shadow-bg: var(--grey);
+
+  --txt-dark: var(--black);
+  --txt-light: var(--white);
+  --txt-accent: var(--blue-dark);
+
+  --facebook: 221, 44%, 41%;
+  --linkedin: 201, 100%, 35%;
+  --dribbble: 337, 79%, 61%;
+}
+

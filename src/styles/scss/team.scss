@@ -22,7 +22,6 @@ footer.footer {
 #about {
   width: 80%;
   margin-inline: auto;
-  margin-top: 30px;
 
   h2 {
     text-align: center;
@@ -62,7 +61,6 @@ footer.footer {
   gap: 30px;
   //  LENGTH
   margin: auto;
-  margin-top: 40px;
   margin-bottom: 40px;
 
   h2 {
@@ -180,7 +178,7 @@ footer.footer {
 
 #team {
   justify-self: normal;
-  min-height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
