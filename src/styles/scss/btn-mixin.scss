@@ -1,0 +1,60 @@
+@mixin btn-call-to-action {
+    ///COLORS
+    color: hsl(var(--txt-light));
+    background-color: hsl(var(--btn-accent-bg));
+    box-shadow: 3px 3px 0px hsl(var(--btn-shadow-bg) / 0.8);
+    &:hover {
+      ////DECORATION
+      box-shadow: none;
+    }
+    /// LENGTH AND STYLES
+    ////TEXT
+    font-weight: bold;
+    ////DECORATION
+    border-radius: 5px;
+    border: none;
+    ////ANIMATION
+    transition: linear 800ms box-shadow;
+    &:hover {
+      ////ANIMATION
+      transition: linear 500ms box-shadow;
+    }
+  }
+  @mixin btn-multiple-options {
+    ///COLORS
+    color: hsl(var(--text-dark));
+    background-color: hsl(var(--btn-main-bg) / 0.251);
+    &:hover {
+      background-color: hsl(var(--btn-accent-bg) / 0.2);
+    }
+    &.active {
+      color: hsl(var(--txt-light));
+      background-color: hsl(var(--btn-accent-bg));
+    }
+    /// LENGTH AND STYLES
+    &.active {
+      font-weight: bold;
+    }
+    ////DECORATION
+    border-radius: 8px;
+    border: none;
+    ////ANIMATION
+    transition: linear 200ms background-color, linear 100ms color,
+      linear 200ms font-weight;
+  }
+  @mixin btn-option {
+    ///COLORS
+    color: hsl(var(--text-dark));
+    background-color: hsl(var(--btn-main-bg) / 0.251);
+    &:hover {
+      background-color: hsl(var(--btn-accent-bg) / 0.2);
+    }
+    /// LENGTH AND STYLES
+    ////DECORATION
+    border-radius: 8px;
+    border: none;
+    ////ANIMATION
+    transition: linear 200ms background-color, linear 100ms color,
+      linear 200ms font-weight;
+  }
+  
