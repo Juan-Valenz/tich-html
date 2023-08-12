@@ -205,57 +205,82 @@ footer.footer {
     margin-top: 40px;
   }
 
-  .member {
-    overflow: hidden;
-    //// 
-    position: relative;
-    background: #000;
-    min-height: 300px;
-    width: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
+  .member.v2 {
+
+    ///COLORS
+    background-color: hsl(var(--card-main-bg));
     box-shadow: 5px 5px 0px hsl(var(--grey));
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    header {
+      color: hsl(var(--txt-light));
+      background-color: hsl(var(--accent-bg));
     }
 
-    .details {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    /// POSITION & DISPLAY  
+    display: grid;
+    grid-template-rows: 1fr 69px;
+
+    header {
+      grid-area: 2/1/1 span/1 span;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: hsl(var(--black));
-      opacity: 0;
-      transition: .5s linear;
+    }
 
-      h3 {
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: hsl(var(--bluish));
+    main {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+
+      img {
+        justify-self: center;
+        align-self: center;
       }
 
-      span {
-        color: hsl(var(--whitish));
+      .content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        .contacts {
+          display: grid;
+          grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
+          align-content: stretch;
+
+          >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
 
-    &:hover {
 
-      .details {
-        opacity: 1;
+    /// LENGTH AND STYLES
+    border-radius: 10px;
+    overflow: hidden;
 
+    main {
+      height: 410px;
+
+      img {
+        width: 150px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+      .content {
+        padding-inline: 20px;
+          font-size: 13px;
+        .bio {
+          font-size: 12px;
+        }
+        .contacts {
+          .linkedin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }
