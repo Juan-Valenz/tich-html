@@ -282,7 +282,7 @@ footer.footer {
 #team .member.v2 main .content .bio {
   font-size: 12px;
 }
-#team .member.v2 main .content .contacts .linkedin_icon {
+#team .member.v2 main .content .contacts .linkedin {
   display: flex;
   justify-content: center;
   align-items: center;
