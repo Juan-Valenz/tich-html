@@ -24,15 +24,14 @@ footer.footer {
     font-size: clamp(1.6rem, 1.33rem + 0.73vw, 2.2rem);
   }
 }
-#about p {
-  text-align: left;
-  font-size: 0.8rem;
-  font-size: 0.83rem;
+#about .description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-@media (width > 600px) {
-  #about p {
-    font-size: clamp(0.93rem, 0.61rem + 0.85vw, 1.63rem);
-  }
+#about .description p {
+  text-align: left;
+  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
 }
 @media (width > 1095px) {
   #about h2 {
@@ -58,6 +57,7 @@ footer.footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding-inline: 10px;
 }
 #services p {
   display: flex;
