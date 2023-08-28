@@ -341,6 +341,7 @@ main > section h2 a {
   font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
   text-align: justify;
   transition: 0.3s font-size;
+  margin-inline: 10px;
 }
 #hero .hero > div {
   width: 600px;
