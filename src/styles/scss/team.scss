@@ -178,7 +178,7 @@ footer.footer {
 
 #team {
   justify-self: normal;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,6 +216,10 @@ footer.footer {
       background-color: hsl(var(--accent-bg));
     }
 
+    .linkedin {
+      fill: hsl(var(--linkedin));
+    }
+
     /// POSITION & DISPLAY  
     display: grid;
     grid-template-rows: 1fr 69px;
@@ -245,11 +249,23 @@ footer.footer {
           display: grid;
           grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
           align-content: stretch;
+          max-height: 100px;
 
           >* {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+          .email {
+            font-size: 13px;
+          }
+
+          span {
+            font-size: 25px;
+          }
+
+          .linkedin {
+            width: 20px;
           }
         }
       }
@@ -268,18 +284,13 @@ footer.footer {
         aspect-ratio: 1/1;
         border-radius: 50%;
       }
+
       .content {
         padding-inline: 20px;
-          font-size: 13px;
+        font-size: 13px;
+
         .bio {
           font-size: 12px;
-        }
-        .contacts {
-          .linkedin {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
         }
       }
     }
