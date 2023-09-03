@@ -2,7 +2,7 @@
 //  LAYOUT
 
 //SECTION: HEADER
-//// POSITIONING AND STYLES
+/// POSITIONING AND STYLES
 .header {
   //  LENGTH
   height: 100vh;
@@ -11,52 +11,21 @@
   min-height: 700px;
 }
 
-footer.footer {
-  background-color: hsl(var(--secondary-bg));
-}
-
-
-
-//SECTION: ABOUT
-/// POSITIONING AND STYLES
-#about {
-  width: 80%;
-  margin-inline: auto;
-
-
-  h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    @include bootstrap.h2;
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    p {
-      text-align: left;
-      @include bootstrap.p_small;
-    }
-  }
-
-  @media (width > 1095px) {
-    h2 {
-      font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
-    }
-
-    p {
-      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-    }
-  }
-}
 
 //SECTION: SERVICES
 ///  COLORS
 #services {
   .card {
+    box-shadow: 5px 5px 0px hsl(var(--grey));
     background-color: hsl(var(--white));
+
+    a {
+      color: hsl(var(--txt-light));
+      background-color: hsl(var(--accent-bg));
+    }
+    h3 {
+      color: hsl(var(--txt-accent));
+    }
   }
 }
 
@@ -65,15 +34,12 @@ footer.footer {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  //  LENGTH
-  margin: auto;
-  margin-bottom: 40px;
+
 
   h2 {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-inline: 10px;
   }
 
   p {
@@ -96,41 +62,12 @@ footer.footer {
     align-items: center;
     flex-grow: 1;
     gap: 15px;
-    //  LENGTH
-    width: 80%;
-    padding: 10px 20px;
-    //  DECORATION
-    border-radius: 30px;
-    box-shadow: 5px 5px 0px hsl(var(--grey));
-
-
-    svg {
-      margin-top: 25px;
-      max-width: 70px;
-      max-height: 70px;
-      margin-bottom: 15px;
-      cursor: pointer;
-    }
 
     .content {
       display: flex;
       flex-direction: column;
 
-      h3 {
-        //  LENGTH
-        margin-bottom: 10px;
-        //  TEXT
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        font-weight: 800;
-        text-align: center;
-        color: hsl(var(--txt-accent));
-
-      }
-
       p {
-        min-height: 60px;
-        font-size: 0.8rem;
         display: -webkit-box;
         text-align: center;
         -webkit-line-clamp: 3;
@@ -146,25 +83,10 @@ footer.footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        width: 85px;
-        height: 30px;
-        font-weight: bold;
-        color: hsl(var(--txt-light));
-        background-color: hsl(var(--accent-bg));
-        border-radius: 5px;
-        border: none;
-        margin-top: 10px;
-        margin-inline: auto;
       }
     }
   }
 
-  @media (width > 600px) {
-    p {
-      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-    }
-  }
 
   @media (width > 1090px) {
     .cards {
@@ -172,31 +94,83 @@ footer.footer {
       justify-content: space-between;
       align-items: stretch;
 
-      .card {
-        width: 350px;
-        padding: 1rem;
-      }
+
     }
   }
 }
 
-#team {
+/// LENGHT AND STYLE
+#services {
+  //  LENGTH
+  margin: auto;
+  margin-bottom: 40px;
 
-  ///COLORS
-  .member.v1 {
-    background-color: hsl(var(--card-main-bg));
-    box-shadow: 5px 5px 0px hsl(var(--grey));
+  h2 {
+    padding-inline: 10px;
+  }
 
-    h3 {
-      color: hsl(var(--txt-light));
-      background-color: hsl(var(--accent-bg));
+  .cards {
+    //  LENGTH
+    width: auto;
+    padding: 10px 20px;
+    //  DECORATION
+  }
+  .card {
+    width: 350px;
+    padding: 1rem;
+    border-radius: 30px;
+      
+      svg {
+        margin-top: 25px;
+        max-width: 70px;
+        max-height: 70px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+
+      h3 {
+        //  LENGTH
+        margin-bottom: 10px;
+        //  TEXT
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      p {
+        min-height: 60px;
+        font-size: 0.8rem;
+      }
+
+      a {
+        width: 85px;
+        height: 30px;
+        margin-top: 10px;
+        margin-inline: auto;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+      }
+    }
+  
+  @media (width > 600px) {
+    p {
+      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
     }
   }
 
-  .member.v1 img {
-    box-shadow: 2px 2px 0px hsl(var(--grey));
+  @media (width < 600px) {
+    .card {
+      width: 290px
+    }
   }
+}
 
+//SECTION: TEAM
+#team {
+
+  ///COLORS
   .contacts svg {
     fill: hsl(var(--linkedin));
   }
@@ -248,48 +222,6 @@ footer.footer {
   .teamBox {
     max-width: 100%;
     margin-top: 40px;
-  }
-
-  .member.v1 {
-    min-height: 350px;
-    max-width: 400px;
-    width: auto;
-    border-radius: 20px;
-
-    img {
-      width: 150px;
-      aspect-ratio: 1/1;
-      margin: 0 auto;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      border-radius: 50%;
-    }
-
-    p {
-      //// LENGHT
-      padding-inline: 20px;
-      margin-bottom: 20px;
-      ////TEXT
-      font-size: 13px;
-    }
-
-    .contacts {
-      //// LENGTH 
-      margin-bottom: 20px;
-      //// TEXT 
-      font-weight: normal;
-
-      svg {
-        width: 20px;
-        cursor: pointer;
-      }
-    }
-
-    h3 {
-      padding: 20px;
-      border-radius: 0 0 20px 20px;
-      text-transform: uppercase;
-    }
   }
 
   .member.v2 {
@@ -363,149 +295,84 @@ footer.footer {
         .bio {
           font-size: 12px;
         }
-
-        .contacts {
-          .linkedin {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        }
       }
     }
   }
-
-  // .member {
-  //   // overflow: hidden;
-  //   //// 
-  //   position: relative;
-  //   background: #000;
-  //   min-height: 300px;
-  //   width: 250px;
-  //   margin: 0 auto;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   border-radius: 10px;
-  //   box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
-  //   box-shadow: 5px 5px 0px hsl(var(--grey));
-  //   h3 {
-  //     width: 100%;
-  //     border-radius: 25px 25px 0 0;
-  //     padding: 30px 0;
-  //     font-weight: 800;
-  //     margin: 0;
-  //     color: hsl(var(--bluish));
-  //   }
-
-  //   img {
-  //     display: block;
-  //     position: relative;
-  //     background-color: #E6EBEE;
-  //     width: 150px;
-  //     height: 150px;
-  //     margin: 0 auto;
-  //     margin-top: 30px;
-  //     overflow: hidden;
-  //     border-radius: 50%;
-  //   }
-
-  //   .details {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     background-color: hsl(var(--black));
-  //     opacity: 0;
-  //     transition: .5s linear;
-
-
-  //     span {
-  //       color: hsl(var(--whitish));
-  //     }
-  //   }
-  // }
 }
 
-
-
-
 // SECTION: CONTACT
+///COLOR 
 
 #contact {
-  ////FLEX
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ////LENGHT
-  width: auto;
-  height: auto;
-  max-width: none;
-  margin: 20px;
-  ////DECORATION
-  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf, );
-  background-size: auto;
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  border-radius: 50px;
+  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
 
   label {
     >* {
       color: hsl(var(--whitish));
-    }
-
-    >p {
-      font-weight: bold;
-      cursor: pointer;
     }
   }
 
   input,
   select,
   textarea {
-    ////LENGHT
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    ////TEXT
-    @include bootstrap.p_small;
-    font-size: .8rem;
-    ////DECORATION
     border: 1px solid hsl(var(--main-bg));
-    resize: vertical;
     background-color: hsl(var(--secondary-bg) / 0.062);
-    border-radius: 8px;
-  }
-
-  textarea {
-    ////LENGHT
-    min-height: 140px;
   }
 
   button {
     background-color: hsl(var(--secondary-bg) / 0.2);
     color: hsl(var(--txt-light));
-    padding: 15px 25px;
-    border: none;
-    cursor: pointer;
     border: 1px solid hsl(var(--main-bg));
-    border-radius: 8px;
-
 
     &:hover {
       background-color: hsl(var(--accent-bg));
     }
   }
 
+  header {
+    h2 {
+      color: hsl(var(--txt-light));
+    }
+
+    p {
+      color: hsl(var(--txt-light));
+    }
+  }
+}
+
+/// POSITION & DISPLAY  
+
+#contact {
+  ////FLEX
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >p {
+    cursor: pointer;
+  }
+
+
+  input,
+  select,
+  textarea {
+    ////TEXT
+    @include bootstrap.p_small;
+    font-size: .8rem;
+    ////DECORATION
+    resize: vertical;
+    border-radius: 8px;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
 
   .container {
     border-radius: 5px;
-    padding: 10px;
   }
 
   header {
@@ -513,12 +380,7 @@ footer.footer {
     text-transform: uppercase;
 
     h2 {
-      color: hsl(var(--txt-light));
       font-size: 2rem;
-    }
-
-    p {
-      color: hsl(var(--txt-light));
     }
   }
 
@@ -550,6 +412,7 @@ footer.footer {
     }
   }
 
+
   @media (width > 1080px) {
     .column>div {
       flex-direction: row;
@@ -558,108 +421,45 @@ footer.footer {
   }
 }
 
-//  FOOTER
-////  COLORS
+/// LENGHT AND STYLE
 
-#footer {
-  background-color: hsl(var(--secondary-bg));
+#contact {
+  ////LENGHT
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 20px;
+  ////DECORATION
+  background-size: auto;
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  border-radius: 50px;
 
-  .share {
-    a {
-      .facebook {
-        fill: hsl(var(--facebook));
-      }
-
-      .linkedin {
-        fill: hsl(var(--linkedin));
-      }
-
-      .dribbble {
-        fill: hsl(var(--dribbble));
-      }
-    }
-  }
-
-  .credit {
-    color: hsl(var(--txt-light));
-
-    span {
-      color: hsl(var(--txt-accent));
-    }
-  }
-
-  .links a {
-    color: hsl(var(--txt-light));
-    border: hsl(var(--grey));
-
-    &:hover {
-      color: hsl(var(--txt-accent));
-    }
+  >p {
+    font-weight: bold;
   }
 
 
-}
-
-//// POSITIONING AND STYLES
-#footer {
-  text-align: center;
-
-  .share {
-    padding: 2rem 0;
-
-    a {
-      display: inline-block;
-
-      svg {
-        height: 2rem;
-        width: 2rem;
-        margin: 0.3rem;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
-
-      }
-
-      &:hover svg {
-        cursor: pointer;
-        -moz-animation-name: bounce;
-      }
-
-    }
+  input,
+  select,
+  textarea {
+    ////LENGHT
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
   }
 
-  .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
-
-    a {
-      padding: 0.7rem 2rem;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      border-radius: 20px;
-      width: 255.5px;
-
-      &:hover {
-        font-weight: bold;
-      }
-
-    }
+  button {
+    padding: 15px 25px;
   }
 
-  .credit {
-    font-weight: lighter;
-    padding: 1.5rem;
+  .container {
+    padding: 10px;
+  }
 
-    span {
-      font-weight: bold;
-    }
+  textarea {
+    ////LENGHT
+    min-height: 140px;
   }
 }

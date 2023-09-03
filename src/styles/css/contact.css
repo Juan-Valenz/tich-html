@@ -1,153 +1,60 @@
-.header {
-  height: 100vh;
-  height: 100dvh;
-  padding-top: 150px;
-  min-height: 700px;
+#contact {
+  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
 }
-
-header {
-  overflow: hidden;
-}
-
-.hero {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  margin-inline: auto;
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/clamp(272px, 50% + 150px, 850px) 1fr;
-  justify-content: start;
-  align-items: center;
-}
-.hero > div {
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 800px;
-  aspect-ratio: 1/1;
-  z-index: -1;
-  left: 60%;
-  transition: all 1s linear;
-}
-@media (width < 800px) {
-  .hero > div {
-    width: 600px;
-    translate: -300px 400px;
-  }
-}
-.hero h1 {
-  grid-area: 1/1/1 span/1 span;
-  align-self: end;
-  width: 100%;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.2s font-size;
-}
-@media (width > 600px) {
-  .hero h1 {
-    font-size: clamp(1.1rem, 0.83rem + 0.73vw, 1.7rem);
-  }
-}
-.hero > p {
-  grid-area: 2/1/2 span/1 span;
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  text-align: left;
-  transition: 0.3s font-size;
-}
-
-.question {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.question .help {
-  position: absolute;
-  padding: 20% 10px;
-}
-.question .help h2 {
+#contact label > * {
   color: hsl(var(--whitish));
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: start;
 }
-@media (width > 600px) {
-  .question .help h2 {
-    font-size: clamp(1.6rem, 1.33rem + 0.73vw, 2.2rem);
-  }
+#contact input,
+#contact select,
+#contact textarea {
+  border: 1px solid hsl(var(--main-bg));
+  background-color: hsl(var(--secondary-bg)/0.062);
 }
-.question .help > div {
-  position: absolute;
-  background-image: url(../../images/code.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+#contact button {
+  background-color: hsl(var(--secondary-bg)/0.2);
+  color: hsl(var(--txt-light));
+  border: 1px solid hsl(var(--main-bg));
+}
+#contact button:hover {
+  background-color: hsl(var(--accent-bg));
+}
+#contact header h2 {
+  color: hsl(var(--txt-light));
+}
+#contact header p {
+  color: hsl(var(--txt-light));
 }
 
 #contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: auto;
-  max-width: none;
-  margin: 20px;
-  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
-  background-size: auto;
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  border-radius: 50px;
 }
-#contact label > * {
-  color: hsl(var(--whitish));
-}
-#contact label > p {
-  font-weight: bold;
+#contact > p {
   cursor: pointer;
 }
 #contact input,
 #contact select,
 #contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 16px;
   font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
   font-size: 0.8rem;
-  border: 1px solid hsl(var(--main-bg));
   resize: vertical;
-  background-color: hsl(var(--secondary-bg)/0.062);
   border-radius: 8px;
-}
-#contact textarea {
-  min-height: 140px;
 }
 #contact button {
-  background-color: hsl(var(--secondary-bg)/0.2);
-  color: hsl(var(--txt-light));
-  padding: 15px 25px;
   border: none;
   cursor: pointer;
-  border: 1px solid hsl(var(--main-bg));
   border-radius: 8px;
-}
-#contact button:hover {
-  background-color: hsl(var(--accent-bg));
 }
 #contact .container {
   border-radius: 5px;
-  padding: 10px;
 }
 #contact header {
   text-align: center;
+  text-transform: uppercase;
 }
 #contact header h2 {
-  color: hsl(var(--txt-light));
   font-size: 2rem;
-}
-#contact header p {
-  color: hsl(var(--txt-light));
 }
 #contact .column {
   float: left;
@@ -180,79 +87,33 @@ header {
   }
 }
 
-#footer {
-  background-color: hsl(var(--secondary-bg));
+#contact {
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 20px;
+  background-size: auto;
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  border-radius: 50px;
 }
-#footer .share a .facebook {
-  fill: hsl(var(--facebook));
-}
-#footer .share a .linkedin {
-  fill: hsl(var(--linkedin));
-}
-#footer .share a .dribbble {
-  fill: hsl(var(--dribbble));
-}
-#footer .credit {
-  color: hsl(var(--txt-light));
-}
-#footer .credit span {
-  color: hsl(var(--txt-accent));
-}
-#footer .links a {
-  color: hsl(var(--txt-light));
-  border: hsl(var(--grey));
-}
-#footer .links a:hover {
-  color: hsl(var(--txt-accent));
-}
-
-#footer {
-  text-align: center;
-}
-#footer .share {
-  padding: 2rem 0;
-}
-#footer .share a {
-  display: inline-block;
-}
-#footer .share a svg {
-  height: 2rem;
-  width: 2rem;
-  margin: 0.3rem;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-#footer .share a:hover svg {
-  cursor: pointer;
-  -moz-animation-name: bounce;
-}
-#footer .links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  gap: 1rem;
-}
-#footer .links a {
-  padding: 0.7rem 2rem;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  border-radius: 20px;
-  width: 255.5px;
-}
-#footer .links a:hover {
+#contact > p {
   font-weight: bold;
 }
-#footer .credit {
-  font-weight: lighter;
-  padding: 1.5rem;
+#contact input,
+#contact select,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
-#footer .credit span {
-  font-weight: bold;
+#contact button {
+  padding: 15px 25px;
+}
+#contact .container {
+  padding: 10px;
+}
+#contact textarea {
+  min-height: 140px;
 }

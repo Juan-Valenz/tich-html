@@ -82,6 +82,9 @@ main>section {
   }
 
   h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
     position: relative;
 
     a {
@@ -91,6 +94,13 @@ main>section {
       height: 100%;
       aspect-ratio: 1 / 1;
     }
+  }
+}
+
+#about {
+  p {
+    width: auto;
+    margin-inline: 35px  ;
   }
 }
 
@@ -379,8 +389,7 @@ main>section {
   /// LENGTH AND STYLES
   ////LENGTH
   height: 100vh;
-  height: 100dvh;
-  padding-top: 150px;
+  height: 100dvh;   
 
   .hero {
     ////LENGHT
