@@ -1,17 +1,32 @@
-/* Error: There is no module with the namespace "bootstrap".
- *    ,
- * 11 |       @include bootstrap.h2;
- *    |       ^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   src\styles\scss\about_us.scss 11:7  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "bootstrap".\a    \2577 \a 11 \2502        @include bootstrap.h2;\d\a    \2502        ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\styles\\scss\\about_us.scss 11:7  root stylesheet';
+#about {
+  width: 80%;
+  margin-inline: auto;
+}
+#about h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (width > 600px) {
+  #about h2 {
+    font-size: clamp(1.6rem, 1.33rem + 0.73vw, 2.2rem);
+  }
+}
+#about main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#about main p {
+  text-align: left;
+  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+}
+@media (width > 1095px) {
+  #about h2 {
+    font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
+  }
+  #about p {
+    font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
+  }
 }
