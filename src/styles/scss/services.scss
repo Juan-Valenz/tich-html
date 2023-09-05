@@ -1,65 +1,24 @@
 @use "bootstrap";
 //  LAYOUT
 
-//SECTION: HEADER
-//// POSITIONING AND STYLES
-.header {
-  //  LENGTH
-  height: 100vh;
-  height: 100dvh;
-  padding-top: 150px;
-  min-height: 700px;
-}
-
-footer.footer {
-  background-color: hsl(var(--secondary-bg));
-}
-
-
-
-//SECTION: ABOUT
-/// POSITIONING AND STYLES
-#about {
-  width: 80%;
-  margin-inline: auto;
-
-  h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    @include bootstrap.h2;
-  }
-
-  p {
-    text-align: left;
-    font-size: 0.8rem;
-    @include bootstrap.p_medium;
-  }
-
-  @media (width > 1095px) {
-    h2 {
-      font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
-    }
-
-    p {
-      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-    }
-  }
-}
-
 //SECTION: SERVICES
 ///  COLORS
 #services {
   .card {
     background-color: hsl(var(--white));
-  }
-}
+    box-shadow: 5px 5px 0px hsl(var(--grey));
 
-/// POSITIONING AND STYLES
-#services {
+    h3 {
+      color: hsl(var(--txt-accent));
+    }
+  }
+
+
+  /// POSITION & DISPLAY
   display: flex;
   flex-direction: column;
   gap: 30px;
-  //  LENGTH
+  ////  LENGTH
   margin: auto;
   margin-bottom: 40px;
   width: 90%;
@@ -89,13 +48,12 @@ footer.footer {
     align-items: center;
     flex-grow: 1;
     gap: 15px;
-    //  LENGTH
+    ////  LENGTH
     width: 100%;
-    min-height: 60vh;
+    min-height: 44vh;
     padding: 10px 20px;
-    //  DECORATION
+    ////  DECORATION
     border-radius: 30px;
-    box-shadow: 5px 5px 0px hsl(var(--grey));
 
 
     svg {
@@ -109,24 +67,36 @@ footer.footer {
     .content {
       display: flex;
       flex-direction: column;
+      gap: 10px;
 
       h3 {
-        //  LENGTH
+        ////  LENGTH
         margin-bottom: 10px;
-        //  TEXT
+        //// TEXT
         @include bootstrap.h3;
         text-transform: uppercase;
         font-weight: 800;
         text-align: center;
-        color: hsl(var(--txt-accent));
 
       }
 
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .service {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
       p {
-        min-height: 230px;
+        min-height: 60px;
         @include bootstrap.p_small;
         display: -webkit-box;
-        text-align: center;
+        text-align: start;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -141,112 +111,14 @@ footer.footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        button {
-          width: 85px;
-          height: 30px;
-          font-weight: bold;
-          color: hsl(var(--txt-light));
-          background-color: hsl(var(--accent-bg));
-          border-radius: 5px;
-          border: none;
-          margin-top: 10px;
-          margin-inline: auto;
-        }
       }
     }
   }
 
   @media (width > 1090px) {
     .card {
-      width: 300px;
       padding: 1rem;
     }
   }
-}
 
-
-#team {
-  justify-self: normal;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  .subject {
-    position: relative;
-    text-align: center;
-    width: 100%;
-  }
-
-  .title {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-
-  .teamBox {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .member {
-    overflow: hidden;
-    //// 
-    position: relative;
-    background: #000;
-    min-height: 300px;
-    width: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: hsl(var(--secondary-bg)) 0px 20px 30px -10px;
-    box-shadow: 5px 5px 0px hsl(var(--grey));
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .details {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: hsl(var(--black));
-      opacity: 0;
-      transition: .5s linear;
-
-      h3 {
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: hsl(var(--bluish));
-      }
-
-      span {
-        color: hsl(var(--whitish));
-      }
-    }
-
-    &:hover {
-
-      .details {
-        opacity: 1;
-
-      }
-    }
-  }
 }
