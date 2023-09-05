@@ -2,58 +2,58 @@
 //  LAYOUT
 
 // SECTION: CONTACT
-///COLOR 
 
 #contact {
-    background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
-  
-    label {
-      >* {
-        color: hsl(var(--whitish));
-      }
-    }
-  
-    input,
-    select,
-    textarea {
-      border: 1px solid hsl(var(--main-bg));
-      background-color: hsl(var(--secondary-bg) / 0.062);
-    }
-  
-    button {
-      background-color: hsl(var(--secondary-bg) / 0.2);
-      color: hsl(var(--txt-light));
-      border: 1px solid hsl(var(--main-bg));
-  
-      &:hover {
-        background-color: hsl(var(--accent-bg));
-      }
-    }
-  
-    header {
-      h2 {
-        color: hsl(var(--txt-light));
-      }
-  
-      p {
-        color: hsl(var(--txt-light));
-      }
+  ///COLOR 
+  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
+
+  label {
+    >* {
+      color: hsl(var(--whitish));
     }
   }
-  
-  /// POSITION & DISPLAY  
-  
-  #contact {
-    ////FLEX
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    >p {
-      cursor: pointer;
+
+  input,
+  select,
+  textarea {
+    border: 1px solid hsl(var(--main-bg));
+    background-color: hsl(var(--secondary-bg) / 0.062);
+  }
+
+  button {
+    background-color: hsl(var(--secondary-bg) / 0.2);
+    color: hsl(var(--txt-light));
+    border: 1px solid hsl(var(--main-bg));
+
+    &:hover {
+      background-color: hsl(var(--accent-bg));
     }
-  
-  
+  }
+
+  header {
+    h2 {
+      color: hsl(var(--txt-light));
+    }
+
+    p {
+      color: hsl(var(--txt-light));
+    }
+  }
+
+
+  /// POSITION & DISPLAY  
+
+
+  ////FLEX
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >p {
+    cursor: pointer;
+  }
+
+
   input,
   select,
   textarea {
@@ -64,82 +64,82 @@
     resize: vertical;
     border-radius: 8px;
   }
-  
+
   button {
     border: none;
     cursor: pointer;
     border-radius: 8px;
   }
-  
-  
+
+
   .container {
     border-radius: 5px;
   }
-  
+
   header {
     text-align: center;
     text-transform: uppercase;
-  
+
     h2 {
       font-size: 2rem;
     }
   }
-  
+
   .column {
     float: left;
     margin-top: 6px;
     padding: 20px;
-  
+
     >div {
       display: flex;
       flex-direction: column;
       column-gap: 10px;
     }
   }
-  
+
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   @media screen and (width < 600px) {
     padding-inline: 5%;
-  
+
     .column,
     input[type=submit] {
       width: 100%;
       margin-top: 0;
     }
   }
-  
-  
+
+
   @media (width > 1080px) {
     .column>div {
       flex-direction: row;
     }
-  
+
   }
-  }
+
   /// LENGHT AND STYLE
-  
-  #contact {
-    ////LENGHT
-    width: auto;
-    height: auto;
-    max-width: none;
-    margin: 20px;
-    ////DECORATION
-    background-size: auto;
-    background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
-    border-radius: 50px;
-  
-    >p {
-      font-weight: bold;
-    }
-  
-  
+
+
+  ////LENGHT
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 20px;
+  ////DECORATION
+  background-size: auto;
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  border-radius: 50px;
+
+  >p {
+    font-weight: bold;
+  }
+
+
   input,
   select,
   textarea {
@@ -149,21 +149,17 @@
     margin-top: 6px;
     margin-bottom: 16px;
   }
-  
+
   button {
     padding: 15px 25px;
   }
-  
+
   .container {
     padding: 10px;
   }
-  
+
   textarea {
     ////LENGHT
     min-height: 140px;
   }
-  }
-  
-
-//  SECTION: FOOTER
-/// COLORS
+}
