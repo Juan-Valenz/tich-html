@@ -1,59 +1,11 @@
 @use "bootstrap";
 //  LAYOUT
 
-//SECTION: HEADER
-///POSITIONING AND STYLES
-.header {
-  //  LENGTH
-  height: 100vh;
-  height: 100dvh;
-  padding-top: 150px;
-  min-height: 700px;
-}
-
-
 //SECTION: TEAM
-/// POSITIONING AND STYLES
 #team {
-  justify-self: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .subject {
-    position: relative;
-    text-align: center;
-    width: 80%;
-  }
-
-  .teamBox {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
-  }
-
-  ///LENGHT AND DISPLAY
-
-  #team {
-    .subject {
-      width: 100%;
-    }
-
-    .title {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .teamBox {
-      min-width: 100%;
-      margin-top: 40px;
-    }
-  }
-
+  ///COLOR
   .member.v2 {
-
-    ///COLORS
     background-color: hsl(var(--card-main-bg));
     box-shadow: 5px 5px 0px hsl(var(--grey));
 
@@ -65,80 +17,120 @@
     .linkedin {
       fill: hsl(var(--linkedin));
     }
+  }
 
-    /// POSITION & DISPLAY  
+
+  /// POSITION & DISPLAY
+  justify-self: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .subject {
+    position: relative;
+  }
+
+  .teamBox {
+    position: relative;
     display: grid;
-    grid-template-rows: 1fr 69px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
 
-    header {
-      grid-area: 2/1/1 span/1 span;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    main {
+    .member.v2 {
       display: grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 20px;
+      grid-template-rows: 1fr 69px;
+      border-radius: 20px;
 
-      img {
-        justify-self: center;
-        align-self: center;
+      header {
+        grid-area: 2/1/1 span/1 span;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 0 20px 20px;
       }
 
-      .content {
+      main {
         display: grid;
         grid-template-rows: 1fr 1fr;
+        gap: 20px;
 
-        .contacts {
+        img {
+          justify-self: center;
+          align-self: center;
+        }
+
+        .content {
           display: grid;
-          grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
-          align-content: stretch;
-          max-height: 100px;
+          grid-template-rows: 1fr 1fr;
 
-          >* {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+          .contacts {
+            display: grid;
+            grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
+            align-content: stretch;
 
-          .email {
-            font-size: 13px;
-          }
-
-          span {
-            font-size: 25px;
-          }
-
-          .linkedin {
-            width: 20px;
+            >* {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
           }
         }
       }
     }
+  }
 
+  ///LENGHT AND STYLE
 
-    /// LENGTH AND STYLES
-    border-radius: 10px;
-    overflow: hidden;
+  .subject {
+    width: 80%;
+    text-align: center;
+  }
 
-    main {
-      height: 410px;
+  .title {
+    max-width: 800px;
+    margin: 0 auto;
 
-      img {
-        width: 150px;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
+  }
+
+  .teamBox {
+    min-width: 100%;
+    margin-top: 40px;
+  }
+
+  border-radius: 10px;
+
+  main {
+    height: 410px;
+
+    img {
+      width: 150px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+    }
+
+    .content {
+      padding-inline: 20px;
+      font-size: 13px;
+
+      .contacts {
+        max-height: 100px;
       }
 
-      .content {
-        padding-inline: 20px;
-        font-size: 13px;
+      .bio {
+        font-size: 12px;
+      }
 
-        .bio {
-          font-size: 12px;
-        }
+      .email {
+        font-size: 13px;
+      }
+
+      span {
+        font-size: 25px;
+      }
+
+      .linkedin {
+        width: 20px;
       }
     }
   }
