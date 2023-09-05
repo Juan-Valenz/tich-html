@@ -1,5 +1,16 @@
 #contact {
   background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 20px;
+  background-size: auto;
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  border-radius: 50px;
 }
 #contact label > * {
   color: hsl(var(--whitish));
@@ -23,12 +34,6 @@
 }
 #contact header p {
   color: hsl(var(--txt-light));
-}
-
-#contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #contact > p {
   cursor: pointer;
@@ -85,17 +90,6 @@
   #contact .column > div {
     flex-direction: row;
   }
-}
-
-#contact {
-  width: auto;
-  height: auto;
-  max-width: none;
-  margin: 20px;
-  background-size: auto;
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  border-radius: 50px;
 }
 #contact > p {
   font-weight: bold;
