@@ -1,10 +1,10 @@
-.header {
-  height: 100vh;
-  height: 100dvh;
-  padding-top: 150px;
-  min-height: 700px;
+#services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 40px;
 }
-
 #services .card {
   box-shadow: 5px 5px 0px hsl(var(--grey));
   background-color: hsl(var(--white));
@@ -15,12 +15,6 @@
 }
 #services .card h3 {
   color: hsl(var(--txt-accent));
-}
-
-#services {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 #services h2 {
   display: flex;
@@ -71,11 +65,6 @@
     align-items: stretch;
   }
 }
-
-#services {
-  margin: auto;
-  margin-bottom: 40px;
-}
 #services h2 {
   padding-inline: 10px;
 }
@@ -84,7 +73,7 @@
   padding: 10px 20px;
 }
 #services .card {
-  width: 350px;
+  width: 320px;
   padding: 1rem;
   border-radius: 30px;
 }
@@ -127,11 +116,22 @@
 }
 
 #team {
+  justify-self: normal;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
 }
-#team .contacts svg {
+#team .member.v2 {
+  background-color: hsl(var(--card-main-bg));
+  box-shadow: 5px 5px 0px hsl(var(--grey));
+}
+#team .member.v2 header {
+  color: hsl(var(--txt-light));
+  background-color: hsl(var(--accent-bg));
+}
+#team .member.v2 .linkedin {
   fill: hsl(var(--linkedin));
 }
 #team .subject {
@@ -140,205 +140,80 @@
 #team .teamBox {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 30px;
-  gap: 40px;
+}
+#team .teamBox .member.v2 {
+  display: grid;
+  grid-template-rows: 1fr 69px;
+  border-radius: 20px;
+}
+#team .teamBox .member.v2 header {
+  grid-area: 2/1/1 span/1 span;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
 }
-#team .member.v1 {
-  position: relative;
+#team .teamBox .member.v2 main {
   display: grid;
-  grid-template-rows: repeat(auto-fit);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 }
-#team .member.v1 img {
+#team .teamBox .member.v2 main img {
+  justify-self: center;
+  align-self: center;
+}
+#team .teamBox .member.v2 main .content {
   display: grid;
-  position: relative;
+  grid-template-rows: 1fr 1fr;
+}
+#team .teamBox .member.v2 main .content .contacts {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
+  align-content: stretch;
+}
+#team .teamBox .member.v2 main .content .contacts > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #team .subject {
+  width: 80%;
   text-align: center;
-  width: 100%;
 }
 #team .title {
   max-width: 800px;
   margin: 0 auto;
 }
 #team .teamBox {
-  max-width: 100%;
+  min-width: 100%;
   margin-top: 40px;
 }
-#team .member.v2 {
-  background-color: hsl(var(--card-main-bg));
-  box-shadow: 5px 5px 0px hsl(var(--grey));
-  display: grid;
-  grid-template-rows: 1fr 69px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-#team .member.v2 header {
-  color: hsl(var(--txt-light));
-  background-color: hsl(var(--accent-bg));
-}
-#team .member.v2 header {
-  grid-area: 2/1/1 span/1 span;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#team .member.v2 main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-}
-#team .member.v2 main img {
-  justify-self: center;
-  align-self: center;
-}
-#team .member.v2 main .content {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-#team .member.v2 main .content .contacts {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
-  align-content: stretch;
-}
-#team .member.v2 main .content .contacts > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#team .member.v2 main {
+#team main {
   height: 410px;
 }
-#team .member.v2 main img {
+#team main img {
   width: 150px;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
-#team .member.v2 main .content {
+#team main .content {
   padding-inline: 20px;
   font-size: 13px;
 }
-#team .member.v2 main .content .bio {
+#team main .content .contacts {
+  max-height: 100px;
+}
+#team main .content .bio {
   font-size: 12px;
 }
-
-#contact {
-  background: linear-gradient(-45deg, #23a6d5, #257997, #147cdf, #485dcf);
+#team main .content .email {
+  font-size: 13px;
 }
-#contact label > * {
-  color: hsl(var(--whitish));
+#team main .content span {
+  font-size: 25px;
 }
-#contact input,
-#contact select,
-#contact textarea {
-  border: 1px solid hsl(var(--main-bg));
-  background-color: hsl(var(--secondary-bg)/0.062);
-}
-#contact button {
-  background-color: hsl(var(--secondary-bg)/0.2);
-  color: hsl(var(--txt-light));
-  border: 1px solid hsl(var(--main-bg));
-}
-#contact button:hover {
-  background-color: hsl(var(--accent-bg));
-}
-#contact header h2 {
-  color: hsl(var(--txt-light));
-}
-#contact header p {
-  color: hsl(var(--txt-light));
-}
-
-#contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#contact > p {
-  cursor: pointer;
-}
-#contact input,
-#contact select,
-#contact textarea {
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  font-size: 0.8rem;
-  resize: vertical;
-  border-radius: 8px;
-}
-#contact button {
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-}
-#contact .container {
-  border-radius: 5px;
-}
-#contact header {
-  text-align: center;
-  text-transform: uppercase;
-}
-#contact header h2 {
-  font-size: 2rem;
-}
-#contact .column {
-  float: left;
-  margin-top: 6px;
-  padding: 20px;
-}
-#contact .column > div {
-  display: flex;
-  flex-direction: column;
-  column-gap: 10px;
-}
-#contact .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (width < 600px) {
-  #contact {
-    padding-inline: 5%;
-  }
-  #contact .column,
-  #contact input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-@media (width > 1080px) {
-  #contact .column > div {
-    flex-direction: row;
-  }
-}
-
-#contact {
-  width: auto;
-  height: auto;
-  max-width: none;
-  margin: 20px;
-  background-size: auto;
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  border-radius: 50px;
-}
-#contact > p {
-  font-weight: bold;
-}
-#contact input,
-#contact select,
-#contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-#contact button {
-  padding: 15px 25px;
-}
-#contact .container {
-  padding: 10px;
-}
-#contact textarea {
-  min-height: 140px;
+#team main .content .linkedin {
+  width: 20px;
 }
