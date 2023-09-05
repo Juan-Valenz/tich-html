@@ -331,6 +331,7 @@ main > section h2 a {
   width: 90%;
   height: 100%;
   margin-inline: auto;
+  padding-top: 150px;
 }
 #hero .hero h1 {
   width: max(100%, 375px);
