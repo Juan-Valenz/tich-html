@@ -1,0 +1,160 @@
+@use "bootstrap";
+
+#services {
+    .card {
+        background-color: hsl(var(--white));
+        box-shadow: 5px 5px 0px hsl(var(--grey));
+
+        h3 {
+            color: hsl(var(--txt-accent));
+        }
+    }
+
+
+    /// POSITION & DISPLAY
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    ////  LENGTH
+    margin: auto;
+    margin-bottom: 40px;
+    width: 90%;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        gap: 15px;
+        ////  LENGTH
+        width: 100%;
+        min-height: 44vh;
+        padding: 10px 20px;
+        ////  DECORATION
+        border-radius: 30px;
+
+
+        svg {
+            margin-top: 25px;
+            max-width: 70px;
+            max-height: 70px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h3 {
+                ////  LENGTH
+                margin-bottom: 10px;
+                //// TEXT
+                @include bootstrap.h3;
+                text-transform: uppercase;
+                font-weight: 800;
+                text-align: center;
+                word-spacing: 10px;
+            }
+
+            h4 {
+                margin-block: 20px;
+                text-align: center;
+            }
+
+
+            .service {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px;
+
+                div {
+                    display: grid;
+
+                    header {
+                        text-align: center;
+                    }
+
+                    main {
+                        text-align: center;
+                    }
+                }
+            }
+
+            p {
+                min-height: 70px;
+                @include bootstrap.p_small;
+                display: -webkit-box;
+                text-align: start;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                padding-inline: 10px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .features {
+                text-align: center;
+                min-height: 30px;
+
+                a {
+                    font-weight: bold;
+                    color: hsl(var(--txt-accent));
+                }
+            }
+
+        }
+    }
+
+    @media (width > 1090px) {
+        .card {
+            padding: 1rem;
+        }
+    }
+
+    @media (width < 600px) {
+        .card {
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                main {
+                    grid-template-columns: auto;
+                }
+            }
+            
+        }
+    }
+
+}
