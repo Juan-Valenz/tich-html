@@ -1,9 +1,8 @@
 @use "bootstrap";
-//  LAYOUT
 
-//SECTION: SERVICES
-///  COLORS
 #services {
+
+  /// COLORS
   .card {
     background-color: hsl(var(--white));
     box-shadow: 5px 5px 0px hsl(var(--grey));
@@ -11,31 +10,22 @@
     h3 {
       color: hsl(var(--txt-accent));
     }
+
+    main div {
+      box-shadow: 0px 3.2px 7.2px hsl(var(--black)/0.132), 0px 0.6px 1.8px hsl(var(--black)/0.108);
+    }
   }
 
 
   /// POSITION & DISPLAY
+  ////FLEX
   display: flex;
   flex-direction: column;
   gap: 30px;
-  ////  LENGTH
-  margin: auto;
-  margin-bottom: 40px;
-  width: 90%;
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  p {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
 
   .cards {
+    ////FLEX
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,11 +33,73 @@
   }
 
   .card {
+    ////FLEX
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
     gap: 15px;
+
+    @media (width < 600px) {
+      .card {
+        ////FLEX
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        main {
+          ////GRID
+          grid-template-columns: auto;
+        }
+      }
+    }
+
+    header {
+      ////FLEX
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    main {
+      ////FLEX
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 25px;
+
+      div {
+        ////FLEX
+        flex: 0 1 calc(50% - 20px);
+        ////GRID
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+
+      }
+    }
+
+    // .features {
+    //   text-align: center;
+    //   min-height: 30px;
+
+    //   a {
+    //     font-weight: bold;
+    //     color: hsl(var(--txt-accent));
+    //   }
+    // }
+  }
+
+  /// LENGTH AND STYLES
+  ////  LENGTH
+  margin: auto;
+  margin-bottom: 40px;
+  width: 90%;
+
+  .card {
     ////  LENGTH
     width: 100%;
     min-height: 44vh;
@@ -55,74 +107,44 @@
     ////  DECORATION
     border-radius: 30px;
 
-
-    svg {
-      margin-top: 25px;
-      max-width: 70px;
-      max-height: 70px;
-      margin-bottom: 15px;
-      cursor: pointer;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      h3 {
-        ////  LENGTH
-        margin-bottom: 10px;
-        //// TEXT
-        @include bootstrap.h3;
-        text-transform: uppercase;
-        font-weight: 800;
-        text-align: center;
-        word-spacing: 10px;
-        
+    @media (width > 1090px) {
+      .card {
+        ////LENGHT
+        padding: 1rem;
       }
-      
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .service {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-      }
-
-      p {
-        min-height: 70px;
-        @include bootstrap.p_small;
-        display: -webkit-box;
-        text-align: start;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        padding-inline: 10px;
-
-        span {
-          font-weight: bold;
-        }
-      }
-      .features {
-        text-align: center;
-        min-height: 30px;
-        a {
-          font-weight: bold;
-          color: hsl(var(--txt-accent));
-        }
-      }
-     
     }
   }
 
-  @media (width > 1090px) {
-    .card {
-      padding: 1rem;
-    }
+  svg {
+    ////LENGHT
+    max-width: 70px;
+    max-height: 70px;
   }
 
+  h3 {
+    //// TEXT
+    @include bootstrap.h3;
+    text-transform: uppercase;
+    word-spacing: 10px;
+  }
+
+  p {
+    //// TEXT
+    @include bootstrap.p_small;
+    text-align: center;
+  }
+
+  div {
+    ////LENGHT
+    border-radius: 15px;
+    padding-bottom: 20px;
+    padding-inline: 10px;
+  }
+ 
+
+  main {
+    ////TEXT
+    text-align: center;
+    @include bootstrap.p_small;
+  }
 }
