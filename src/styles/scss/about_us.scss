@@ -3,34 +3,50 @@
 //SECTION: ABOUT
 #about {
   /// POSITION & DISPLAY
-  width: 80%;
-  margin-inline: auto;
 
   h2 {
     text-align: center;
-    padding-bottom: 20px;
-    @include bootstrap.h2;
-  }
+    }
 
   main {
+    ////FLEX
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     p {
+      ////POSITION
       text-align: left;
-      @include bootstrap.p_small;
     }
   }
 
-  @media (width > 1095px) {
-    h2 {
-      font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
-    }
 
-    p {
-      font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-    }
-  }
+
   ///LENGTH AND STYLES
+
+  width: 80%;
+  margin-inline: auto;
+
+  h2 {
+    ////LENGHT
+    padding-bottom: 20px;
+    @include bootstrap.h2;
+
+    @media (width > 1095px) {
+      h2 {
+        font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
+      }
+    }
+  }
+
+  p {
+    ////LENGHT
+    @include bootstrap.p_small;
+
+    @media (width > 1095px) {
+      p {
+        font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
+      }
+    }
+  }
 }
