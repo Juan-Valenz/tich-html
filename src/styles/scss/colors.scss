@@ -1,7 +1,7 @@
 @mixin colors-test {
   --test-color: hsl(213, 100%, 50%);
   --test-color: hsl(24, 100%, 63%);
-  --test-color: hsl(0, 0%, 70%);
+  --test-color: #fbff00;
 }
 
 @mixin colors {
