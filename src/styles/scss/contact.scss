@@ -49,7 +49,7 @@
   justify-content: center;
   align-items: center;
 
-  >p {
+  .column p {
     cursor: pointer;
   }
 
@@ -66,6 +66,7 @@
   }
 
   button {
+    ////DECORATION
     border: none;
     cursor: pointer;
     border-radius: 8px;
@@ -73,24 +74,30 @@
 
 
   .container {
+    ////DECORATION
     border-radius: 5px;
   }
 
   header {
+    ////TEXT
     text-align: center;
     text-transform: uppercase;
 
     h2 {
+      ////TEXT
       font-size: 2rem;
     }
   }
 
   .column {
+    ////POSITION
     float: left;
+    ////LENGHT
     margin-top: 6px;
     padding: 20px;
 
     >div {
+      ////LENGHT
       display: flex;
       flex-direction: column;
       column-gap: 10px;
@@ -136,6 +143,7 @@
   border-radius: 50px;
 
   >p {
+    ////TEXT
     font-weight: bold;
   }
 
@@ -151,10 +159,12 @@
   }
 
   button {
+    ////LENGHT
     padding: 15px 25px;
   }
 
   .container {
+    ////LENGHT
     padding: 10px;
   }
 
