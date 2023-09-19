@@ -49,9 +49,9 @@ button {
 }
 
 body>main {
+  ////GRID
   display: grid;
   align-items: start;
-  //justify-content: center;
   grid-template-columns: 1fr;
   row-gap: 20px;
   padding-block: 50px;
@@ -82,9 +82,7 @@ main>section {
   }
 
   h2 {
-    display: flex;
     text-align: center;
-    justify-content: center;
     position: relative;
     padding-bottom: 20px;
 
@@ -100,8 +98,9 @@ main>section {
 
 #about {
   p {
+    ////LENGHT
     width: auto;
-    margin-inline: 35px  ;
+    margin-inline: 35px;
   }
 }
 
@@ -211,6 +210,7 @@ main>section {
 
   @media (width > 1080px) {
     .navigation {
+      ////LENGHT
       display: flex;
       gap: 5px;
     }
@@ -325,6 +325,7 @@ main>section {
       }
 
       .language {
+        ////LENGHT
         height: 35px;
       }
     }
@@ -381,7 +382,9 @@ main>section {
     }
 
     >div {
+      ////POSITION
       position: absolute;
+      ////POSITION
       left: 65%;
       z-index: -1;
     }
@@ -390,7 +393,7 @@ main>section {
   /// LENGTH AND STYLES
   ////LENGTH
   height: 100vh;
-  height: 100dvh;   
+  height: 100dvh;
 
   .hero {
     ////LENGHT
@@ -403,10 +406,7 @@ main>section {
       ////LENGTH
       width: max(100%, 375px);
       ////TEXT
-      // font-size: 1.1rem;
-      // font-weight: 800;
       @include bootstrap.h3;
-      // white-space: nowrap;
       text-transform: uppercase;
       ////ANIMATION
       transition: 0.2s font-size;
@@ -414,13 +414,13 @@ main>section {
 
     >p {
       ////TEXT
-      // font-size: 0.8rem;
       @include bootstrap.p_small;
       text-align: justify;
       ////ANIMATION
       transition: 0.3s font-size;
       ////LENGHT
       margin-inline: 10px;
+
     }
 
     >div {
@@ -439,6 +439,7 @@ main>section {
       }
 
       @media (width < 1100px) {
+        ////ANIMATION
         translate: -400px 500px;
       }
     }
