@@ -13,15 +13,8 @@
 #services .card h3 {
   color: hsl(var(--txt-accent));
 }
-#services h2 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#services p {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+#services .card main div {
+  box-shadow: 0px 3.2px 7.2px hsl(var(--black)/0.132), 0px 0.6px 1.8px hsl(var(--black)/0.108);
 }
 #services .cards {
   display: flex;
@@ -35,70 +28,82 @@
   align-items: center;
   flex-grow: 1;
   gap: 15px;
+}
+@media (width < 600px) {
+  #services .card .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #services .card .card main {
+    grid-template-columns: auto;
+  }
+}
+#services .card header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#services .card main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+}
+#services .card main div {
+  flex: 0 1 calc(50% - 20px);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#services .card {
   width: 100%;
   min-height: 44vh;
   padding: 10px 20px;
   border-radius: 30px;
 }
-#services .card svg {
-  margin-top: 25px;
+@media (width > 1090px) {
+  #services .card .card {
+    padding: 1rem;
+  }
+}
+#services svg {
   max-width: 70px;
   max-height: 70px;
-  margin-bottom: 15px;
-  cursor: pointer;
 }
-#services .card .content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#services .card .content h3 {
-  margin-bottom: 10px;
+#services h3 {
   font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
-  font-weight: 800;
-  text-align: center;
   word-spacing: 10px;
 }
 @media (width > 600px) {
-  #services .card .content h3 {
+  #services h3 {
     font-size: clamp(1.4rem, 1.13rem + 0.73vw, 2rem);
   }
 }
-#services .card .content main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#services .card .content .service {
-  display: flex;
-  justify-content: center;
+#services p {
+  font-size: 0.86rem;
   text-align: center;
 }
-#services .card .content p {
-  min-height: 70px;
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  display: -webkit-box;
-  text-align: start;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+@media (width > 600px) {
+  #services p {
+    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  }
+}
+#services div {
+  border-radius: 15px;
+  padding-bottom: 20px;
   padding-inline: 10px;
 }
-#services .card .content p span {
-  font-weight: bold;
-}
-#services .card .content .features {
+#services main {
   text-align: center;
-  min-height: 30px;
+  font-size: 0.86rem;
 }
-#services .card .content .features a {
-  font-weight: bold;
-  color: hsl(var(--txt-accent));
-}
-@media (width > 1090px) {
-  #services .card {
-    padding: 1rem;
+@media (width > 600px) {
+  #services main {
+    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
   }
 }
