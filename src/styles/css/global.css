@@ -15,7 +15,7 @@
   --yellow-dark: 55 100% 43%;
   --test-color: hsl(213, 100%, 50%);
   --test-color: hsl(24, 100%, 63%);
-  --test-color: hsl(0, 0%, 70%);
+  --test-color: #fbff00;
   --main-bg: var(--whitish);
   --secondary-bg: var(--black);
   --accent-bg: var(--blue-dark);
@@ -108,9 +108,7 @@ main > section {
   }
 }
 main > section h2 {
-  display: flex;
   text-align: center;
-  justify-content: center;
   position: relative;
   padding-bottom: 20px;
 }
@@ -347,10 +345,15 @@ main > section h2 a {
   }
 }
 #hero .hero > p {
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  font-size: 0.86rem;
   text-align: justify;
   transition: 0.3s font-size;
   margin-inline: 10px;
+}
+@media (width > 600px) {
+  #hero .hero > p {
+    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  }
 }
 #hero .hero > div {
   width: 600px;
