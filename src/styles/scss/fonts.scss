@@ -64,7 +64,7 @@
 }
 
 @mixin p_medium {
-  font-size: 0.83rem;
+  font-size: 0.9rem;
 
   @media (width > 600px) {
     font-size: clamp(.93rem, 0.61rem + 0.85vw, 1.63rem);
@@ -72,11 +72,12 @@
 }
 
 @mixin p_small {
-  font-size: clamp(.7rem, .4rem + 0.85vw, 1.3rem);
-
+  font-size: .86rem;
+  @media (width > 600px) {
+    font-size: clamp(.7rem, .4rem + 0.85vw, 1.3rem);
+  }
 }
 
 @mixin p_tiny {
   font-size: clamp(.5rem, .2rem + 0.85vw, 1.1rem);
-
 }
