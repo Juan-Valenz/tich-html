@@ -17,13 +17,9 @@
   color: hsl(var(--txt-accent));
 }
 #services h2 {
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 #services p {
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 #services .cards {
@@ -72,6 +68,11 @@
   width: auto;
   padding: 10px 20px;
 }
+@media (width < 600px) {
+  #services .cards .card {
+    width: 290px;
+  }
+}
 #services .card {
   width: 320px;
   padding: 1rem;
@@ -95,6 +96,11 @@
   min-height: 60px;
   font-size: 0.8rem;
 }
+@media (width > 600px) {
+  #services .card p p {
+    font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
+  }
+}
 #services .card a {
   width: 85px;
   height: 30px;
@@ -103,16 +109,6 @@
   border-radius: 5px;
   border: none;
   font-weight: bold;
-}
-@media (width > 600px) {
-  #services p {
-    font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-  }
-}
-@media (width < 600px) {
-  #services .card {
-    width: 290px;
-  }
 }
 
 #team {
