@@ -4,6 +4,16 @@
 }
 #about h2 {
   text-align: center;
+}
+#about main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#about main p {
+  text-align: left;
+}
+#about h2 {
   padding-bottom: 20px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -13,20 +23,21 @@
     font-size: clamp(1.6rem, 1.33rem + 0.73vw, 2.2rem);
   }
 }
-#about main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#about main p {
-  text-align: left;
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-}
 @media (width > 1095px) {
-  #about h2 {
+  #about h2 h2 {
     font-size: clamp(1.2rem, 1.02rem + 0.48vw, 1.6rem);
   }
+}
+#about p {
+  font-size: 0.86rem;
+}
+@media (width > 600px) {
   #about p {
+    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  }
+}
+@media (width > 1095px) {
+  #about p p {
     font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
   }
 }
