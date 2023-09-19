@@ -35,16 +35,23 @@
 #contact header p {
   color: hsl(var(--txt-light));
 }
-#contact > p {
+#contact .column p {
   cursor: pointer;
 }
 #contact input,
 #contact select,
 #contact textarea {
-  font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  font-size: 0.86rem;
   font-size: 0.8rem;
   resize: vertical;
   border-radius: 8px;
+}
+@media (width > 600px) {
+  #contact input,
+  #contact select,
+  #contact textarea {
+    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+  }
 }
 #contact button {
   border: none;
