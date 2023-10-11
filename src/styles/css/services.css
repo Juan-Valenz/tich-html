@@ -6,14 +6,14 @@
   margin-bottom: 40px;
   width: 90%;
 }
-#services .card {
+#services .card.v1 {
   background-color: hsl(var(--white));
   box-shadow: 5px 5px 0px hsl(var(--grey));
 }
-#services .card h3 {
+#services .card.v1 h3 {
   color: hsl(var(--txt-accent));
 }
-#services .card main div {
+#services .card.v1 main div {
   box-shadow: 0px 3.2px 7.2px hsl(var(--black)/0.132), 0px 0.6px 1.8px hsl(var(--black)/0.108);
 }
 #services .cards {
@@ -22,7 +22,7 @@
   align-items: center;
   gap: 25px;
 }
-#services .card {
+#services .card.v1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,80 +30,145 @@
   gap: 15px;
 }
 @media (width < 600px) {
-  #services .card .card {
+  #services .card.v1 .card.v1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  #services .card .card main {
+  #services .card.v1 .card.v1 main {
     grid-template-columns: auto;
+    width: 200px;
   }
 }
-#services .card header {
+#services .card.v1 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-#services .card main {
+#services .card.v1 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 25px;
 }
-#services .card main div {
+#services .card.v1 main div {
   flex: 0 1 calc(50% - 20px);
   display: grid;
   justify-content: center;
   align-items: center;
 }
-#services .card {
+#services .card.v1 {
   width: 100%;
   min-height: 44vh;
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-large);
 }
 @media (width > 1090px) {
-  #services .card .card {
+  #services .card.v1 .card.v1 {
     padding: 1rem;
   }
 }
-#services svg {
+#services .card.v1 svg {
   max-width: 70px;
   max-height: 70px;
 }
-#services h3 {
-  font-size: 1.3rem;
-  font-weight: bold;
+#services .card.v1 h3 {
+  font-size: var(--font-size-medium);
   text-transform: uppercase;
   word-spacing: 10px;
 }
-@media (width > 600px) {
-  #services h3 {
-    font-size: clamp(1.4rem, 1.13rem + 0.73vw, 2rem);
-  }
-}
-#services p {
-  font-size: 0.86rem;
+#services .card.v1 p {
+  font-size: var(--font-size-tiny);
   text-align: center;
 }
-@media (width > 600px) {
-  #services p {
-    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  }
-}
-#services div {
-  border-radius: 15px;
+#services .card.v1 div {
+  border-radius: var(--border-radius-medium);
   padding-bottom: 20px;
   padding-inline: 10px;
 }
-#services main {
-  text-align: center;
-  font-size: 0.86rem;
+#services .card.v1 div header {
+  font-size: var(--font-size-small);
 }
-@media (width > 600px) {
-  #services main {
-    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
+#services .card.v1 div h4 {
+  font-size: var(--font-size-tiny);
+}
+#services .card.v1 main {
+  text-align: center;
+  font-size: var(--font-size-tiny);
+}
+@media (width < 600px) {
+  #services .card.v1 > main > div {
+    flex: 0 1 80%;
   }
+}
+#services .card.v2 {
+  background-color: hsl(var(--white));
+  border: 1px solid black;
+  border-radius: var(--border-radius-large);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--proximity-in-medium);
+  width: 100%;
+  min-height: 44vh;
+  margin-top: 30px;
+  overflow: hidden;
+}
+#services .card.v2 .imageContainer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+#services .card.v2 .imageContainer img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#services .card.v2 .imageContainer .overlay {
+  position: absolute;
+  inset: 0;
+}
+#services .card.v2 .imageContainer .overlay.blue {
+  background-color: hsl(var(--blue)/0.15);
+}
+#services .card.v2 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+#services .card.v2 h3 {
+  --font-size-tiny: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 18px;
+  --font-size-large: 20px;
+  --font-size-huge: 24px;
+  margin-bottom: 20px;
+}
+@media (width > 700px) {
+  #services .card.v2 h3 {
+    --font-size-tiny: 14px;
+    --font-size-small: 18px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-huge: 32px;
+  }
+}
+#services .card.v2 .line {
+  content: "";
+  inset: auto;
+  width: 90%;
+  border: 1px solid hsl(var(--black)/0.2);
+  margin-inline: 5%;
+}
+#services main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
 }
