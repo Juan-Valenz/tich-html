@@ -1,3 +1,4 @@
+const test = "test"
 // SECTION
 /// EVENT LISTENERS
 window.addEventListener("scroll", function () {
@@ -28,7 +29,7 @@ const openMenu = () => {
 
   html.classList.add("noOverflow");
   linkList.classList.add("active");
-  console.log("Test");
+  console.log(`${test} is complete`);
 };
 const closeMenu = () => {
   let html = document.querySelector("html");
