@@ -16,17 +16,17 @@
   input,
   select,
   textarea {
-    border: 1px solid hsl(var(--main-bg));
-    background-color: hsl(var(--secondary-bg) / 0.062);
+    border: 1px solid hsl(var(--background));
+    background-color: hsl(var(--foreground) / 0.062);
   }
 
   button {
-    background-color: hsl(var(--secondary-bg) / 0.2);
+    background-color: hsl(var(--foreground) / 0.2);
     color: hsl(var(--txt-light));
-    border: 1px solid hsl(var(--main-bg));
+    border: 1px solid hsl(var(--background));
 
     &:hover {
-      background-color: hsl(var(--accent-bg));
+      background-color: hsl(var(--accent));
     }
   }
 
@@ -58,24 +58,17 @@
   select,
   textarea {
     ////TEXT
-    @include bootstrap.p_small;
-    font-size: .8rem;
+    font-size: var(--font-size-tiny);
     ////DECORATION
     resize: vertical;
-    border-radius: 8px;
+    border-radius: var(--border-radius-medium);
   }
 
   button {
     ////DECORATION
     border: none;
     cursor: pointer;
-    border-radius: 8px;
-  }
-
-
-  .container {
-    ////DECORATION
-    border-radius: 5px;
+    border-radius: var(--border-radius-medium);
   }
 
   header {
@@ -85,8 +78,17 @@
 
     h2 {
       ////TEXT
-      font-size: 2rem;
+      font-size: var(--font-size-large);
     }
+
+    p {
+      ////TEXT 
+      font-size: var(--font-size-small);
+    }
+  }
+
+  p {
+    font-size: var(--font-size-tiny);
   }
 
   .column {
@@ -140,7 +142,7 @@
   background-size: auto;
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
-  border-radius: 50px;
+  border-radius: var(--border-radius-large);
 
   >p {
     ////TEXT
