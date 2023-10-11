@@ -11,15 +11,15 @@
 }
 #services .card a {
   color: hsl(var(--txt-light));
-  background-color: hsl(var(--accent-bg));
+  background-color: hsl(var(--accent));
 }
 #services .card h3 {
-  color: hsl(var(--txt-accent));
+  color: hsl(0, 0%, 10%);
+}
+#services .card p {
+  color: hsl(0, 0%, 30%);
 }
 #services h2 {
-  text-align: center;
-}
-#services p {
   text-align: center;
 }
 #services .cards {
@@ -29,10 +29,8 @@
   gap: 25px;
 }
 #services .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
-  flex-grow: 1;
   gap: 15px;
 }
 #services .card .content {
@@ -49,7 +47,7 @@
 #services .card .content p span {
   font-weight: bold;
 }
-#services .card .content a {
+#services .card a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,38 +73,53 @@
 }
 #services .card {
   width: 320px;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+#services .card .imageContainer {
+  width: 100%;
+  height: 130px;
+  position: relative;
+}
+#services .card .imageContainer img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#services .card .imageContainer .overlay {
+  position: absolute;
+  inset: 0;
+}
+#services .card .imageContainer .overlay.blue {
+  background-color: hsl(var(--blue)/0.15);
+}
+#services .card .content {
   padding: 1rem;
-  border-radius: 30px;
 }
-#services .card svg {
-  margin-top: 25px;
-  max-width: 70px;
-  max-height: 70px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-#services .card h3 {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+#services .card .content h3 {
+  gap: 20px;
+  font-size: var(--font-size-small);
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
 }
-#services .card p {
+#services .card .content p {
   min-height: 60px;
-  font-size: 0.8rem;
+  font-size: var(--font-size-tiny);
 }
 @media (width > 600px) {
-  #services .card p p {
+  #services .card .content p p {
     font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
   }
 }
 #services .card a {
-  width: 85px;
+  width: 110px;
   height: 30px;
-  margin-top: 10px;
   margin-inline: auto;
-  border-radius: 5px;
+  border-radius: var(--border-radius-medium);
   border: none;
   font-weight: bold;
 }
@@ -116,16 +129,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  border-radius: 10px;
 }
 #team .member.v2 {
-  background-color: hsl(var(--card-main-bg));
+  background-color: hsl(var(--card-background));
   box-shadow: 5px 5px 0px hsl(var(--grey));
 }
 #team .member.v2 header {
   color: hsl(var(--txt-light));
-  background-color: hsl(var(--accent-bg));
+  background-color: hsl(var(--accent));
 }
 #team .member.v2 .linkedin {
   fill: hsl(var(--linkedin));
@@ -142,14 +153,14 @@
 #team .teamBox .member.v2 {
   display: grid;
   grid-template-rows: 1fr 69px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-large);
 }
 #team .teamBox .member.v2 header {
   grid-area: 2/1/1 span/1 span;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 30px 30px;
 }
 #team .teamBox .member.v2 main {
   display: grid;
@@ -186,29 +197,32 @@
   min-width: 100%;
   margin-top: 40px;
 }
+#team header {
+  font-size: var(--font-size-small);
+}
 #team main {
   height: 410px;
 }
 #team main img {
   width: 150px;
   aspect-ratio: 1/1;
-  border-radius: 50%;
+  border-radius: var(--border-radius-circle);
 }
 #team main .content {
   padding-inline: 20px;
-  font-size: 13px;
+  font-size: var(--font-size-tiny);
 }
 #team main .content .contacts {
   max-height: 100px;
 }
 #team main .content .bio {
-  font-size: 12px;
+  font-size: var(--font-size-tiny);
 }
 #team main .content .email {
-  font-size: 13px;
+  font-size: var(--font-size-tiny);
 }
 #team main .content span {
-  font-size: 25px;
+  font-size: var(--font-size-small);
 }
 #team main .content .linkedin {
   width: 20px;
