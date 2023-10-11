@@ -73,6 +73,7 @@
 
 @mixin p_small {
   font-size: .86rem;
+
   @media (width > 600px) {
     font-size: clamp(.7rem, .4rem + 0.85vw, 1.3rem);
   }
@@ -80,4 +81,63 @@
 
 @mixin p_tiny {
   font-size: clamp(.5rem, .2rem + 0.85vw, 1.1rem);
+}
+
+@mixin p_colossal {
+  font-size: 1.3rem;
+
+  @media (width > 600px) {
+
+    font-size: clamp(1.4rem, 1.13rem + 0.73vw, 2rem);
+  }
+}
+
+@mixin p_large {
+  font-size: 1rem;
+
+  @media (width > 600px) {
+    font-size: clamp(1.1rem, 0.83rem + 0.73vw, 1.7rem);
+  }
+}
+
+@mixin p_medium {
+  font-size: 0.9rem;
+
+  @media (width > 600px) {
+    font-size: clamp(.93rem, 0.61rem + 0.85vw, 1.63rem);
+  }
+}
+
+@mixin p_small {
+  font-size: .86rem;
+
+  @media (width > 600px) {
+    font-size: clamp(.7rem, .4rem + 0.85vw, 1.3rem);
+  }
+}
+
+@mixin p_tiny {
+  font-size: clamp(.5rem, .2rem + 0.85vw, 1.1rem);
+}
+
+//TODO: 
+//[x] Create max of 5 font sizes
+//[] Remove all font weights 
+//[] Add font sizes for width bigger than 600px, 800px, 1000px, 1200px
+
+
+@mixin font-sizes {
+  --font-size-tiny: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 18px;
+  --font-size-large: 20px;
+  --font-size-huge: 24px;
+
+  @media (width > 700px) {
+    --font-size-tiny: 14px;
+    --font-size-small: 18px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-huge: 32px;
+  }
 }
