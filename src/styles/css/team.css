@@ -3,16 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  border-radius: 10px;
 }
 #team .member.v2 {
-  background-color: hsl(var(--card-main-bg));
+  background-color: hsl(var(--card-background));
   box-shadow: 5px 5px 0px hsl(var(--grey));
 }
 #team .member.v2 header {
   color: hsl(var(--txt-light));
-  background-color: hsl(var(--accent-bg));
+  background-color: hsl(var(--accent));
 }
 #team .member.v2 .linkedin {
   fill: hsl(var(--linkedin));
@@ -29,14 +27,14 @@
 #team .teamBox .member.v2 {
   display: grid;
   grid-template-rows: 1fr 69px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-large);
 }
 #team .teamBox .member.v2 header {
   grid-area: 2/1/1 span/1 span;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 30px 30px;
 }
 #team .teamBox .member.v2 main {
   display: grid;
@@ -73,13 +71,16 @@
   min-width: 100%;
   margin-top: 40px;
 }
+#team header {
+  font-size: var(--font-size-small);
+}
 #team main {
   height: 410px;
 }
 #team main img {
   width: 150px;
   aspect-ratio: 1/1;
-  border-radius: 50%;
+  border-radius: var(--border-radius-circle);
 }
 #team main .content {
   padding-inline: 20px;
@@ -89,13 +90,13 @@
   max-height: 100px;
 }
 #team main .content .bio {
-  font-size: 12px;
+  font-size: var(--font-size-tiny);
 }
 #team main .content .email {
-  font-size: 13px;
+  font-size: var(--font-size-tiny);
 }
 #team main .content span {
-  font-size: 25px;
+  font-size: var(--font-size-medium);
 }
 #team main .content .linkedin {
   width: 20px;
