@@ -1,0 +1,25 @@
+@mixin proximities {
+    --proximity-in-small: 4px;
+    --proximity-in-medium: 8px;
+    --proximity-in-large: 12px;
+
+    --proximity-mid: 16px;
+
+    --proximity-out-small: 20px;
+    --proximity-out-medium: 24px;
+    --proximity-out-large: 32px;
+    --proximity-out-huge: 40px;
+
+    @media (width > 600px) {
+        --proximity-in-small: 14px;
+        --proximity-in-medium: 18px;
+        --proximity-in-large: 22px;
+
+        --proximity-mid: 26px;
+
+        --proximity-out-small: 30px;
+        --proximity-out-medium: 34px;
+        --proximity-out-large: 42px;
+        --proximity-out-huge: 50px;
+    }
+}
