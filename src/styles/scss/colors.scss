@@ -1,10 +1,11 @@
 @mixin colors-test {
   --test-color: hsl(213, 100%, 50%);
   --test-color: hsl(24, 100%, 63%);
-  --test-color: #fbff00;
+  --test-color: #bd0890;
 }
 
 @mixin colors {
+  --main-color: 218;
   // base colors
   --black: 0 0% 8%;
   --blackish: 210 3% 15%;
@@ -12,9 +13,9 @@
   --whitish: 0 0% 94%;
   --white: 0 0% 100%;
   // blues
-  --blue-dark: 218 50% 40%;
-  --blue: 218 100% 63%;
-  --bluish: 180 61% 50%;
+  --blue-dark: var(--main-color) 50% 40%;
+  --blue: var(--main-color) 100% 63%;
+  --bluish: var(--main-color) 61% 50%;
   // reds
   --red: 0 100% 50%;
   // greens
@@ -28,20 +29,20 @@
 }
 
 @mixin color-theme {
-  //  HSL !!!
-  --main-bg: var(--whitish);
-  --secondary-bg: var(--black);
-  --accent-bg: var(--blue-dark);
+  //  Theme colors
+  --background: var(--whitish);
+  --foreground: var(--black);
+  --accent: var(--blue-dark);
 
-  --card-main-bg: var(--white);
-  --card-secondary-bg: var(--whitish);
-  --card-accent-bg: var(--accent-bg);
-  --card-shadow-bg: var(--grey);
+  --card-background: var(--white);
+  --card-foreground: var(--whitish);
+  --card-accent: var(--accent);
+  --card-shadow: var(--grey);
 
-  --btn-main-bg: var(--grey);
-  --btn-secondary-bg: var(--blue);
-  --btn-accent-bg: var(--accent-bg);
-  --btn-shadow-bg: var(--grey);
+  --btn-background: var(--grey);
+  --btn-secondary : var(--blue);
+  --btn-accent: var(--accent);
+  --btn-shadow: var(--grey);
 
   --txt-dark: var(--black);
   --txt-light: var(--white);
