@@ -16,6 +16,7 @@
 
     p {
       ////POSITION
+      margin-inline: none;
       text-align: left;
     }
   }
@@ -30,7 +31,8 @@
   h2 {
     ////LENGHT
     padding-bottom: 20px;
-    @include bootstrap.h2;
+    ////TEXT
+    font-size: var(--font-size-large);
 
     @media (width > 1095px) {
       h2 {
@@ -41,12 +43,6 @@
 
   p {
     ////LENGHT
-    @include bootstrap.p_small;
-
-    @media (width > 1095px) {
-      p {
-        font-size: clamp(0.8rem, 0.71rem + 0.24vw, 1rem);
-      }
-    }
+    font-size: var(--font-size-tiny);
   }
 }
