@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 :root {
+  --main-color: 218;
   --black: 0 0% 8%;
   --blackish: 210 3% 15%;
   --grey: 0 0% 70%;
   --whitish: 0 0% 94%;
   --white: 0 0% 100%;
-  --blue-dark: 218 50% 40%;
-  --blue: 218 100% 63%;
-  --bluish: 180 61% 50%;
+  --blue-dark: var(--main-color) 50% 40%;
+  --blue: var(--main-color) 100% 63%;
+  --bluish: var(--main-color) 61% 50%;
   --red: 0 100% 50%;
   --green: 106 100% 63%;
   --brown: 30 100% 32%;
@@ -15,27 +16,65 @@
   --yellow-dark: 55 100% 43%;
   --test-color: hsl(213, 100%, 50%);
   --test-color: hsl(24, 100%, 63%);
-  --test-color: #fbff00;
-  --main-bg: var(--whitish);
-  --secondary-bg: var(--black);
-  --accent-bg: var(--blue-dark);
-  --card-main-bg: var(--white);
-  --card-secondary-bg: var(--whitish);
-  --card-accent-bg: var(--accent-bg);
-  --card-shadow-bg: var(--grey);
-  --btn-main-bg: var(--grey);
-  --btn-secondary-bg: var(--blue);
-  --btn-accent-bg: var(--accent-bg);
-  --btn-shadow-bg: var(--grey);
+  --test-color: #bd0890;
+  --background: var(--whitish);
+  --foreground: var(--black);
+  --accent: var(--blue-dark);
+  --card-background: var(--white);
+  --card-foreground: var(--whitish);
+  --card-accent: var(--accent);
+  --card-shadow: var(--grey);
+  --btn-background: var(--grey);
+  --btn-secondary: var(--blue);
+  --btn-accent: var(--accent);
+  --btn-shadow: var(--grey);
   --txt-dark: var(--black);
   --txt-light: var(--white);
   --txt-accent: var(--blue-dark);
   --facebook: 221, 44%, 41%;
   --linkedin: 201, 100%, 35%;
   --dribbble: 337, 79%, 61%;
-  --border-radius-s: 5px;
-  --border-radius-m: 10px;
-  --border-radius-l: 15px;
+  --proximity-in-small: 4px;
+  --proximity-in-medium: 8px;
+  --proximity-in-large: 12px;
+  --proximity-mid: 16px;
+  --proximity-out-small: 20px;
+  --proximity-out-medium: 24px;
+  --proximity-out-large: 32px;
+  --proximity-out-huge: 40px;
+  --font-size-tiny: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 18px;
+  --font-size-large: 20px;
+  --font-size-huge: 24px;
+  --icon-size-small: 16px;
+  --icon-size-medium: 18px;
+  --icon-size-large: 24px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 30px;
+  --border-radius-circle: 50%;
+  transition: font-size 2s ease-out;
+}
+@media (width > 600px) {
+  :root {
+    --proximity-in-small: 14px;
+    --proximity-in-medium: 18px;
+    --proximity-in-large: 22px;
+    --proximity-mid: 26px;
+    --proximity-out-small: 30px;
+    --proximity-out-medium: 34px;
+    --proximity-out-large: 42px;
+    --proximity-out-huge: 50px;
+  }
+}
+@media (width > 700px) {
+  :root {
+    --font-size-tiny: 14px;
+    --font-size-small: 18px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-huge: 32px;
+  }
 }
 
 * {
@@ -56,7 +95,7 @@ html.noOverflow {
 }
 
 body {
-  background-color: hsl(var(--main-bg));
+  background-color: hsl(var(--background));
   color: hsl(var(--txt-dark));
 }
 
@@ -108,6 +147,7 @@ main > section {
   }
 }
 main > section h2 {
+  font-size: var(--font-size-large);
   text-align: center;
   position: relative;
   padding-bottom: 20px;
@@ -123,10 +163,12 @@ main > section h2 a {
 #about p {
   width: auto;
   margin-inline: 35px;
+  font-size: var(--font-size-tiny);
+  text-align: justify;
 }
 
 #nav {
-  background-color: hsl(var(--main-bg));
+  background-color: hsl(var(--background));
   position: fixed;
   top: 0;
   left: 0;
@@ -137,13 +179,13 @@ main > section h2 a {
   transition: 0.3s height;
 }
 #nav .navigation {
-  background-color: hsl(var(--main-bg));
+  background-color: hsl(var(--background));
 }
 #nav .navigation a:where(:hover, :active, .active) {
   color: hsl(var(--txt-accent));
 }
 #nav .contact_us {
-  background-color: hsl(var(--btn-accent-bg));
+  background-color: hsl(var(--btn-accent));
   color: hsl(var(--txt-light));
 }
 #nav .contact_us p {
@@ -154,16 +196,16 @@ main > section h2 a {
 }
 #nav .language {
   color: hsl(var(--text-dark));
-  background-color: hsl(var(--btn-main-bg)/0.251);
-  border-radius: 8px;
+  background-color: hsl(var(--btn-background)/0.251);
+  border-radius: var(--border-radius-medium);
   border: none;
   transition: linear 200ms background-color, linear 100ms color, linear 200ms font-weight;
 }
 #nav .language:hover {
-  background-color: hsl(var(--btn-accent-bg)/0.2);
+  background-color: hsl(var(--btn-accent)/0.2);
 }
 #nav.down {
-  border-bottom-color: hsl(var(--accent-bg)/0.3);
+  border-bottom-color: hsl(var(--accent)/0.3);
 }
 #nav > div {
   display: flex;
@@ -256,7 +298,7 @@ main > section h2 a {
   font-weight: bold;
   font-size: 0.95rem;
   box-shadow: 3px 3px 0px hsl(var(--grey));
-  border-radius: 5px;
+  border-radius: var(--border-radius-medium);
 }
 #nav .contact_us.fi {
   font-size: 0.85rem;
@@ -333,27 +375,16 @@ main > section h2 a {
   padding-top: 150px;
 }
 #hero .hero h1 {
-  width: max(100%, 375px);
-  font-size: 1.3rem;
-  font-weight: bold;
+  width: max(100%, 344px);
+  font-size: var(--font-size-huge);
   text-transform: uppercase;
   transition: 0.2s font-size;
 }
-@media (width > 600px) {
-  #hero .hero h1 {
-    font-size: clamp(1.4rem, 1.13rem + 0.73vw, 2rem);
-  }
-}
 #hero .hero > p {
-  font-size: 0.86rem;
+  font-size: var(--font-size-small);
   text-align: justify;
   transition: 0.3s font-size;
   margin-inline: 10px;
-}
-@media (width > 600px) {
-  #hero .hero > p {
-    font-size: clamp(0.7rem, 0.4rem + 0.85vw, 1.3rem);
-  }
 }
 #hero .hero > div {
   width: 600px;
@@ -372,7 +403,7 @@ main > section h2 a {
 }
 
 #footer {
-  background-color: hsl(var(--secondary-bg));
+  background-color: hsl(var(--foreground));
   text-align: center;
 }
 #footer .share a .facebook {
@@ -430,11 +461,11 @@ main > section h2 a {
   padding: 2rem 0;
 }
 #footer .links a {
-  width: 255.5px;
+  display: inline-block;
+  width: 155px;
   padding: 0.7rem 2rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-medium);
   text-transform: uppercase;
-  border-radius: 20px;
 }
 #footer .links a:hover {
   font-weight: bold;
