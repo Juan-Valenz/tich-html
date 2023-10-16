@@ -6,7 +6,7 @@
   @include bootstrap.colors;
   @include bootstrap.colors-test;
   @include bootstrap.color-theme;
-  
+
   @include bootstrap.proximities;
   @include bootstrap.font-sizes;
   @include bootstrap.icon-sizes;
@@ -14,8 +14,7 @@
   --border-radius-medium: 8px;
   --border-radius-large: 30px;
   --border-radius-circle: 50%;
-  
-  transition: font-size 2s ease-out;
+
 
 }
 
@@ -24,6 +23,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: font-size 2s ease-out;
 }
 
 html,
@@ -42,7 +42,7 @@ body {
 }
 
 body>header {
-  min-height: 600px;
+  min-height: 700px;
 }
 
 a {
@@ -74,6 +74,9 @@ body>main {
 
 main>section {
   ////LENGTH
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-medium);
   width: auto;
 
   @media (width < 1180px) {
@@ -89,10 +92,11 @@ main>section {
   }
 
   h2 {
+    display: flex;
+    flex-direction: column;
     font-size: var(--font-size-large);
     text-align: center;
     position: relative;
-    padding-bottom: 20px;
 
     a {
       position: absolute;
@@ -109,7 +113,7 @@ main>section {
     ////LENGHT
     width: auto;
     margin-inline: 35px;
-    
+
     ////TEXT
     font-size: var(--font-size-tiny);
     text-align: justify;
@@ -378,27 +382,48 @@ main>section {
   overflow: hidden;
 
   .hero {
+    position: relative;
     ////GRID
-    display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / clamp(272px, 50% + 150px, 850px) 1fr;
-    justify-content: start;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--proximity-in-large);
+    // display: grid;
+    // grid-template: 1fr 1fr 1fr 1fr / clamp(272px, 50% + 150px, 850px) 1fr;
+    // justify-content: start;
+    // align-items: center;
 
-    h1 {
-      grid-area: 1 / 1 / 1 span / 1 span;
-      align-self: end;
-    }
+    // h1 {
+    //   grid-area: 1 / 1 / 1 span / 1 span;
+    //   align-self: end;
+    // }
 
     >p {
-      grid-area: 2 / 1 / 2 span / 1 span;
+      // grid-area: 2 / 1 / 2 span / 1 span;
+      transition: 1s width linear;
     }
+
 
     >div {
       ////POSITION
       position: absolute;
       ////POSITION
       left: 65%;
+      bottom: -15%;
       z-index: -1;
+    }
+  }
+
+ 
+  @media (width > 600px) {
+    .hero>p {
+      width: 80%;
+      font-size: var(--font-size-medium);
+    }
+  }
+
+  @media (width >=1100px) {
+    .hero>p {
+      width: 50%;
     }
   }
 
@@ -414,25 +439,25 @@ main>section {
     margin-inline: auto;
     padding-top: 150px;
 
+@media (width < 755px) {
+  height: 60%;
+}
+
     h1 {
       ////LENGTH
       width: max(100%, 344px);
       ////TEXT
       font-size: var(--font-size-huge);
       text-transform: uppercase;
-      ////ANIMATION
-      transition: 0.2s font-size;
+
     }
 
     >p {
       ////TEXT
-      font-size: var(--font-size-small);
+      font-size: var(--font-size-tiny);
       text-align: justify;
-      ////ANIMATION
-      transition: 0.3s font-size;
       ////LENGHT
-      margin-inline: 10px;
-
+      // margin-inline: 10px;
     }
 
     >div {
@@ -453,6 +478,10 @@ main>section {
       @media (width < 1100px) {
         ////ANIMATION
         translate: -400px 500px;
+      }
+      @media (width < 440px) {
+        ////ANIMATION
+        translate: -400px 720px;
       }
     }
   }
@@ -517,7 +546,7 @@ main>section {
 
   .share {
     ////LENGTH
-    padding: 2rem 0;
+    padding-block: var(--proximity-in-large);
 
     a {
       &:hover svg {
@@ -545,7 +574,7 @@ main>section {
 
   .links {
     ////TEXT
-    padding: 2rem 0;
+    padding-block: var(--proximity-in-large);
 
     a {
       display: inline-block;

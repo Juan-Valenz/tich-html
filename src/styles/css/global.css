@@ -53,7 +53,6 @@
   --border-radius-medium: 8px;
   --border-radius-large: 30px;
   --border-radius-circle: 50%;
-  transition: font-size 2s ease-out;
 }
 @media (width > 600px) {
   :root {
@@ -82,6 +81,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: font-size 2s ease-out;
 }
 
 html,
@@ -100,7 +100,7 @@ body {
 }
 
 body > header {
-  min-height: 600px;
+  min-height: 700px;
 }
 
 a {
@@ -132,6 +132,9 @@ body > main {
 }
 
 main > section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-medium);
   width: auto;
 }
 @media (width < 1180px) {
@@ -147,10 +150,11 @@ main > section {
   }
 }
 main > section h2 {
+  display: flex;
+  flex-direction: column;
   font-size: var(--font-size-large);
   text-align: center;
   position: relative;
-  padding-bottom: 20px;
 }
 main > section h2 a {
   position: absolute;
@@ -351,22 +355,30 @@ main > section h2 a {
   background-color: hsl(var(--whitish));
 }
 #hero .hero {
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/clamp(272px, 50% + 150px, 850px) 1fr;
-  justify-content: start;
-  align-items: center;
-}
-#hero .hero h1 {
-  grid-area: 1/1/1 span/1 span;
-  align-self: end;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-large);
 }
 #hero .hero > p {
-  grid-area: 2/1/2 span/1 span;
+  transition: 1s width linear;
 }
 #hero .hero > div {
   position: absolute;
   left: 65%;
+  bottom: -15%;
   z-index: -1;
+}
+@media (width > 600px) {
+  #hero .hero > p {
+    width: 80%;
+    font-size: var(--font-size-medium);
+  }
+}
+@media (width >= 1100px) {
+  #hero .hero > p {
+    width: 50%;
+  }
 }
 #hero .hero {
   width: 90%;
@@ -374,17 +386,19 @@ main > section h2 a {
   margin-inline: auto;
   padding-top: 150px;
 }
+@media (width < 755px) {
+  #hero .hero {
+    height: 60%;
+  }
+}
 #hero .hero h1 {
   width: max(100%, 344px);
   font-size: var(--font-size-huge);
   text-transform: uppercase;
-  transition: 0.2s font-size;
 }
 #hero .hero > p {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-tiny);
   text-align: justify;
-  transition: 0.3s font-size;
-  margin-inline: 10px;
 }
 #hero .hero > div {
   width: 600px;
@@ -399,6 +413,11 @@ main > section h2 a {
 @media (width < 1100px) {
   #hero .hero > div {
     translate: -400px 500px;
+  }
+}
+@media (width < 440px) {
+  #hero .hero > div {
+    translate: -400px 720px;
   }
 }
 
@@ -438,7 +457,7 @@ main > section h2 a {
   gap: 1rem;
 }
 #footer .share {
-  padding: 2rem 0;
+  padding-block: var(--proximity-in-large);
 }
 #footer .share a:hover svg {
   cursor: pointer;
@@ -458,7 +477,7 @@ main > section h2 a {
   -webkit-animation-iteration-count: infinite;
 }
 #footer .links {
-  padding: 2rem 0;
+  padding-block: var(--proximity-in-large);
 }
 #footer .links a {
   display: inline-block;
