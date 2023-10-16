@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: var(--proximity-in-medium);
 }
 #services .card.v1 {
   display: flex;
@@ -104,8 +104,8 @@
   }
 }
 #services .card.v2 {
+  box-shadow: 5px 5px 0px hsl(var(--grey));
   background-color: hsl(var(--white));
-  border: 1px solid black;
   border-radius: var(--border-radius-large);
   position: relative;
   display: flex;
@@ -140,7 +140,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding-inline: var(--proximity-in-large);
+  gap: var(--proximity-in-large);
 }
 #services .card.v2 h3 {
   --font-size-tiny: 12px;
@@ -148,7 +149,6 @@
   --font-size-medium: 18px;
   --font-size-large: 20px;
   --font-size-huge: 24px;
-  margin-bottom: 20px;
 }
 @media (width > 700px) {
   #services .card.v2 h3 {
@@ -169,6 +169,7 @@
 #services main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 10px 20px;
+  gap: var(--proximity-in-medium);
+  padding-inline: var(--proximity-in-large);
+  padding-bottom: var(--proximity-in-large);
 }
