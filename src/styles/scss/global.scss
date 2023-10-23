@@ -57,6 +57,8 @@ button {
 
 body>main {
   ////GRID
+  overflow-x: hidden;
+  position: relative;
   display: grid;
   align-items: start;
   grid-auto-rows: auto;
