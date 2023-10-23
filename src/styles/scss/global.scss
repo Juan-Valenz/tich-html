@@ -59,8 +59,8 @@ body>main {
   ////GRID
   display: grid;
   align-items: start;
-  grid-template-columns: 1fr;
-  row-gap: 20px;
+  grid-auto-rows: auto;
+  column-gap: 20px;
   padding-block: 50px;
 
   @media (width > 600px) {
