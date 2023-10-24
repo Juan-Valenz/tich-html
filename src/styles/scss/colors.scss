@@ -4,6 +4,16 @@
   --test-color: #bd0890;
 }
 
+@mixin common {
+  --txt-dark: var(--black);
+  --txt-grey-dark: 0 0% 30%;
+  --txt-grey: 0 0% 50%;
+  --txt-grey-light: 0 0% 80%;
+  --txt-light: var(--white);
+  --txt-accent: var(--blue-dark);
+}
+
+
 @mixin colors {
   --main-color: 218;
   // base colors
@@ -31,6 +41,7 @@
 @mixin color-theme {
   //  Theme colors
   --background: var(--whitish);
+  --mid-ground: var(--txt-grey-dark);
   --foreground: var(--black);
   --accent: var(--blue-dark);
 
@@ -43,10 +54,6 @@
   --btn-secondary : var(--blue);
   --btn-accent: var(--accent);
   --btn-shadow: var(--grey);
-
-  --txt-dark: var(--black);
-  --txt-light: var(--white);
-  --txt-accent: var(--blue-dark);
 
   --facebook: 221, 44%, 41%;
   --linkedin: 201, 100%, 35%;
