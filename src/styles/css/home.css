@@ -64,7 +64,7 @@
   }
 }
 #services h2 {
-  padding-inline: 10px;
+  padding-inline: var(--proximity-mid);
 }
 #services .cards {
   width: auto;
@@ -146,6 +146,9 @@
 }
 #team .subject {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-large);
 }
 #team .teamBox {
   position: relative;
@@ -208,7 +211,6 @@
 }
 #team .teamBox {
   min-width: 100%;
-  margin-top: var(--proximity-in-medium);
 }
 #team header {
   font-size: var(--font-size-small);

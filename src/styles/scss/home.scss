@@ -107,7 +107,7 @@
   margin: auto;
 
   h2 {
-    padding-inline: 10px;
+    padding-inline: var(--proximity-mid);
   }
 
   .cards {
@@ -196,7 +196,7 @@
 
 //SECTION: TEAM
 #team {
-
+ 
   ///COLOR
   .member.v2 {
     background-color: hsl(var(--card-background));
@@ -223,6 +223,9 @@
   .subject {
     ////POSITION
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--proximity-in-large)
   }
 
   .teamBox {
@@ -310,7 +313,7 @@
   .teamBox {
     ////LENGHT
     min-width: 100%;
-    margin-top: var(--proximity-in-medium);
+    // margin-top: var(--proximity-in-medium);
   }
 
   header {
