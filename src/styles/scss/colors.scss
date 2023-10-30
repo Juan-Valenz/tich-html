@@ -5,7 +5,7 @@
 }
 
 @mixin common {
-  --txt-dark: var(--black);
+  --txt-dark: 0 0% 20%;
   --txt-grey-dark: 0 0% 30%;
   --txt-grey: 0 0% 50%;
   --txt-grey-light: 0 0% 80%;
@@ -46,7 +46,8 @@
   --accent: var(--blue-dark);
 
   --card-background: var(--white);
-  --card-foreground: var(--whitish);
+  --card-mid-ground: var(--txt-grey-dark);
+  --card-foreground: var(--black);
   --card-accent: var(--accent);
   --card-shadow: var(--grey);
 
