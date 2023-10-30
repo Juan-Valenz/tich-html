@@ -2,6 +2,9 @@
 
 //SECTION: ABOUT
 #about {
+  main p {
+    color: hsl(var(--mid-ground));
+  }
   /// POSITION & DISPLAY
 
   h2 {
@@ -12,7 +15,7 @@
     ////FLEX
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--proximity-in-huge);
 
     p {
       ////POSITION
