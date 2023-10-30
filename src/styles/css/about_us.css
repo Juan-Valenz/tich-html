@@ -2,13 +2,16 @@
   width: 80%;
   margin-inline: auto;
 }
+#about main p {
+  color: hsl(var(--mid-ground));
+}
 #about h2 {
   text-align: center;
 }
 #about main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--proximity-in-huge);
 }
 #about main p {
   margin-inline: none;
