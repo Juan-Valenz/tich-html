@@ -39,7 +39,7 @@ html.noOverflow {
 
 body {
   background-color: hsl(var(--background));
-  color: hsl(var(--txt-dark));
+  color: hsl(var(--foreground));
 }
 
 body>header {
@@ -111,6 +111,13 @@ main>section {
 }
 
 #about {
+
+  ///COLOR
+  p {
+    color:hsl(var(--mid-ground));
+  }
+
+  /// LENGTH AND STYLES
   p {
     ////LENGHT
     width: auto;
@@ -371,6 +378,10 @@ main>section {
 
   ///COLORS
   .hero {
+    >p {
+      color: hsl(var(--mid-ground))
+    }
+
     span {
       color: hsl(var(--txt-accent));
     }
@@ -484,16 +495,16 @@ main>section {
       >p {
         width: 80%;
       }
+
       >div {
-      ////ANIMATION
-      translate: -400px 500px;
-    }
+        ////ANIMATION
+        translate: -400px 500px;
+      }
     }
   }
 
   @media (width < 440px) {
-    .hero 
-    >div {
+    .hero>div {
       ////ANIMATION
       translate: -400px 720px;
     }

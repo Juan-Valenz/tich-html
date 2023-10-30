@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 :root {
-  --txt-dark: var(--black);
+  --txt-dark: 0 0% 20%;
   --txt-grey-dark: 0 0% 30%;
   --txt-grey: 0 0% 50%;
   --txt-grey-light: 0 0% 80%;
@@ -24,11 +24,12 @@
   --test-color: hsl(24, 100%, 63%);
   --test-color: #bd0890;
   --background: var(--whitish);
-  --mid-ground: var(--black);
+  --mid-ground: var(--txt-grey-dark);
   --foreground: var(--black);
   --accent: var(--blue-dark);
   --card-background: var(--white);
-  --card-foreground: var(--whitish);
+  --card-mid-ground: var(--txt-grey-dark);
+  --card-foreground: var(--black);
   --card-accent: var(--accent);
   --card-shadow: var(--grey);
   --btn-background: var(--grey);
@@ -100,7 +101,7 @@ html.noOverflow {
 
 body {
   background-color: hsl(var(--background));
-  color: hsl(var(--txt-dark));
+  color: hsl(var(--foreground));
 }
 
 body > header {
@@ -169,6 +170,9 @@ main > section h2 a {
   aspect-ratio: 1/1;
 }
 
+#about p {
+  color: hsl(var(--mid-ground));
+}
 #about p {
   width: auto;
   margin-inline: 35px;
@@ -352,6 +356,9 @@ main > section h2 a {
   position: relative;
   overflow: hidden;
   height: 100dvh;
+}
+#hero .hero > p {
+  color: hsl(var(--mid-ground));
 }
 #hero .hero span {
   color: hsl(var(--txt-accent));
