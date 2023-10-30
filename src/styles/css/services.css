@@ -16,6 +16,12 @@
 #services .card.v1 main div {
   box-shadow: 0px 3.2px 7.2px hsl(var(--black)/0.132), 0px 0.6px 1.8px hsl(var(--black)/0.108);
 }
+#services .card.v2 header p {
+  color: hsl(var(--mid-ground));
+}
+#services .card.v2 main p {
+  color: hsl(var(--mid-ground));
+}
 #services .cards {
   display: flex;
   flex-direction: column;
