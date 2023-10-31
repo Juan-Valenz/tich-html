@@ -30,6 +30,9 @@
   .subject {
     ////POSITION
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--proximity-in-large)
   }
 
   .teamBox {
@@ -37,18 +40,18 @@
     position: relative;
     ////GRID
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+    justify-content: space-evenly;
     grid-gap: 30px;
 
     .member.v2 {
       ////GRID
-      display: grid;
-      grid-template-rows: 1fr 69px;
+      display: flex;
+      flex-direction: column-reverse;
+      overflow: hidden;
       border-radius: var(--border-radius-large);
 
       header {
-        ////GRID
-        grid-area: 2/1/1 span/1 span;
         ////FLEX
         display: flex;
         justify-content: center;
@@ -59,9 +62,9 @@
 
       main {
         ////GRID
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--proximity-in-large);
 
         img {
           ////IMAGE
@@ -72,13 +75,13 @@
         .content {
           ////GRID
           display: grid;
-          grid-template-rows: 1fr 1fr;
+          align-items: center;
 
           .contacts {
             ////GRID
-            display: grid;
-            grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
-            align-content: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             >* {
               ////FLEX
@@ -92,12 +95,31 @@
     }
   }
 
+  @media (width > 450px) {
+    .teamBox .member.v2 main {
+      flex-direction: row;
+
+      .contacts {
+        ////GRID
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  // @media (width > 500px) {
+  //   .teamBox .member.v2 main{
+  //     flex-direction: column;
+  //   }
+  // }
+
   ///LENGHT AND STYLE
+  width: 100%;
 
   .subject {
     ////LENGHT
     width: 80%;
-    ////TEXT
     text-align: center;
   }
 
@@ -111,56 +133,68 @@
   .teamBox {
     ////LENGHT
     min-width: 100%;
-    margin-top: 40px;
+    // margin-top: var(--proximity-in-medium);
   }
 
   header {
+    ////LENGHT
+    padding-block: 1rem;
+    ////TEXT 
     font-size: var(--font-size-small);
   }
 
   main {
-    ////LENGHT
-    height: 410px;
 
-    img { 
+    img {
       ////LENGHT
-      width: 150px;
-      aspect-ratio: 1/1;
-      ////DECORATION
-    border-radius: var(--border-radius-circle);
+      height: 150px;
+      width: 130px;
+      // aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: top;
+      ////DECOATION
+      // border-radius: var(--border-radius-circle);
     }
 
     .content {
-      ////LENGHT
-      padding-inline: 20px;
       ////TEXT
-      font-size: 13px;
+      font-size: var(--font-size-tiny);
+      ////LENGHT
+      padding-top: var(--proximity-out-small);
 
       .contacts {
         ////LENGHT
-        max-height: 100px;
+        height: fit-content;
+        width: fit-content;
+        color: hsl(var(--card-mid-ground));
       }
 
-      .bio {
-        ////LENGHT        
-        font-size: var(--font-size-tiny);
-
-      }
-
-      .email {
-        ////LENGHT
+      .email span {
+        ////TEXT
         font-size: var(--font-size-tiny);
       }
 
-      span {
-        ////LENGHT
-        font-size: var(--font-size-medium);
+      .phone span {
+        ////TEXT
+        font-size: var(--font-size-tiny);
+      }
+
+
+      span.icon {
+        ////TEXT
+        font-size: var(--font-size-small);
       }
 
       .linkedin {
         ////LENGHT
         width: 20px;
       }
+    }
+  }
+
+  @media (width > 450px) {
+    .teamBox .member.v2 main {
+      flex-direction: row;
     }
   }
 }

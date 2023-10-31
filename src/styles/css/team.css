@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 #team .member.v2 {
   background-color: hsl(var(--card-background));
@@ -17,29 +18,33 @@
 }
 #team .subject {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-large);
 }
 #team .teamBox {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+  justify-content: space-evenly;
   grid-gap: 30px;
 }
 #team .teamBox .member.v2 {
-  display: grid;
-  grid-template-rows: 1fr 69px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
   border-radius: var(--border-radius-large);
 }
 #team .teamBox .member.v2 header {
-  grid-area: 2/1/1 span/1 span;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 0 30px 30px;
 }
 #team .teamBox .member.v2 main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-large);
 }
 #team .teamBox .member.v2 main img {
   justify-self: center;
@@ -47,17 +52,27 @@
 }
 #team .teamBox .member.v2 main .content {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  align-items: center;
 }
 #team .teamBox .member.v2 main .content .contacts {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(25px, 1fr));
-  align-content: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 #team .teamBox .member.v2 main .content .contacts > * {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (width > 450px) {
+  #team .teamBox .member.v2 main {
+    flex-direction: row;
+  }
+  #team .teamBox .member.v2 main .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 #team .subject {
   width: 80%;
@@ -69,35 +84,40 @@
 }
 #team .teamBox {
   min-width: 100%;
-  margin-top: 40px;
 }
 #team header {
+  padding-block: 1rem;
   font-size: var(--font-size-small);
 }
-#team main {
-  height: 410px;
-}
 #team main img {
-  width: 150px;
-  aspect-ratio: 1/1;
-  border-radius: var(--border-radius-circle);
+  height: 150px;
+  width: 130px;
+  object-fit: cover;
+  object-position: top;
 }
 #team main .content {
-  padding-inline: 20px;
-  font-size: 13px;
+  font-size: var(--font-size-tiny);
+  padding-top: var(--proximity-out-small);
 }
 #team main .content .contacts {
-  max-height: 100px;
+  height: fit-content;
+  width: fit-content;
+  color: hsl(var(--card-mid-ground));
 }
-#team main .content .bio {
+#team main .content .email span {
   font-size: var(--font-size-tiny);
 }
-#team main .content .email {
+#team main .content .phone span {
   font-size: var(--font-size-tiny);
 }
-#team main .content span {
-  font-size: var(--font-size-medium);
+#team main .content span.icon {
+  font-size: var(--font-size-small);
 }
 #team main .content .linkedin {
   width: 20px;
+}
+@media (width > 450px) {
+  #team .teamBox .member.v2 main {
+    flex-direction: row;
+  }
 }
