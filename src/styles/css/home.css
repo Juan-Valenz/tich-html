@@ -183,13 +183,15 @@
   align-self: center;
 }
 #team .teamBox .member.v2 main .content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 #team .teamBox .member.v2 main .content .contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 #team .teamBox .member.v2 main .content .contacts > * {
   display: flex;
@@ -200,9 +202,10 @@
   #team .teamBox .member.v2 main {
     flex-direction: row;
   }
-  #team .teamBox .member.v2 main .contacts {
+  #team .teamBox .member.v2 main .content .contacts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
   }
 }
