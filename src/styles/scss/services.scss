@@ -3,26 +3,16 @@
 #services {
 
   /// COLORS
-  .card.v1 {
-    background-color: hsl(var(--white));
-    box-shadow: 5px 5px 0px hsl(var(--grey));
 
-    h3 {
-      color: hsl(var(--txt-accent));
+  .card.v2 {
+    header p {
+      color: hsl(var(--mid-ground));
     }
 
-    main div {
-      box-shadow: 0px 3.2px 7.2px hsl(var(--black)/0.132), 0px 0.6px 1.8px hsl(var(--black)/0.108);
+    main p {
+      color: hsl(var(--mid-ground));
     }
   }
-.card.v2 {
-  header p {
-    color: hsl(var(--mid-ground));
-  }
-  main p {
-    color: hsl(var(--mid-ground));
-  }
-}
 
   /// POSITION & DISPLAY
   ////FLEX
@@ -39,57 +29,6 @@
     gap: var(--proximity-in-medium);
   }
 
-  .card.v1 {
-    ////FLEX
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    gap: 15px;
-
-    @media (width < 600px) {
-      .card.v1 {
-        ////FLEX
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        main {
-          ////GRID
-          grid-template-columns: auto;
-          width: 200px;
-        }
-      }
-    }
-
-    header {
-      ////FLEX
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-    }
-
-    main {
-      ////FLEX
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 25px;
-
-      div {
-        ////FLEX
-        flex: 0 1 calc(50% - 20px);
-        ////GRID
-        display: grid;
-        justify-content: center;
-        align-items: center;
-
-
-      }
-    }
-  }
 
   /// LENGTH AND STYLES
   ////  LENGTH
@@ -97,88 +36,27 @@
   margin-bottom: 40px;
   width: 90%;
 
-  .card.v1 {
-    ////  LENGTH
-    width: 100%;
-    min-height: 44vh;
-    padding: 10px 20px;
-    ////  DECORATION
-    border-radius: var(--border-radius-large);
-
-    @media (width > 1090px) {
-      .card.v1 {
-        ////LENGHT
-        padding: 1rem;
-      }
-    }
-
-    svg {
-      ////LENGHT
-      max-width: 70px;
-      max-height: 70px;
-    }
-
-    h3 {
-      //// TEXT
-      font-size: var(--font-size-medium);
-      text-transform: uppercase;
-      word-spacing: 10px;
-    }
-
-    p {
-      //// TEXT
-      font-size: var(--font-size-tiny);
-      text-align: center;
-    }
-
-    div {
-      ////LENGHT
-      border-radius: var(--border-radius-medium);
-      padding-bottom: 20px;
-      padding-inline: 10px;
-
-      header {
-        font-size: var(--font-size-small);
-      }
-
-      h4 {
-        font-size: var(--font-size-tiny);
-      }
-    }
-
-
-    main {
-      ////TEXT
-      text-align: center;
-      font-size: var(--font-size-tiny);
-    }
-  }
-
-  @media (width < 600px) {
-
-    ////LENGHT
-    .card.v1>main>div {
-      flex: 0 1 80%;
-    }
-  }
 
   .card.v2 {
+    ///COLOUR
     box-shadow: 5px 5px 0px hsl(var(--grey));
     background-color: hsl(var(--white));
     border-radius: var(--border-radius-large);
+    ///POSITION AND DISPLAY
     position: relative;
     display: flex;
     flex-direction: column;
     row-gap: var(--proximity-in-medium);
+    ///LENGHT AND STYLES
     width: 100%;
     min-height: 44vh;
     margin-top: 30px;
     overflow: hidden;
 
     .imageContainer {
+      position: relative;
       width: 100%;
       height: 200px;
-      position: relative;
 
       img {
         position: absolute;
@@ -203,27 +81,40 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-inline:var(--proximity-in-large);
+      padding-inline: var(--proximity-in-large);
       gap: var(--proximity-in-large);
-    }
-    h3 {
-      @include bootstrap.font-sizes;
-    }
-    
-    .line {
-        content: "";
-        inset: auto;
-        width: 90%;
-        border: 1px solid hsl(var(--black)/0.2);
-        margin-inline: 5%;
+      
+      h3 {
+        font-size: var(--font-size-medium);
+      }
+      p {
+        font-size: var(--font-size-small);
       }
     }
 
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: var(--proximity-in-medium);
-      padding-inline:var(--proximity-in-large);
-      padding-bottom: (var(--proximity-in-large));
+    .line {
+      content: "";
+      inset: auto;
+      width: 90%;
+      border: 1px solid hsl(var(--black)/0.2);
+      margin-inline: 5%;
     }
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--proximity-in-medium);
+    padding-inline: var(--proximity-in-large);
+    padding-bottom: (var(--proximity-in-large));
+
+    p {
+      font-size: var(--font-size-tiny);
+    }
+
+    span {
+      color: hsl(var(--accent));
+      font-weight: bold;
+    }
+  }
+}
