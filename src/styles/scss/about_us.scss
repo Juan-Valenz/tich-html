@@ -4,6 +4,12 @@
 #about {
   main p {
     color: hsl(var(--mid-ground));
+    span {
+      color: hsl(var(--accent));
+    }
+    a {
+      color: hsl(var(--accent));
+    }
   }
   /// POSITION & DISPLAY
 
@@ -15,7 +21,7 @@
     ////FLEX
     display: flex;
     flex-direction: column;
-    gap: var(--proximity-in-huge);
+    gap: var(--proximity-mid);
 
     p {
       ////POSITION
@@ -47,5 +53,8 @@
   p {
     ////LENGHT
     font-size: var(--font-size-tiny);
+    span {
+      font-weight: bold;
+    }
   }
 }

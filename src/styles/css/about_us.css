@@ -5,13 +5,19 @@
 #about main p {
   color: hsl(var(--mid-ground));
 }
+#about main p span {
+  color: hsl(var(--accent));
+}
+#about main p a {
+  color: hsl(var(--accent));
+}
 #about h2 {
   text-align: center;
 }
 #about main {
   display: flex;
   flex-direction: column;
-  gap: var(--proximity-in-huge);
+  gap: var(--proximity-mid);
 }
 #about main p {
   margin-inline: none;
@@ -28,4 +34,7 @@
 }
 #about p {
   font-size: var(--font-size-tiny);
+}
+#about p span {
+  font-weight: bold;
 }
