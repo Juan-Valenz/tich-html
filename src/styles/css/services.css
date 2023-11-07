@@ -26,10 +26,43 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--proximity-in-medium);
+  overflow: hidden;
   width: 100%;
   min-height: 44vh;
   margin-top: 30px;
-  overflow: hidden;
+}
+.imageContainer .overlay #services .card.v2.blue {
+  background-color: hsl(var(--blue)/0.15);
+}
+#services .card.v2 main span {
+  color: hsl(var(--accent));
+}
+#services .card.v2 .imageContainer {
+  position: relative;
+}
+#services .card.v2 .imageContainer img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+#services .card.v2 .overlay {
+  position: absolute;
+  inset: 0;
+}
+#services .card.v2 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--proximity-in-large);
+}
+#services .card.v2 main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--proximity-in-medium);
+}
+#services .card.v2 main span {
+  font-weight: bold;
 }
 #services .card.v2 .imageContainer {
   position: relative;
@@ -37,26 +70,20 @@
   height: 200px;
 }
 #services .card.v2 .imageContainer img {
-  position: absolute;
-  inset: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-}
-#services .card.v2 .imageContainer .overlay {
-  position: absolute;
-  inset: 0;
-}
-#services .card.v2 .imageContainer .overlay.blue {
-  background-color: hsl(var(--blue)/0.15);
 }
 #services .card.v2 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-inline: var(--proximity-in-large);
-  gap: var(--proximity-in-large);
+  position: relative;
+}
+#services .card.v2 header::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  bottom: calc(var(--proximity-in-medium) / -2);
+  width: 90%;
+  border: 1px solid hsl(var(--black)/0.2);
 }
 #services .card.v2 header h3 {
   font-size: var(--font-size-medium);
@@ -64,17 +91,7 @@
 #services .card.v2 header p {
   font-size: var(--font-size-small);
 }
-#services .card.v2 .line {
-  content: "";
-  inset: auto;
-  width: 90%;
-  border: 1px solid hsl(var(--black)/0.2);
-  margin-inline: 5%;
-}
 #services main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--proximity-in-medium);
   padding-inline: var(--proximity-in-large);
   padding-bottom: var(--proximity-in-large);
 }
