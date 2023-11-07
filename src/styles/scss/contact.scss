@@ -39,11 +39,7 @@
       color: hsl(var(--txt-light));
     }
   }
-
-
   /// POSITION & DISPLAY  
-
-
   ////FLEX
   display: flex;
   justify-content: center;
@@ -52,7 +48,6 @@
   .column p {
     cursor: pointer;
   }
-
 
   input,
   select,
@@ -88,6 +83,7 @@
   }
 
   p {
+    ////TEXT
     font-size: var(--font-size-tiny);
   }
 
@@ -131,8 +127,6 @@
   }
 
   /// LENGHT AND STYLE
-
-
   ////LENGHT
   width: auto;
   height: auto;
@@ -148,7 +142,6 @@
     ////TEXT
     font-weight: bold;
   }
-
 
   input,
   select,
