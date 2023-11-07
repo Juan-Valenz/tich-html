@@ -3,7 +3,6 @@
 //[] Remove all font weights 
 //[] Add font sizes for width bigger than 600px, 800px, 1000px, 1200px
 
-
 @mixin font-sizes {
   --font-size-tiny: 12px;
   --font-size-small: 14px;
@@ -14,7 +13,7 @@
   @media (width > 700px) {
     --font-size-tiny: 14px;
     --font-size-small: 18px;
-    --font-size-medium: 20px;
+    --font-size-medium: 22px;
     --font-size-large: 24px;
     --font-size-huge: 32px;
   }
