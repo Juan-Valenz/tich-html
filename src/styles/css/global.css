@@ -75,7 +75,7 @@
   :root {
     --font-size-tiny: 14px;
     --font-size-small: 18px;
-    --font-size-medium: 20px;
+    --font-size-medium: 22px;
     --font-size-large: 24px;
     --font-size-huge: 32px;
   }
@@ -141,9 +141,22 @@ main > section {
   gap: var(--proximity-in-medium);
   width: auto;
 }
+main > section h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+main > section h2 a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
 @media (width < 1180px) {
   main > section.container {
-    margin-inline: 30px;
+    margin-inline: var(--proximity-out-small);
   }
 }
 @media (width > 1180px) {
@@ -154,19 +167,8 @@ main > section {
   }
 }
 main > section h2 {
-  display: flex;
-  flex-direction: column;
   font-size: var(--font-size-large);
-  text-align: center;
-  position: relative;
   padding-inline: var(--proximity-mid);
-}
-main > section h2 a {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  aspect-ratio: 1/1;
 }
 
 #about p {
@@ -174,7 +176,7 @@ main > section h2 a {
 }
 #about p {
   width: auto;
-  margin-inline: 35px;
+  margin-inline: var(--proximity-out-small);
   font-size: var(--font-size-tiny);
   text-align: justify;
 }
@@ -380,12 +382,6 @@ main > section h2 a {
   bottom: -15%;
   z-index: -1;
 }
-@media (width > 600px) {
-  #hero .hero > p {
-    width: 80%;
-    font-size: var(--font-size-medium);
-  }
-}
 @media (width >= 1100px) {
   #hero .hero {
     justify-content: center;
@@ -405,11 +401,12 @@ main > section h2 a {
 #hero .hero > p {
   font-size: var(--font-size-tiny);
   text-align: justify;
-  width: 50%;
+  width: 80%;
 }
 #hero .hero > div {
   width: 600px;
   transition: translate 1s linear;
+  translate: -400px 620px;
   backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
 }
@@ -417,17 +414,22 @@ main > section h2 a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-@media (width < 1100px) {
-  #hero .hero > p {
-    width: 80%;
-  }
+@media (width > 440px) {
   #hero .hero > div {
     translate: -400px 500px;
   }
 }
-@media (width < 440px) {
+@media (width > 1100px) {
+  #hero .hero > p {
+    width: 50%;
+  }
   #hero .hero > div {
-    translate: -400px 720px;
+    translate: initial;
+  }
+}
+@media (width < 600px) {
+  #hero .hero > p {
+    font-size: var(--font-size-small);
   }
 }
 
