@@ -5,10 +5,10 @@
 #about main p {
   color: hsl(var(--mid-ground));
 }
-#about main p span {
-  color: hsl(var(--accent));
+#about main p:not(:last-child):after {
+  border: 1px solid hsl(var(--black)/0.2);
 }
-#about main p a {
+#about main p span {
   color: hsl(var(--accent));
 }
 #about h2 {
@@ -20,8 +20,14 @@
   gap: var(--proximity-mid);
 }
 #about main p {
-  margin-inline: none;
   text-align: left;
+}
+#about main p:not(:last-child):after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  bottom: calc(var(--proximity-mid) / -2);
+  width: 95%;
 }
 #about h2 {
   padding-bottom: 20px;
@@ -34,6 +40,12 @@
 }
 #about p {
   font-size: var(--font-size-tiny);
+  display: inline-flex;
+  position: relative;
+}
+#about p:not(:last-child):after {
+  content: "";
+  width: 90%;
 }
 #about p span {
   font-weight: bold;

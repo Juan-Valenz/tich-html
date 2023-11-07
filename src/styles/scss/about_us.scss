@@ -2,20 +2,25 @@
 
 //SECTION: ABOUT
 #about {
+
+  ///COLOUR 
   main p {
     color: hsl(var(--mid-ground));
+
+    &:not(:last-child):after {
+      border: 1px solid hsl(var(--black)/0.2);
+    }
+
     span {
       color: hsl(var(--accent));
     }
-    a {
-      color: hsl(var(--accent));
-    }
   }
+
   /// POSITION & DISPLAY
 
   h2 {
     text-align: center;
-    }
+  }
 
   main {
     ////FLEX
@@ -25,8 +30,14 @@
 
     p {
       ////POSITION
-      margin-inline: none;
       text-align: left;
+      &:not(:last-child):after {
+        content: "";
+        position: absolute;
+        inset: auto;
+        bottom: calc(var(--proximity-mid) / -2);
+        width: 95%;
+      }
     }
   }
 
@@ -51,8 +62,16 @@
   }
 
   p {
-    ////LENGHT
+    ////TEXT
     font-size: var(--font-size-tiny);
+    display: inline-flex;
+    position: relative;
+
+    &:not(:last-child):after {
+      content: "";
+      width: 90%;
+    }
+
     span {
       font-weight: bold;
     }
