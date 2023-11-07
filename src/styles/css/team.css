@@ -89,6 +89,9 @@
   padding-block: 1rem;
   font-size: var(--font-size-small);
 }
+#team main {
+  padding-block: var(--proximity-in-medium);
+}
 #team main img {
   height: 150px;
   width: 130px;
