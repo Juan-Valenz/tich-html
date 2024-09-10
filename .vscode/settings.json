@@ -1,8 +1,8 @@
 {
     "better-comments.highlightPlainText": false,
     "better-comments.tags": [
-        
 
+        
         {
             "tag": "section",
             "color": "#eeff00",
